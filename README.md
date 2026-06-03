@@ -1,90 +1,106 @@
-# PyTorch: The Complete Learning Guide
-## From Absolute Beginner to Advanced Practitioner
+<p align="center">
+  <img src="https://pytorch.org/assets/images/pytorch-logo.png" width="120" alt="PyTorch Logo">
+</p>
 
-A structured, self-contained PyTorch course organized into 14 modules. Each module contains:
-- **README.md** — Detailed explanations, theory, formulas, and inline code examples
-- **Python scripts** — Fully runnable examples you can execute with `python filename.py`
+<h1 align="center">PyTorch: The Complete Learning Guide</h1>
+<h3 align="center">From Absolute Beginner to Advanced Practitioner</h3>
 
-**Target:** Take someone with basic Python knowledge and make them a proficient PyTorch developer.
+<p align="center">
+  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.13%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-14-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-55%2B-green" alt="Examples"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-30%2C000%2B-orange" alt="Lines"></a>
+</p>
 
-**PyTorch Version:** 2.13+ (June 2026)
+<p align="center">
+  A structured, self-contained PyTorch course organized into <strong>14 modules</strong>.<br>
+  Each module contains detailed explanations, theory, formulas, and fully runnable Python examples.
+</p>
+
+---
+
+## About This Guide
+
+This repository takes someone with **basic Python knowledge** and makes them a **proficient PyTorch developer**. Every module contains:
+
+- **`README.md`** — In-depth explanations with theory, math formulas, diagrams, and inline code
+- **Python scripts** — Self-contained, runnable examples (`python filename.py`) with detailed output
+
+**Updated for PyTorch 2.13+ (June 2026)** — includes modern features like `torch.compile`, FlexAttention, FSDP2, and more.
 
 ---
 
 ## Course Structure
 
-### Part I: Foundations (Modules 01-03)
+### Part I: Foundations
 
-| Module | Topic | What You'll Learn |
-|--------|-------|-------------------|
-| **[01_foundations](01_foundations/)** | Math & Setup | Installation, PyTorch philosophy, linear algebra, calculus, probability — all with PyTorch code |
-| **[02_tensors](02_tensors/)** | Tensors | Creation, operations, indexing, broadcasting, views, strides, memory layout |
-| **[03_autograd](03_autograd/)** | Automatic Differentiation | Computation graphs, gradients, custom functions, Jacobians, Hessians |
+> *Start here. Master the building blocks everything else depends on.*
 
-### Part II: Building Blocks (Modules 04-06)
+| # | Module | Description | Files |
+|---|--------|-------------|-------|
+| 01 | [**Foundations & Math**](01_foundations/) | Installation, PyTorch philosophy, linear algebra, calculus, probability, optimization theory | 1 README + 1 script |
+| 02 | [**Tensors**](02_tensors/) | Creation, dtypes, operations, indexing, broadcasting, views, strides, memory layout | 1 README + 5 scripts |
+| 03 | [**Autograd**](03_autograd/) | Computation graphs, backward pass, gradient control, custom functions, Jacobians, Hessians | 1 README + 4 scripts |
 
-| Module | Topic | What You'll Learn |
-|--------|-------|-------------------|
-| **[04_neural_networks](04_neural_networks/)** | nn.Module | All layer types (linear, conv, norm, attention), losses, hooks, save/load |
-| **[05_optimizers](05_optimizers/)** | Optimization | SGD, Adam, AdamW, learning rate schedulers, gradient clipping |
-| **[06_data_loading](06_data_loading/)** | Data Pipeline | Dataset, DataLoader, augmentation, samplers, custom collate |
+### Part II: Building Blocks
 
-### Part III: Training (Modules 07-09)
+> *Learn every component you need to build neural networks.*
 
-| Module | Topic | What You'll Learn |
-|--------|-------|-------------------|
-| **[07_training](07_training/)** | Training Pipelines | Complete training loops, AMP, gradient accumulation, transfer learning, EMA |
-| **[08_torch_compile](08_torch_compile/)** | Compilation | torch.compile, Dynamo, Inductor, dynamic shapes, graph breaks, debugging |
-| **[09_attention](09_attention/)** | Attention Mechanisms | SDPA, multi-head attention, FlexAttention, Transformer blocks |
+| # | Module | Description | Files |
+|---|--------|-------------|-------|
+| 04 | [**Neural Networks**](04_neural_networks/) | `nn.Module` lifecycle, all layer types (linear, conv, norm, attention), losses, hooks, save/load | 1 README + 5 scripts |
+| 05 | [**Optimizers**](05_optimizers/) | SGD, Adam, AdamW, Muon, Adafactor, all LR schedulers, gradient clipping | 1 README + 3 scripts |
+| 06 | [**Data Loading**](06_data_loading/) | `Dataset`, `DataLoader`, custom collate, samplers, MixUp, CutMix, augmentation | 1 README + 4 scripts |
 
-### Part IV: Scale & Deploy (Modules 10-11)
+### Part III: Training & Performance
 
-| Module | Topic | What You'll Learn |
-|--------|-------|-------------------|
-| **[10_distributed](10_distributed/)** | Distributed Training | DDP, FSDP2, DeviceMesh, DTensor, Tensor/Pipeline Parallelism |
-| **[11_export_deploy](11_export_deploy/)** | Deployment | torch.export, AOTInductor, NativeRT, ONNX, dynamic shapes |
+> *Put it all together. Train models fast.*
 
-### Part V: Mastery (Modules 12-14)
+| # | Module | Description | Files |
+|---|--------|-------------|-------|
+| 07 | [**Training Pipelines**](07_training/) | Complete training loops, mixed precision (AMP), gradient accumulation/checkpointing, transfer learning, EMA | 1 README + 5 scripts |
+| 08 | [**torch.compile**](08_torch_compile/) | Dynamo, AOTAutograd, Inductor — modes, graph breaks, dynamic shapes, custom backends, debugging | 1 README + 5 scripts |
+| 09 | [**Attention Mechanisms**](09_attention/) | SDPA, Flash Attention, multi-head attention, FlexAttention, Transformer blocks, RoPE, KV cache | 1 README + 5 scripts |
 
-| Module | Topic | What You'll Learn |
-|--------|-------|-------------------|
-| **[12_model_architectures](12_model_architectures/)** | Architectures | ResNet, Transformer, GPT, ViT, VAE — complete implementations |
-| **[13_advanced](13_advanced/)** | Advanced Features | Functorch, custom ops, quantization, profiling, sparse tensors, debugging |
-| **[14_testing](14_testing/)** | Testing & Benchmarking | PyTorch TestCase, reproducibility, benchmarking |
+### Part IV: Scale & Deploy
+
+> *Go from single-GPU to production.*
+
+| # | Module | Description | Files |
+|---|--------|-------------|-------|
+| 10 | [**Distributed Training**](10_distributed/) | DDP, FSDP2 (`fully_shard`), DeviceMesh, DTensor, Tensor Parallel, Pipeline Parallel, DCP | 1 README + 5 scripts |
+| 11 | [**Export & Deployment**](11_export_deploy/) | `torch.export`, dynamic shapes, AOTInductor, NativeRT, ONNX, PT2 Archive | 1 README + 4 scripts |
+
+### Part V: Mastery
+
+> *Build real architectures. Use advanced features. Write proper tests.*
+
+| # | Module | Description | Files |
+|---|--------|-------------|-------|
+| 12 | [**Model Architectures**](12_model_architectures/) | ResNet, Transformer, GPT (with generation), Vision Transformer (ViT), VAE — complete implementations | 1 README + 5 scripts |
+| 13 | [**Advanced Features**](13_advanced/) | Functorch (`vmap`, `grad`), custom operators, quantization, profiling, sparse tensors, debugging | 1 README + 6 scripts |
+| 14 | [**Testing & Benchmarking**](14_testing/) | PyTorch `TestCase`, reproducibility, `torch.utils.benchmark` | 1 README + 3 scripts |
 
 ---
 
 ## Recommended Learning Path
 
-### Week 1-2: Core Fundamentals
 ```
-01_foundations → 02_tensors → 03_autograd
+ Week 1-2                    Week 3-4                     Week 5-6
+┌──────────────────┐   ┌──────────────────────┐   ┌──────────────────────┐
+│  01 Foundations   │   │  04 Neural Networks  │   │  07 Training         │
+│  02 Tensors      │──▶│  05 Optimizers       │──▶│  08 torch.compile    │
+│  03 Autograd     │   │  06 Data Loading     │   │  09 Attention        │
+└──────────────────┘   └──────────────────────┘   └──────────────────────┘
+                                                            │
+                            Week 9-10                Week 7-8│
+                       ┌──────────────────────┐   ┌─────────▼────────────┐
+                       │  12 Architectures    │   │  10 Distributed      │
+                       │  13 Advanced         │◀──│  11 Export & Deploy  │
+                       │  14 Testing          │   └──────────────────────┘
+                       └──────────────────────┘
 ```
-Understand tensors, operations, and how gradients work.
-
-### Week 3-4: Building Models
-```
-04_neural_networks → 05_optimizers → 06_data_loading
-```
-Learn all the building blocks: layers, losses, optimizers, data pipelines.
-
-### Week 5-6: Training & Performance
-```
-07_training → 08_torch_compile → 09_attention
-```
-Master training loops, compilation for speed, and attention mechanisms.
-
-### Week 7-8: Scale & Production
-```
-10_distributed → 11_export_deploy
-```
-Scale to multiple GPUs and deploy models.
-
-### Week 9-10: Expertise
-```
-12_model_architectures → 13_advanced → 14_testing
-```
-Build real architectures, use advanced features, write proper tests.
 
 ---
 
@@ -100,43 +116,72 @@ pip install torch torchvision torchaudio
 
 # Start with Module 01
 cd 01_foundations
-cat README.md            # Read the theory
-python math_with_pytorch.py  # Run the examples
+python math_with_pytorch.py
 
-# Progress through modules sequentially
+# Progress through modules
 cd ../02_tensors
-cat README.md
 python creation_and_properties.py
-# ... and so on
+python operations.py
+python broadcasting.py
 ```
 
-Most examples run on **CPU only** — no GPU required. Examples that need GPU/multi-GPU are clearly marked.
+> Most examples run on **CPU only** — no GPU required.
+> Examples that need GPU or multi-GPU are clearly marked.
 
 ---
 
-## What's Covered (Key Features)
+## What's Covered
 
 ### Core PyTorch
-- Tensors, Autograd, nn.Module, Optimizers, DataLoaders
+Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 
 ### Modern PyTorch (2.x+)
-- `torch.compile` (Dynamo + Inductor)
-- FlexAttention API
-- FSDP2 (`fully_shard`)
-- DTensor and DeviceMesh
-- Pipeline Parallelism (ZeroBubble, DualPipeV)
-- `torch.export` and PT2 Archive
-- NativeRT inference engine
-- Compiled Autograd
-- RMSNorm, SiLU, Flash Attention
-- Float8/BFloat16 dtypes
+| Feature | Module |
+|---------|--------|
+| `torch.compile` (Dynamo + Inductor) | [08](08_torch_compile/) |
+| FlexAttention | [09](09_attention/) |
+| FSDP2 (`fully_shard`) | [10](10_distributed/) |
+| DTensor & DeviceMesh | [10](10_distributed/) |
+| Pipeline Parallelism (ZeroBubble, DualPipeV) | [10](10_distributed/) |
+| `torch.export` & PT2 Archive | [11](11_export_deploy/) |
+| NativeRT C++ inference engine | [11](11_export_deploy/) |
+| Compiled Autograd | [03](03_autograd/), [08](08_torch_compile/) |
+| RMSNorm, SiLU, Flash Attention | [04](04_neural_networks/), [09](09_attention/) |
+| Functorch (`vmap`, `grad`, `jacrev`) | [13](13_advanced/) |
 
-### Architecture Implementations
-- ResNet (BasicBlock + Bottleneck)
-- Transformer (Encoder-Decoder)
-- GPT (Decoder-only with generation)
-- Vision Transformer (ViT)
-- VAE (with reparameterization trick)
+### Complete Architecture Implementations
+| Architecture | Description | Module |
+|-------------|-------------|--------|
+| **ResNet** | BasicBlock + Bottleneck, ResNet-18/34/50/101 | [12](12_model_architectures/) |
+| **Transformer** | Full encoder-decoder with cross-attention | [12](12_model_architectures/) |
+| **GPT** | Decoder-only with temperature, top-k, top-p generation | [12](12_model_architectures/) |
+| **ViT** | Vision Transformer with patch embedding | [12](12_model_architectures/) |
+| **VAE** | Variational Autoencoder with reparameterization trick | [12](12_model_architectures/) |
+
+---
+
+## Repository Stats
+
+```
+14 modules | 14 detailed READMEs | 55+ Python scripts | 30,000+ lines of content
+```
+
+| Module | README Lines | Python Files | Key Topics |
+|--------|:-----------:|:------------:|------------|
+| 01 Foundations | 640 | 1 | Math, installation, philosophy |
+| 02 Tensors | 930 | 5 | Creation, ops, indexing, broadcasting |
+| 03 Autograd | 833 | 4 | Gradients, custom functions, Jacobians |
+| 04 Neural Networks | 1,003 | 5 | All layers, losses, hooks, save/load |
+| 05 Optimizers | 469 | 3 | SGD, Adam, schedulers |
+| 06 Data Loading | 559 | 4 | Dataset, DataLoader, augmentation |
+| 07 Training | 832 | 5 | AMP, transfer learning, EMA |
+| 08 torch.compile | 526 | 5 | Dynamo, Inductor, graph breaks |
+| 09 Attention | 495 | 5 | SDPA, FlexAttention, RoPE |
+| 10 Distributed | 1,322 | 5 | DDP, FSDP2, TP, PP, DCP |
+| 11 Export & Deploy | 836 | 4 | torch.export, AOTInductor, NativeRT |
+| 12 Architectures | 646 | 5 | ResNet, GPT, ViT, VAE |
+| 13 Advanced | 624 | 6 | functorch, profiling, custom ops |
+| 14 Testing | 363 | 3 | TestCase, reproducibility, benchmarks |
 
 ---
 
@@ -144,13 +189,25 @@ Most examples run on **CPU only** — no GPU required. Examples that need GPU/mu
 
 ```
 Python >= 3.10
-PyTorch >= 2.0 (most examples)
+PyTorch >= 2.0
 ```
 
 ```bash
 pip install torch torchvision torchaudio
 ```
 
+---
+
+## Contributing
+
+This is a personal learning reference. If you find errors or have suggestions, feel free to open an issue.
+
 ## License
 
-Personal reference compilation. PyTorch is BSD-licensed.
+This guide is a personal compilation for educational purposes. PyTorch itself is BSD-licensed.
+
+---
+
+<p align="center">
+  <i>Built with PyTorch v2.13+ — Updated June 2026</i>
+</p>
