@@ -82,6 +82,14 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 13 | [**Advanced Features**](13_advanced/) | Functorch (`vmap`, `grad`), custom operators, quantization, profiling, sparse tensors, debugging | 1 README + 6 scripts |
 | 14 | [**Testing & Benchmarking**](14_testing/) | PyTorch `TestCase`, reproducibility, `torch.utils.benchmark` | 1 README + 3 scripts |
 
+### Bonus: Practical Deep Dives
+
+> *The hidden toolkit most tutorials never teach. Updated incrementally.*
+
+| # | Module | Description | Files |
+|---|--------|-------------|-------|
+| 15 | [**Practical Utilities**](15_practical_utilities/) | Weight parametrization, pruning, spectral/weight norm, sequence packing, nested tensors, Conv-BN fusion | 1 README + 4 scripts |
+
 ---
 
 ## Recommended Learning Path
@@ -182,6 +190,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 12 Architectures | 646 | 5 | ResNet, GPT, ViT, VAE |
 | 13 Advanced | 624 | 6 | functorch, profiling, custom ops |
 | 14 Testing | 363 | 3 | TestCase, reproducibility, benchmarks |
+| **15 Practical Utilities** | **350+** | **4** | **Parametrize, pruning, nested tensors, fusion** |
 
 ---
 
