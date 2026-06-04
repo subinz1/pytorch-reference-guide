@@ -8,26 +8,30 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.13%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-14-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-16-blue" alt="Modules"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-55%2B-green" alt="Examples"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-30%2C000%2B-orange" alt="Lines"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-15-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-40%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>14 modules</strong>.<br>
-  Each module contains detailed explanations, theory, formulas, and fully runnable Python examples.
+  A structured, self-contained PyTorch course organized into <strong>16 modules</strong> and <strong>15 interactive notebooks</strong>.<br>
+  Each module contains detailed explanations, theory, formulas, runnable Python scripts, and Jupyter playbooks.
 </p>
 
 ---
 
 ## About This Guide
 
-This repository takes someone with **basic Python knowledge** and makes them a **proficient PyTorch developer**. Every module contains:
+This repository takes someone with **basic Python knowledge** and makes them a **proficient PyTorch developer**. Three ways to learn:
 
 - **`README.md`** — In-depth explanations with theory, math formulas, diagrams, and inline code
 - **Python scripts** — Self-contained, runnable examples (`python filename.py`) with detailed output
+- **Jupyter notebooks** — Interactive playbooks with markdown + code cells, exercises, and visualizations
 
 **Updated for PyTorch 2.13+ (June 2026)** — includes modern features like `torch.compile`, FlexAttention, FSDP2, and more.
+
+> **New modules added daily** — see the [Bonus: Practical Deep Dives](#bonus-practical-deep-dives) section for the latest additions.
 
 ---
 
@@ -139,12 +143,10 @@ The [`notebooks/`](notebooks/) folder contains **15 interactive playbooks** — 
 
 ## Quick Start
 
+### Option A: Read & Run Scripts
 ```bash
-# Clone the repo
 git clone https://github.com/subinz1/pytorch-reference-guide.git
 cd pytorch-reference-guide
-
-# Install PyTorch
 pip install torch torchvision torchaudio
 
 # Start with Module 01
@@ -154,9 +156,17 @@ python math_with_pytorch.py
 # Progress through modules
 cd ../02_tensors
 python creation_and_properties.py
-python operations.py
-python broadcasting.py
 ```
+
+### Option B: Interactive Notebooks (Recommended for Beginners)
+```bash
+pip install jupyter
+cd notebooks
+jupyter notebook 01_tensors_masterclass.ipynb
+```
+
+### Option C: Google Colab
+Upload any notebook from the `notebooks/` folder to [Google Colab](https://colab.research.google.com/) and run it with a free GPU.
 
 > Most examples run on **CPU only** — no GPU required.
 > Examples that need GPU or multi-GPU are clearly marked.
@@ -232,6 +242,23 @@ pip install torch torchvision torchaudio
 ```
 
 ---
+
+## Daily Updates Roadmap
+
+This guide grows incrementally. Upcoming topics:
+
+| Day | Topic | Status |
+|-----|-------|--------|
+| Day 1 | Practical Utilities (parametrize, pruning, fusion) | Done |
+| Day 2 | Selective Activation Checkpointing (SAC) | Done |
+| Day 3 | `torch.compile` Decorators Deep Dive | Planned |
+| Day 4 | `torch.package` — Model Packaging | Planned |
+| Day 5 | `__torch_function__` & Tensor Subclassing | Planned |
+| Day 6 | `torch.backends` Performance Tuning | Planned |
+| Day 7 | CUDA Graphs | Planned |
+| Day 8 | LLM Training Recipes (RoPE, KV Cache) | Planned |
+| Day 9 | `torch.fx` Graph Transforms | Planned |
+| Day 10 | `torch.masked` (MaskedTensor) | Planned |
 
 ## Contributing
 
