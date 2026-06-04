@@ -89,6 +89,31 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | # | Module | Description | Files |
 |---|--------|-------------|-------|
 | 15 | [**Practical Utilities**](15_practical_utilities/) | Weight parametrization, pruning, spectral/weight norm, sequence packing, nested tensors, Conv-BN fusion | 1 README + 4 scripts |
+| 16 | [**Activation Checkpointing**](16_activation_checkpointing/) | Basic checkpointing, checkpoint_sequential, Selective Activation Checkpointing (SAC), policies | 1 README + 1 script |
+
+### Interactive Notebooks
+
+> *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
+
+The [`notebooks/`](notebooks/) folder contains **15 interactive playbooks** — one per module:
+
+| Notebook | Topic |
+|----------|-------|
+| `01_tensors_masterclass.ipynb` | Tensor creation, operations, broadcasting, views |
+| `02_autograd_from_scratch.ipynb` | Gradients, computation graphs, custom functions |
+| `03_neural_networks_playbook.ipynb` | nn.Module, layers, losses, save/load |
+| `04_training_complete_guide.ipynb` | Training loops, AMP, checkpointing, plotting |
+| `05_optimizers_and_schedulers.ipynb` | Optimizer comparison, LR schedulers visualized |
+| `06_data_loading_pipeline.ipynb` | Dataset, DataLoader, collate, augmentation |
+| `07_attention_and_transformers.ipynb` | SDPA, MHA, FlexAttention, Transformer blocks |
+| `08_torch_compile_masterclass.ipynb` | Compile modes, graph breaks, dynamic shapes |
+| `09_model_architectures.ipynb` | Build ResNet, GPT, ViT from scratch |
+| `10_distributed_overview.ipynb` | DDP, FSDP2, DeviceMesh, parallelism strategies |
+| `11_export_and_deploy.ipynb` | torch.export, dynamic shapes, deployment paths |
+| `12_advanced_features.ipynb` | Functorch, custom ops, sparse, FFT, profiling |
+| `13_testing_and_reproducibility.ipynb` | Seeds, deterministic mode, benchmarking |
+| `14_practical_utilities.ipynb` | Parametrize, pruning, packing, fusion |
+| `15_selective_checkpointing.ipynb` | Activation checkpointing, SAC, memory tradeoffs |
 
 ---
 
@@ -171,7 +196,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-14 modules | 14 detailed READMEs | 55+ Python scripts | 30,000+ lines of content
+16 modules | 16 detailed READMEs | 55+ Python scripts | 15 Jupyter notebooks | 30,000+ lines of content
 ```
 
 | Module | README Lines | Python Files | Key Topics |
@@ -191,6 +216,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 13 Advanced | 624 | 6 | functorch, profiling, custom ops |
 | 14 Testing | 363 | 3 | TestCase, reproducibility, benchmarks |
 | **15 Practical Utilities** | **350+** | **4** | **Parametrize, pruning, nested tensors, fusion** |
+| **16 Activation Checkpointing** | **200+** | **1** | **SAC, memory/compute tradeoffs** |
 
 ---
 
