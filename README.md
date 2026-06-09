@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.13%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-17-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-18-blue" alt="Modules"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-55%2B-green" alt="Examples"></a>
   <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-15-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-40%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>17 modules</strong> and <strong>15 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>18 modules</strong> and <strong>15 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and Jupyter playbooks.
 </p>
 
@@ -95,6 +95,7 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 15 | [**Practical Utilities**](15_practical_utilities/) | Weight parametrization, pruning, spectral/weight norm, sequence packing, nested tensors, Conv-BN fusion | 1 README + 4 scripts |
 | 16 | [**Activation Checkpointing**](16_activation_checkpointing/) | Basic checkpointing, checkpoint_sequential, Selective Activation Checkpointing (SAC), policies | 1 README + 1 script |
 | 17 | [**Compile Decorators & Control**](17_compile_decorators/) | Stances, disable, allow_in_graph, substitute_in_graph, mark_dynamic, explain, TORCH_LOGS, upstream updates | 1 README + 1 script |
+| 18 | [**torch.package**](18_torch_package/) | PackageExporter, PackageImporter, intern/extern/mock/deny, hermetic model archives, comparison with torch.save/export | 1 README + 1 script |
 
 ### Interactive Notebooks
 
@@ -207,7 +208,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-17 modules | 17 detailed READMEs | 55+ Python scripts | 15 Jupyter notebooks | 30,000+ lines of content
+18 modules | 18 detailed READMEs | 55+ Python scripts | 15 Jupyter notebooks | 30,000+ lines of content
 ```
 
 | Module | README Lines | Python Files | Key Topics |
@@ -253,7 +254,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 1 | Practical Utilities (parametrize, pruning, fusion) | Done |
 | Day 2 | Selective Activation Checkpointing (SAC) | Done |
 | Day 3 | `torch.compile` Decorators Deep Dive | **Done** |
-| Day 4 | `torch.package` — Model Packaging | Planned |
+| Day 4 | `torch.package` — Model Packaging | **Done** |
 | Day 5 | `__torch_function__` & Tensor Subclassing | Planned |
 | Day 6 | `torch.backends` Performance Tuning | Planned |
 | Day 7 | CUDA Graphs | Planned |
