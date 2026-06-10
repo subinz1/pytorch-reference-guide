@@ -1,3 +1,28 @@
+<div align="center">
+
+[← Previous Module](../06_data_loading/) | [🏠 Home](../README.md) | [Next Module →](../08_torch_compile/)
+
+</div>
+
+---
+
+> **Module 07** of the PyTorch Complete Learning Guide
+> **Prerequisites:** Modules 04, 05, 06
+> **Time to complete:** ~4 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `basic_training_loop.py` | Basic training loop — complete annotated example |
+| `mixed_precision.py` | Mixed precision training — AMP with float16 and bfloat16 |
+| `gradient_techniques.py` | Gradient techniques — accumulation, checkpointing, and clipping |
+| `transfer_learning.py` | Transfer learning — freeze/unfreeze and differential learning rates |
+| `regularization.py` | Regularization techniques — EMA, label smoothing, weight decay |
+
+---
+
 # Module 07: The Complete Training Guide
 
 ## Overview
@@ -830,3 +855,13 @@ def train(model, train_loader, val_loader, config):
 | EMA                    | Smoother final model        | 2x params     | Negligible   |
 | Label smoothing        | Prevent overconfidence      | None          | None         |
 | Early stopping         | Prevent overfitting         | None          | Saves time   |
+
+---
+
+<div align="center">
+
+[← Previous Module](../06_data_loading/) | [🏠 Home](../README.md) | [Next Module →](../08_torch_compile/)
+
+**[📓 Open Notebook](../notebooks/04_training_complete_guide.ipynb)** — Interactive version of this module
+
+</div>

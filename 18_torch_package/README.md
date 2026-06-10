@@ -1,3 +1,24 @@
+<div align="center">
+
+[← Previous Module](../17_compile_decorators/) | [🏠 Home](../README.md) | [Next Module →](../19_torch_function_dispatch/)
+
+</div>
+
+---
+
+> **Module 18** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 04 — Neural Networks](../04_neural_networks/)
+> **Time to complete:** ~1 hour
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide |
+| `packaging_models.py` | torch.package — bundling models and Python source code into hermetic archives |
+
+---
+
 # Module 18: torch.package — Self-Contained Model Packaging
 
 *Day 4 of the incremental learning series*
@@ -329,3 +350,13 @@ Recent PyTorch main commits (since last update):
 - Source: `torch/package/package_exporter.py`, `torch/package/package_importer.py`
 - PyTorch docs: [torch.package](https://pytorch.org/docs/stable/package.html)
 - Tutorial: [Loading a TorchScript Model in C++](https://pytorch.org/tutorials/advanced/cpp_export.html) (comparison)
+
+---
+
+<div align="center">
+
+[← Previous Module](../17_compile_decorators/) | [🏠 Home](../README.md) | [Next Module →](../19_torch_function_dispatch/)
+
+**No dedicated notebook** — see [Practical Workflow](#9-practical-workflow) above
+
+</div>

@@ -1,3 +1,24 @@
+<div align="center">
+
+[← Previous Module](../16_activation_checkpointing/) | [🏠 Home](../README.md) | [Next Module →](../18_torch_package/)
+
+</div>
+
+---
+
+> **Module 17** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 08 — torch.compile](../08_torch_compile/)
+> **Time to complete:** ~1 hour
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide |
+| `compile_control.py` | torch.compile decorators & control APIs — fine-grained control over what gets compiled and how |
+
+---
+
 # Module 17: torch.compile Decorators & Control APIs
 
 *Day 3 of the incremental learning series*
@@ -222,3 +243,13 @@ Refactored Triton template heuristics into `torch/_inductor/heuristics/`.
 | `comptime.breakpoint()` | Debug during compilation |
 | `CompileCounter` | Count compilations in tests |
 | `EagerAndRecordGraphs` | Inspect captured FX graphs |
+
+---
+
+<div align="center">
+
+[← Previous Module](../16_activation_checkpointing/) | [🏠 Home](../README.md) | [Next Module →](../18_torch_package/)
+
+**No dedicated notebook** — covered in [Module 08 notebook](../notebooks/08_torch_compile_masterclass.ipynb)
+
+</div>

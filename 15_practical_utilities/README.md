@@ -1,3 +1,27 @@
+<div align="center">
+
+[← Previous Module](../14_testing/) | [🏠 Home](../README.md) | [Next Module →](../16_activation_checkpointing/)
+
+</div>
+
+---
+
+> **Module 15** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 04 — Neural Networks](../04_neural_networks/)
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide |
+| `parametrization.py` | Weight parametrization — enforcing constraints like symmetry, orthogonality, and positivity on parameters |
+| `pruning.py` | Model pruning — making neural networks smaller by removing weights |
+| `sequence_packing_and_nested.py` | Sequence packing & nested tensors — efficient variable-length processing |
+| `conv_bn_fusion.py` | Conv-BN fusion & inference optimization utilities |
+
+---
+
 # Module 15: Practical PyTorch Utilities
 
 ## The Hidden Toolkit Most Tutorials Never Teach
@@ -430,3 +454,13 @@ linear = skip_init(nn.Linear, 10000, 10000)
 - **`torch.nn.utils.parametrize` docs**: [pytorch.org/docs/stable/generated/torch.nn.utils.parametrize.register_parametrization](https://pytorch.org/docs/stable/generated/torch.nn.utils.parametrize.register_parametrization.html)
 - **Pruning tutorial**: [pytorch.org/tutorials/intermediate/pruning_tutorial](https://pytorch.org/tutorials/intermediate/pruning_tutorial.html)
 - **NestedTensor**: [pytorch.org/docs/stable/nested.html](https://pytorch.org/docs/stable/nested.html)
+
+---
+
+<div align="center">
+
+[← Previous Module](../14_testing/) | [🏠 Home](../README.md) | [Next Module →](../16_activation_checkpointing/)
+
+**[📓 Open Notebook](../notebooks/14_practical_utilities.ipynb)** — Interactive version
+
+</div>

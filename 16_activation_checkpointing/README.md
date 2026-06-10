@@ -1,3 +1,24 @@
+<div align="center">
+
+[← Previous Module](../15_practical_utilities/) | [🏠 Home](../README.md) | [Next Module →](../17_compile_decorators/)
+
+</div>
+
+---
+
+> **Module 16** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 07 — Training](../07_training/), [Module 08 — torch.compile](../08_torch_compile/)
+> **Time to complete:** ~1 hour
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide |
+| `checkpointing_basics.py` | Activation checkpointing — trading memory for compute with basic and selective checkpointing |
+
+---
+
 # Module 16: Activation Checkpointing — Trading Memory for Compute
 
 *Day 2 of the incremental learning series*
@@ -258,3 +279,13 @@ Savings = (num_layers - 2) / num_layers ≈ 90%+ for 24+ layer models
 - [PyTorch Activation Checkpointing Tutorial](https://pytorch.org/docs/stable/checkpoint.html)
 - [Selective Activation Checkpointing for torch.compile](https://dev-discuss.pytorch.org/)
 - Source code: `torch/utils/checkpoint.py`
+
+---
+
+<div align="center">
+
+[← Previous Module](../15_practical_utilities/) | [🏠 Home](../README.md) | [Next Module →](../17_compile_decorators/)
+
+**[📓 Open Notebook](../notebooks/15_selective_checkpointing.ipynb)** — Interactive version
+
+</div>

@@ -1,3 +1,27 @@
+<div align="center">
+
+[← Previous Module](../02_tensors/) | [🏠 Home](../README.md) | [Next Module →](../04_neural_networks/)
+
+</div>
+
+---
+
+> **Module 03** of the PyTorch Complete Learning Guide
+> **Prerequisites:** Module 02
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `gradient_basics.py` | Gradient basics |
+| `computation_graph.py` | Computation graph |
+| `custom_functions.py` | Custom autograd functions |
+| `higher_order_gradients.py` | Higher-order gradients, Jacobians, and Hessians |
+
+---
+
 # Module 03: Autograd — Automatic Differentiation
 
 ## Table of Contents
@@ -831,3 +855,13 @@ Run the example files to see these concepts in action:
 - `computation_graph.py` — visualizing and understanding the computation graph
 - `custom_functions.py` — writing custom autograd functions
 - `higher_order_gradients.py` — second derivatives, Jacobians, and Hessians
+
+---
+
+<div align="center">
+
+[← Previous Module](../02_tensors/) | [🏠 Home](../README.md) | [Next Module →](../04_neural_networks/)
+
+**[📓 Open Notebook](../notebooks/02_autograd_from_scratch.ipynb)** — Interactive version of this module
+
+</div>

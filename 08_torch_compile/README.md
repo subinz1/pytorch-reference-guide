@@ -1,3 +1,28 @@
+<div align="center">
+
+[← Previous Module](../07_training/) | [🏠 Home](../README.md) | [Next Module →](../09_attention/)
+
+</div>
+
+---
+
+> **Module 08** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 04 — Neural Networks](../04_neural_networks/), [Module 07 — Training](../07_training/)
+> **Time to complete:** ~3 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `compile_basics.py` | torch.compile basics — fundamental usage and getting started |
+| `compilation_modes.py` | Compilation modes — default, reduce-overhead, max-autotune |
+| `graph_breaks.py` | Graph breaks — examples, causes, and fixes |
+| `dynamic_shapes.py` | Dynamic shapes — handling varying input sizes |
+| `custom_backend.py` | Custom backends — writing your own torch.compile backend |
+
+---
+
 # Module 08: torch.compile — The Complete Guide
 
 ## Overview
@@ -524,3 +549,13 @@ explanation = torch._dynamo.explain(model)(sample_input)
 # Step 3: Optimize
 model = torch.compile(model, mode="max-autotune", fullgraph=True)
 ```
+
+---
+
+<div align="center">
+
+[← Previous Module](../07_training/) | [🏠 Home](../README.md) | [Next Module →](../09_attention/)
+
+**[📓 Open Notebook](../notebooks/08_torch_compile_masterclass.ipynb)** — Interactive version of this module
+
+</div>

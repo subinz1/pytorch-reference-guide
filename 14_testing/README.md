@@ -1,3 +1,26 @@
+<div align="center">
+
+[← Previous Module](../13_advanced/) | [🏠 Home](../README.md) | [Next Module →](../15_practical_utilities/)
+
+</div>
+
+---
+
+> **Module 14** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 03 — Autograd](../03_autograd/)
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `test_example.py` | Example test file using PyTorch's TestCase |
+| `reproducibility.py` | Reproducibility in PyTorch — complete setup for reproducible experiments |
+| `benchmarking.py` | Benchmarking with torch.utils.benchmark |
+
+---
+
 # Module 14: Testing and Reproducibility
 
 Writing tests and ensuring reproducibility are essential skills that separate
@@ -361,3 +384,13 @@ def test_model_output_shape(self):
 - `test_example.py` — Complete test file using PyTorch's TestCase
 - `reproducibility.py` — Full reproducibility setup and verification
 - `benchmarking.py` — Benchmarking with torch.utils.benchmark
+
+---
+
+<div align="center">
+
+[← Previous Module](../13_advanced/) | [🏠 Home](../README.md) | [Next Module →](../15_practical_utilities/)
+
+**[📓 Open Notebook](../notebooks/13_testing_and_reproducibility.ipynb)** — Interactive version of this module
+
+</div>

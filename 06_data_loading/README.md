@@ -1,3 +1,27 @@
+<div align="center">
+
+[← Previous Module](../05_optimizers/) | [🏠 Home](../README.md) | [Next Module →](../07_training/)
+
+</div>
+
+---
+
+> **Module 06** of the PyTorch Complete Learning Guide
+> **Prerequisites:** Module 02
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `dataset_basics.py` | Dataset basics |
+| `custom_datasets.py` | Custom datasets |
+| `dataloader_advanced.py` | Advanced DataLoader features |
+| `augmentation.py` | Data augmentation patterns |
+
+---
+
 # Module 06: Data Loading in PyTorch
 
 ## Table of Contents
@@ -557,3 +581,13 @@ from tqdm import tqdm
 for batch in tqdm(loader, desc="Training"):
     ...
 ```
+
+---
+
+<div align="center">
+
+[← Previous Module](../05_optimizers/) | [🏠 Home](../README.md) | [Next Module →](../07_training/)
+
+**[📓 Open Notebook](../notebooks/06_data_loading_pipeline.ipynb)** — Interactive version of this module
+
+</div>

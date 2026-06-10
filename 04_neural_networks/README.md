@@ -1,3 +1,28 @@
+<div align="center">
+
+[← Previous Module](../03_autograd/) | [🏠 Home](../README.md) | [Next Module →](../05_optimizers/)
+
+</div>
+
+---
+
+> **Module 04** of the PyTorch Complete Learning Guide
+> **Prerequisites:** Modules 02, 03
+> **Time to complete:** ~4 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `module_basics.py` | Neural network basics — complete nn.Module tutorial |
+| `common_layers.py` | Common neural network layers |
+| `loss_functions.py` | Loss functions — complete guide |
+| `weight_initialization.py` | Weight initialization strategies |
+| `hooks_and_state_dict.py` | Hooks and state dict — advanced module features |
+
+---
+
 # Module 04: Neural Networks in PyTorch
 
 ## Table of Contents
@@ -1001,3 +1026,13 @@ model.load_state_dict(new_state_dict)
 | Kaiming init | Default for ReLU networks |
 | Hooks | Inspect/modify without changing model code |
 | state_dict | Standard save/load mechanism |
+
+---
+
+<div align="center">
+
+[← Previous Module](../03_autograd/) | [🏠 Home](../README.md) | [Next Module →](../05_optimizers/)
+
+**[📓 Open Notebook](../notebooks/03_neural_networks_playbook.ipynb)** — Interactive version of this module
+
+</div>

@@ -1,3 +1,28 @@
+<div align="center">
+
+[← Previous Module](../08_torch_compile/) | [🏠 Home](../README.md) | [Next Module →](../10_distributed/)
+
+</div>
+
+---
+
+> **Module 09** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 04 — Neural Networks](../04_neural_networks/), [Module 07 — Training](../07_training/)
+> **Time to complete:** ~3 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `manual_attention.py` | Manual attention — implementing attention from scratch with shape annotations |
+| `sdpa_and_backends.py` | SDPA and backend control — PyTorch's optimized attention |
+| `multihead_attention.py` | Multi-head attention — complete implementation with shape tracking |
+| `transformer_block.py` | Transformer block — full implementation with RMSNorm/LayerNorm |
+| `flex_attention_patterns.py` | FlexAttention patterns — custom attention with compiled kernels |
+
+---
+
 # Module 09: Attention Mechanisms — From Scratch to FlexAttention
 
 ## Overview
@@ -493,3 +518,13 @@ The KV cache makes generation ~10x faster for long sequences.
 | FlexAttention        | Custom patterns, fused               | score_mod/mask_mod      |
 | RoPE                 | Relative position encoding           | 2D rotations            |
 | KV Cache             | Fast autoregressive generation       | Cached K, V tensors     |
+
+---
+
+<div align="center">
+
+[← Previous Module](../08_torch_compile/) | [🏠 Home](../README.md) | [Next Module →](../10_distributed/)
+
+**[📓 Open Notebook](../notebooks/07_attention_and_transformers.ipynb)** — Interactive version of this module
+
+</div>

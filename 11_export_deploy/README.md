@@ -1,3 +1,27 @@
+<div align="center">
+
+[← Previous Module](../10_distributed/) | [🏠 Home](../README.md) | [Next Module →](../12_model_architectures/)
+
+</div>
+
+---
+
+> **Module 11** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 08 — torch.compile](../08_torch_compile/)
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `export_basics.py` | torch.export basics — fundamentals of exporting models |
+| `dynamic_shapes.py` | Dynamic shapes with torch.export — the Dim API for variable input sizes |
+| `export_inspection.py` | Exported graph inspection — examining computation graphs after export |
+| `save_and_load.py` | Saving and loading exported models (PT2 archives) |
+
+---
+
 # Module 11: Export and Deployment
 
 ## Table of Contents
@@ -834,3 +858,13 @@ onnx_program.save("model.onnx")
 | `dynamic_shapes.py` | Dim API, multiple dynamic dims | `python dynamic_shapes.py` |
 | `export_inspection.py` | Inspect the graph, list ops | `python export_inspection.py` |
 | `save_and_load.py` | Save/load PT2 archives | `python save_and_load.py` |
+
+---
+
+<div align="center">
+
+[← Previous Module](../10_distributed/) | [🏠 Home](../README.md) | [Next Module →](../12_model_architectures/)
+
+**[📓 Open Notebook](../notebooks/11_export_and_deploy.ipynb)** — Interactive version of this module
+
+</div>

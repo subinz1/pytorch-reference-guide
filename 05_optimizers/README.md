@@ -1,3 +1,26 @@
+<div align="center">
+
+[← Previous Module](../04_neural_networks/) | [🏠 Home](../README.md) | [Next Module →](../06_data_loading/)
+
+</div>
+
+---
+
+> **Module 05** of the PyTorch Complete Learning Guide
+> **Prerequisites:** Module 04
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `optimizer_basics.py` | Optimizer basics |
+| `lr_schedulers.py` | Learning rate schedulers |
+| `optimizer_comparison.py` | Optimizer comparison |
+
+---
+
 # Module 05: Optimizers and Learning Rate Schedulers
 
 ## Table of Contents
@@ -467,3 +490,13 @@ Benefits:
 | ReduceLROnPlateau | Adaptive decay | When you have val metric |
 | Sequential(Linear+Cosine) | Warmup + cosine | Transformers |
 | CosineWarmRestarts | Periodic resets | Long training, exploration |
+
+---
+
+<div align="center">
+
+[← Previous Module](../04_neural_networks/) | [🏠 Home](../README.md) | [Next Module →](../06_data_loading/)
+
+**[📓 Open Notebook](../notebooks/05_optimizers_and_schedulers.ipynb)** — Interactive version of this module
+
+</div>

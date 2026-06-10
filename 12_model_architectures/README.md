@@ -1,3 +1,28 @@
+<div align="center">
+
+[← Previous Module](../11_export_deploy/) | [🏠 Home](../README.md) | [Next Module →](../13_advanced/)
+
+</div>
+
+---
+
+> **Module 12** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 04 — Neural Networks](../04_neural_networks/), [Module 09 — Attention Mechanisms](../09_attention/)
+> **Time to complete:** ~4 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `resnet.py` | ResNet (Residual Network) — complete implementation with BasicBlock and Bottleneck |
+| `transformer.py` | Transformer — complete encoder-decoder implementation |
+| `gpt.py` | GPT (Generative Pre-trained Transformer) — decoder-only implementation |
+| `vit.py` | Vision Transformer (ViT) — complete implementation for image classification |
+| `vae.py` | Variational Autoencoder (VAE) — complete implementation with reparameterization trick |
+
+---
+
 # Module 12: Model Architectures — From Paper to PyTorch
 
 Building real neural network architectures is the bridge between understanding
@@ -644,3 +669,13 @@ of training and can significantly affect convergence speed.
 - `gpt.py` — GPT with generation: greedy, temperature, top-k, top-p sampling
 - `vit.py` — Vision Transformer for image classification
 - `vae.py` — Variational Autoencoder with reparameterization trick and ELBO loss
+
+---
+
+<div align="center">
+
+[← Previous Module](../11_export_deploy/) | [🏠 Home](../README.md) | [Next Module →](../13_advanced/)
+
+**[📓 Open Notebook](../notebooks/09_model_architectures.ipynb)** — Interactive version of this module
+
+</div>

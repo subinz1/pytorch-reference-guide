@@ -1,3 +1,24 @@
+<div align="center">
+
+[← Previous Module](../18_torch_package/) | [🏠 Home](../README.md) | [Next Module →](#)
+
+</div>
+
+---
+
+> **Module 19** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 02 — Tensors](../02_tensors/), [Module 03 — Autograd](../03_autograd/)
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide |
+| `torch_function_examples.py` | __torch_function__ and __torch_dispatch__ — overriding how PyTorch operations work on custom types |
+
+---
+
 # Module 19: `__torch_function__` & `__torch_dispatch__` — Tensor Subclassing
 
 *Day 5 of the incremental learning series*
@@ -320,18 +341,18 @@ print(f"Speed: {speed}")  # 10.44 [m/s]
 
 ```
 User code: torch.nn.functional.relu(x)
-     │
-     ▼
-__torch_function__     ← Python-level, sees relu
-     │
-     ▼
-Decompositions         ← relu → clamp(x, min=0)
-     │
-     ▼
-__torch_dispatch__     ← ATen-level, sees aten.clamp.default
-     │
-     ▼
-C++ dispatcher         ← Routes to CPU/CUDA/etc. kernel
+     |
+     v
+__torch_function__     <- Python-level, sees relu
+     |
+     v
+Decompositions         <- relu -> clamp(x, min=0)
+     |
+     v
+__torch_dispatch__     <- ATen-level, sees aten.clamp.default
+     |
+     v
+C++ dispatcher         <- Routes to CPU/CUDA/etc. kernel
 ```
 
 ---
@@ -355,24 +376,24 @@ Recent PyTorch main commits:
 ## Quick Reference
 
 ```python
-# __torch_function__ — Python-level override (any class)
+# __torch_function__ -- Python-level override (any class)
 class MyType:
     @classmethod
     def __torch_function__(cls, func, types, args, kwargs=None):
         ...
 
-# TorchFunctionMode — scope-based override (no subclass needed)
+# TorchFunctionMode -- scope-based override (no subclass needed)
 class MyMode(TorchFunctionMode):
     def __torch_function__(self, func, types, args=(), kwargs=None):
         ...
 
-# __torch_dispatch__ — ATen-level override (tensor subclass)
+# __torch_dispatch__ -- ATen-level override (tensor subclass)
 class MyTensor(torch.Tensor):
     @classmethod
     def __torch_dispatch__(cls, func, types, args, kwargs=None):
         ...
 
-# TorchDispatchMode — scope-based ATen override
+# TorchDispatchMode -- scope-based ATen override
 class MyDispatchMode(TorchDispatchMode):
     def __torch_dispatch__(self, func, types, args, kwargs=None):
         ...
@@ -385,3 +406,13 @@ class MyDispatchMode(TorchDispatchMode):
 - Source: `torch/overrides.py` (torch_function), `torch/utils/_python_dispatch.py` (torch_dispatch)
 - [Extending PyTorch docs](https://pytorch.org/docs/stable/notes/extending.html)
 - [`__torch_function__` protocol](https://pytorch.org/docs/stable/notes/extending.html#extending-torch)
+
+---
+
+<div align="center">
+
+[← Previous Module](../18_torch_package/) | [🏠 Home](../README.md) | [Next Module →](#)
+
+**No dedicated notebook** — see examples in `torch_function_examples.py`
+
+</div>

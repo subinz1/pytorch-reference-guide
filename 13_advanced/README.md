@@ -1,3 +1,29 @@
+<div align="center">
+
+[← Previous Module](../12_model_architectures/) | [🏠 Home](../README.md) | [Next Module →](../14_testing/)
+
+</div>
+
+---
+
+> **Module 13** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 03 — Autograd](../03_autograd/), [Module 04 — Neural Networks](../04_neural_networks/), [Module 08 — torch.compile](../08_torch_compile/)
+> **Time to complete:** ~3 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `functorch_transforms.py` | Functorch transforms (torch.func): vmap, grad, jacrev, hessian |
+| `per_sample_gradients.py` | Per-sample gradients with vmap + grad |
+| `custom_operators.py` | Custom operators with torch.library |
+| `profiling.py` | Profiling deep dive — profiler usage, timing, and analysis |
+| `sparse_and_complex.py` | Sparse tensors, complex numbers, and FFT |
+| `debugging_tips.py` | Debugging techniques — anomaly detection, gradient flow, and common fixes |
+
+---
+
 # Module 13: Advanced PyTorch Features
 
 This module covers advanced PyTorch capabilities that go beyond standard model
@@ -622,3 +648,13 @@ print(f"Parameters: {total_params:,}, Memory: {memory_gb:.2f} GB")
 - `profiling.py` — Profiler usage, timing, and analysis
 - `sparse_and_complex.py` — Sparse tensors, complex numbers, and FFT
 - `debugging_tips.py` — Anomaly detection, gradient flow checking, and common fixes
+
+---
+
+<div align="center">
+
+[← Previous Module](../12_model_architectures/) | [🏠 Home](../README.md) | [Next Module →](../14_testing/)
+
+**[📓 Open Notebook](../notebooks/12_advanced_features.ipynb)** — Interactive version of this module
+
+</div>

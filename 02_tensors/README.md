@@ -1,3 +1,28 @@
+<div align="center">
+
+[← Previous Module](../01_foundations/) | [🏠 Home](../README.md) | [Next Module →](../03_autograd/)
+
+</div>
+
+---
+
+> **Module 02** of the PyTorch Complete Learning Guide
+> **Prerequisites:** Module 01
+> **Time to complete:** ~3 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `creation_and_properties.py` | Tensor creation and properties |
+| `operations.py` | Tensor operations |
+| `indexing_and_slicing.py` | Indexing and slicing |
+| `broadcasting.py` | Broadcasting |
+| `views_strides_memory.py` | Views, strides, and memory layout |
+
+---
+
 # Module 02: Tensors — The Complete Guide
 
 ## Table of Contents
@@ -928,3 +953,13 @@ Run the example files in this directory to practice:
 - `indexing_and_slicing.py` — all forms of indexing
 - `broadcasting.py` — broadcasting rules with examples
 - `views_strides_memory.py` — views, strides, and memory layout
+
+---
+
+<div align="center">
+
+[← Previous Module](../01_foundations/) | [🏠 Home](../README.md) | [Next Module →](../03_autograd/)
+
+**[📓 Open Notebook](../notebooks/01_tensors_masterclass.ipynb)** — Interactive version of this module
+
+</div>

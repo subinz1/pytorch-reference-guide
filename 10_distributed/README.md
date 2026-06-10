@@ -1,3 +1,28 @@
+<div align="center">
+
+[← Previous Module](../09_attention/) | [🏠 Home](../README.md) | [Next Module →](../11_export_deploy/)
+
+</div>
+
+---
+
+> **Module 10** of the PyTorch Complete Learning Guide
+> **Prerequisites:** [Module 07 — Training](../07_training/), [Module 08 — torch.compile](../08_torch_compile/)
+> **Time to complete:** ~4 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `concepts_and_collectives.py` | Distributed concepts and collective operations (CPU/Gloo) |
+| `ddp_example.py` | DistributedDataParallel (DDP) complete training example |
+| `fsdp2_example.py` | FSDP2 (fully_shard) API patterns |
+| `device_mesh_example.py` | DeviceMesh creation and usage |
+| `parallelism_overview.py` | Parallelism overview: TP, PP, and combined strategies |
+
+---
+
 # Module 10: Distributed Training in PyTorch
 
 ## Table of Contents
@@ -1320,3 +1345,13 @@ for i, (data, target) in enumerate(dataloader):
 | `fsdp2_example.py` | FSDP2 API patterns and setup | `torchrun --nproc_per_node=2 fsdp2_example.py` |
 | `device_mesh_example.py` | DeviceMesh creation and sub-mesh access | `torchrun --nproc_per_node=4 device_mesh_example.py` |
 | `parallelism_overview.py` | API patterns for TP and PP | Reference script showing code patterns |
+
+---
+
+<div align="center">
+
+[← Previous Module](../09_attention/) | [🏠 Home](../README.md) | [Next Module →](../11_export_deploy/)
+
+**[📓 Open Notebook](../notebooks/10_distributed_overview.ipynb)** — Interactive version of this module
+
+</div>

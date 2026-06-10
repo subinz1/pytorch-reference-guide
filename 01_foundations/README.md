@@ -1,3 +1,24 @@
+<div align="center">
+
+[🏠 Home](../README.md) | [Next Module →](../02_tensors/)
+
+</div>
+
+---
+
+> **Module 01** of the PyTorch Complete Learning Guide
+> **Prerequisites:** None (start here)
+> **Time to complete:** ~2 hours
+
+### 📁 Files in This Module
+
+| File | Description |
+|------|-------------|
+| `README.md` | This guide — theory, explanations, and inline examples |
+| `math_with_pytorch.py` | Mathematical foundations with PyTorch |
+
+---
+
 # Module 01: Foundations — PyTorch and the Mathematics of Deep Learning
 
 ## Table of Contents
@@ -638,3 +659,13 @@ linear algebra + calculus, automated by PyTorch's autograd system**.
 
 Run `math_with_pytorch.py` in this directory to see all these concepts in action
 with runnable code.
+
+---
+
+<div align="center">
+
+[🏠 Home](../README.md) | [Next Module →](../02_tensors/)
+
+**[📓 Open Notebook](../notebooks/01_tensors_masterclass.ipynb)** — Interactive version of this module
+
+</div>
