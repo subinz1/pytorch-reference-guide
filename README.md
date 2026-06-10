@@ -10,13 +10,13 @@
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-19-blue" alt="Modules"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-55%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-15-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-40%2C000%2B-orange" alt="Lines"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-19-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-45%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>19 modules</strong> and <strong>15 interactive notebooks</strong>.<br>
-  Each module contains detailed explanations, theory, formulas, runnable Python scripts, and Jupyter playbooks.
+  A structured, self-contained PyTorch course organized into <strong>19 modules</strong> and <strong>19 interactive notebooks</strong>.<br>
+  Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
 ---
@@ -102,25 +102,29 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **15 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **19 interactive playbooks** — one per module:
 
-| Notebook | Topic |
-|----------|-------|
-| `01_tensors_masterclass.ipynb` | Tensor creation, operations, broadcasting, views |
-| `02_autograd_from_scratch.ipynb` | Gradients, computation graphs, custom functions |
-| `03_neural_networks_playbook.ipynb` | nn.Module, layers, losses, save/load |
-| `04_training_complete_guide.ipynb` | Training loops, AMP, checkpointing, plotting |
-| `05_optimizers_and_schedulers.ipynb` | Optimizer comparison, LR schedulers visualized |
-| `06_data_loading_pipeline.ipynb` | Dataset, DataLoader, collate, augmentation |
-| `07_attention_and_transformers.ipynb` | SDPA, MHA, FlexAttention, Transformer blocks |
-| `08_torch_compile_masterclass.ipynb` | Compile modes, graph breaks, dynamic shapes |
-| `09_model_architectures.ipynb` | Build ResNet, GPT, ViT from scratch |
-| `10_distributed_overview.ipynb` | DDP, FSDP2, DeviceMesh, parallelism strategies |
-| `11_export_and_deploy.ipynb` | torch.export, dynamic shapes, deployment paths |
-| `12_advanced_features.ipynb` | Functorch, custom ops, sparse, FFT, profiling |
-| `13_testing_and_reproducibility.ipynb` | Seeds, deterministic mode, benchmarking |
-| `14_practical_utilities.ipynb` | Parametrize, pruning, packing, fusion |
-| `15_selective_checkpointing.ipynb` | Activation checkpointing, SAC, memory tradeoffs |
+| # | Notebook | Topic |
+|---|----------|-------|
+| 01 | [`01_tensors_masterclass.ipynb`](notebooks/01_tensors_masterclass.ipynb) | Tensor creation, operations, broadcasting, views |
+| 02 | [`02_autograd_from_scratch.ipynb`](notebooks/02_autograd_from_scratch.ipynb) | Gradients, computation graphs, custom functions |
+| 03 | [`03_neural_networks_playbook.ipynb`](notebooks/03_neural_networks_playbook.ipynb) | nn.Module, layers, losses, save/load |
+| 04 | [`04_training_complete_guide.ipynb`](notebooks/04_training_complete_guide.ipynb) | Training loops, AMP, checkpointing, plotting |
+| 05 | [`05_optimizers_and_schedulers.ipynb`](notebooks/05_optimizers_and_schedulers.ipynb) | Optimizer comparison, LR schedulers visualized |
+| 06 | [`06_data_loading_pipeline.ipynb`](notebooks/06_data_loading_pipeline.ipynb) | Dataset, DataLoader, collate, augmentation |
+| 07 | [`07_attention_and_transformers.ipynb`](notebooks/07_attention_and_transformers.ipynb) | SDPA, MHA, FlexAttention, Transformer blocks |
+| 08 | [`08_torch_compile_masterclass.ipynb`](notebooks/08_torch_compile_masterclass.ipynb) | Compile modes, graph breaks, dynamic shapes |
+| 09 | [`09_model_architectures.ipynb`](notebooks/09_model_architectures.ipynb) | Build ResNet, GPT, ViT from scratch |
+| 10 | [`10_distributed_overview.ipynb`](notebooks/10_distributed_overview.ipynb) | DDP, FSDP2, DeviceMesh, parallelism strategies |
+| 11 | [`11_export_and_deploy.ipynb`](notebooks/11_export_and_deploy.ipynb) | torch.export, dynamic shapes, deployment paths |
+| 12 | [`12_advanced_features.ipynb`](notebooks/12_advanced_features.ipynb) | Functorch, custom ops, sparse, FFT, profiling |
+| 13 | [`13_testing_and_reproducibility.ipynb`](notebooks/13_testing_and_reproducibility.ipynb) | Seeds, deterministic mode, benchmarking |
+| 14 | [`14_practical_utilities.ipynb`](notebooks/14_practical_utilities.ipynb) | Parametrize, pruning, packing, fusion |
+| 15 | [`15_selective_checkpointing.ipynb`](notebooks/15_selective_checkpointing.ipynb) | Activation checkpointing, SAC, memory tradeoffs |
+| 16 | [`16_activation_checkpointing.ipynb`](notebooks/16_activation_checkpointing.ipynb) | Basic/selective checkpointing, policies, benchmarks |
+| 17 | [`17_compile_decorators.ipynb`](notebooks/17_compile_decorators.ipynb) | Stances, disable, allow_in_graph, mark_dynamic, explain |
+| 18 | [`18_torch_package.ipynb`](notebooks/18_torch_package.ipynb) | PackageExporter/Importer, intern/extern/mock, model shipping |
+| 19 | [`19_torch_function_dispatch.ipynb`](notebooks/19_torch_function_dispatch.ipynb) | `__torch_function__`, `__torch_dispatch__`, modes, custom tensors |
 
 ---
 
@@ -139,6 +143,16 @@ The [`notebooks/`](notebooks/) folder contains **15 interactive playbooks** — 
                        │  12 Architectures    │   │  10 Distributed      │
                        │  13 Advanced         │◀──│  11 Export & Deploy  │
                        │  14 Testing          │   └──────────────────────┘
+                       └──────────┬───────────┘
+                                  │
+                           Ongoing Deep Dives
+                       ┌──────────▼───────────┐
+                       │  15 Utilities         │
+                       │  16 Checkpointing     │
+                       │  17 Compile Control   │
+                       │  18 torch.package     │
+                       │  19 Tensor Dispatch   │
+                       │  ... more coming      │
                        └──────────────────────┘
 ```
 
@@ -184,16 +198,22 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ### Modern PyTorch (2.x+)
 | Feature | Module |
 |---------|--------|
-| `torch.compile` (Dynamo + Inductor) | [08](08_torch_compile/) |
+| `torch.compile` (Dynamo + Inductor) | [08](08_torch_compile/), [17](17_compile_decorators/) |
+| Compile decorators & stances | [17](17_compile_decorators/) |
 | FlexAttention | [09](09_attention/) |
 | FSDP2 (`fully_shard`) | [10](10_distributed/) |
 | DTensor & DeviceMesh | [10](10_distributed/) |
 | Pipeline Parallelism (ZeroBubble, DualPipeV) | [10](10_distributed/) |
 | `torch.export` & PT2 Archive | [11](11_export_deploy/) |
 | NativeRT C++ inference engine | [11](11_export_deploy/) |
+| `torch.package` (hermetic model archives) | [18](18_torch_package/) |
 | Compiled Autograd | [03](03_autograd/), [08](08_torch_compile/) |
+| Selective Activation Checkpointing (SAC) | [16](16_activation_checkpointing/) |
 | RMSNorm, SiLU, Flash Attention | [04](04_neural_networks/), [09](09_attention/) |
 | Functorch (`vmap`, `grad`, `jacrev`) | [13](13_advanced/) |
+| `__torch_function__` & `__torch_dispatch__` | [19](19_torch_function_dispatch/) |
+| Weight parametrization & pruning | [15](15_practical_utilities/) |
+| Nested tensors & sequence packing | [15](15_practical_utilities/) |
 
 ### Complete Architecture Implementations
 | Architecture | Description | Module |
@@ -209,27 +229,30 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-19 modules | 19 detailed READMEs | 55+ Python scripts | 15 Jupyter notebooks | 30,000+ lines of content
+19 modules | 19 READMEs | 60+ Python scripts | 19 Jupyter notebooks | 45,000+ lines of content
 ```
 
-| Module | README Lines | Python Files | Key Topics |
-|--------|:-----------:|:------------:|------------|
-| 01 Foundations | 640 | 1 | Math, installation, philosophy |
-| 02 Tensors | 930 | 5 | Creation, ops, indexing, broadcasting |
-| 03 Autograd | 833 | 4 | Gradients, custom functions, Jacobians |
-| 04 Neural Networks | 1,003 | 5 | All layers, losses, hooks, save/load |
-| 05 Optimizers | 469 | 3 | SGD, Adam, schedulers |
-| 06 Data Loading | 559 | 4 | Dataset, DataLoader, augmentation |
-| 07 Training | 832 | 5 | AMP, transfer learning, EMA |
-| 08 torch.compile | 526 | 5 | Dynamo, Inductor, graph breaks |
-| 09 Attention | 495 | 5 | SDPA, FlexAttention, RoPE |
-| 10 Distributed | 1,322 | 5 | DDP, FSDP2, TP, PP, DCP |
-| 11 Export & Deploy | 836 | 4 | torch.export, AOTInductor, NativeRT |
-| 12 Architectures | 646 | 5 | ResNet, GPT, ViT, VAE |
-| 13 Advanced | 624 | 6 | functorch, profiling, custom ops |
-| 14 Testing | 363 | 3 | TestCase, reproducibility, benchmarks |
-| **15 Practical Utilities** | **350+** | **4** | **Parametrize, pruning, nested tensors, fusion** |
-| **16 Activation Checkpointing** | **200+** | **1** | **SAC, memory/compute tradeoffs** |
+| Module | README | Scripts | Notebook | Key Topics |
+|--------|:------:|:-------:|:--------:|------------|
+| 01 Foundations | 640 | 1 | 01 | Math, installation, philosophy |
+| 02 Tensors | 930 | 5 | 01 | Creation, ops, indexing, broadcasting |
+| 03 Autograd | 833 | 4 | 02 | Gradients, custom functions, Jacobians |
+| 04 Neural Networks | 1,003 | 5 | 03 | All layers, losses, hooks, save/load |
+| 05 Optimizers | 469 | 3 | 05 | SGD, Adam, schedulers |
+| 06 Data Loading | 559 | 4 | 06 | Dataset, DataLoader, augmentation |
+| 07 Training | 832 | 5 | 04 | AMP, transfer learning, EMA |
+| 08 torch.compile | 526 | 5 | 08 | Dynamo, Inductor, graph breaks |
+| 09 Attention | 495 | 5 | 07 | SDPA, FlexAttention, RoPE |
+| 10 Distributed | 1,322 | 5 | 10 | DDP, FSDP2, TP, PP, DCP |
+| 11 Export & Deploy | 836 | 4 | 11 | torch.export, AOTInductor, NativeRT |
+| 12 Architectures | 646 | 5 | 09 | ResNet, GPT, ViT, VAE |
+| 13 Advanced | 624 | 6 | 12 | functorch, profiling, custom ops |
+| 14 Testing | 363 | 3 | 13 | TestCase, reproducibility, benchmarks |
+| 15 Practical Utilities | 432 | 4 | 14 | Parametrize, pruning, nested tensors |
+| 16 Activation Checkpointing | 260 | 1 | 15, 16 | SAC, memory/compute tradeoffs |
+| 17 Compile Decorators | 224 | 1 | 17 | Stances, disable, mark_dynamic |
+| 18 torch.package | 331 | 1 | 18 | PackageExporter/Importer |
+| 19 Tensor Dispatch | 387 | 1 | 19 | `__torch_function__`, `__torch_dispatch__` |
 
 ---
 
