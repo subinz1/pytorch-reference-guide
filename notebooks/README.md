@@ -33,6 +33,10 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 13 | `13_testing_and_reproducibility.ipynb` | [Testing](../14_testing/) | Seeds, deterministic mode, benchmarking |
 | 14 | `14_practical_utilities.ipynb` | [Utilities](../15_practical_utilities/) | Parametrize, pruning, packing, fusion |
 | 15 | `15_selective_checkpointing.ipynb` | [Checkpointing](../16_activation_checkpointing/) | Activation checkpointing, SAC, memory tradeoffs |
+| 16 | `16_activation_checkpointing.ipynb` | [Checkpointing](../16_activation_checkpointing/) | Basic/selective checkpointing, SAC, memory tradeoffs |
+| 17 | `17_compile_decorators.ipynb` | [Compile Control](../17_compile_decorators/) | Stances, disable, allow_in_graph, mark_dynamic, explain |
+| 18 | `18_torch_package.ipynb` | [torch.package](../18_torch_package/) | PackageExporter/Importer, intern/extern/mock, model shipping |
+| 19 | `19_torch_function_dispatch.ipynb` | [Dispatch](../19_torch_function_dispatch/) | __torch_function__, __torch_dispatch__, modes, custom tensors |
 
 ## Requirements
 
