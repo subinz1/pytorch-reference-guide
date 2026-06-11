@@ -37,6 +37,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 17 | `17_compile_decorators.ipynb` | [Compile Control](../17_compile_decorators/) | Stances, disable, allow_in_graph, mark_dynamic, explain |
 | 18 | `18_torch_package.ipynb` | [torch.package](../18_torch_package/) | PackageExporter/Importer, intern/extern/mock, model shipping |
 | 19 | `19_torch_function_dispatch.ipynb` | [Dispatch](../19_torch_function_dispatch/) | __torch_function__, __torch_dispatch__, modes, custom tensors |
+| 20 | `20_backends_tuning.ipynb` | [Backends Tuning](../20_backends_tuning/) | cuDNN, TF32, OpenMP, performance checklist |
 
 ## Requirements
 

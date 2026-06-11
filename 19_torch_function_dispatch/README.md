@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../18_torch_package/) | [🏠 Home](../README.md) | [Next Module →](#)
+[← Previous Module](../18_torch_package/) | [🏠 Home](../README.md) | [Next Module →](../20_backends_tuning/)
 
 </div>
 
@@ -411,7 +411,7 @@ class MyDispatchMode(TorchDispatchMode):
 
 <div align="center">
 
-[← Previous Module](../18_torch_package/) | [🏠 Home](../README.md) | [Next Module →](#)
+[← Previous Module](../18_torch_package/) | [🏠 Home](../README.md) | [Next Module →](../20_backends_tuning/)
 
 **No dedicated notebook** — see examples in `torch_function_examples.py`
 
