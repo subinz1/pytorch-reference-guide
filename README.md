@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-21-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-55%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-21-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-22-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-58%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-22-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-45%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>21 modules</strong> and <strong>21 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>22 modules</strong> and <strong>22 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -99,12 +99,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 19 | [**Tensor Subclassing & Dispatch**](19_torch_function_dispatch/) | `__torch_function__`, `__torch_dispatch__`, TorchFunctionMode, TorchDispatchMode, custom tensor types | 1 README + 1 script |
 | 20 | [**Backends Tuning**](20_backends_tuning/) | `torch.backends.cudnn`, TF32, `set_float32_matmul_precision`, OpenMP, opt_einsum, performance checklist | 1 README + 1 script |
 | 21 | [**CUDA Graphs**](21_cuda_graphs/) | `torch.cuda.CUDAGraph`, capture/replay, static inputs, `reduce-overhead` mode, `make_graphed_callables` | 1 README + 1 script |
+| 22 | [**LLM Training Recipes**](22_llm_recipes/) | RoPE, KV Cache, GQA, Sliding Window, RMSNorm, SwiGLU, weight tying, bf16, gradient accumulation, mini-LLM | 1 README + 3 scripts |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **21 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **22 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -129,6 +130,7 @@ The [`notebooks/`](notebooks/) folder contains **21 interactive playbooks** — 
 | 19 | [`19_torch_function_dispatch.ipynb`](notebooks/19_torch_function_dispatch.ipynb) | `__torch_function__`, `__torch_dispatch__`, modes, custom tensors |
 | 20 | [`20_backends_tuning.ipynb`](notebooks/20_backends_tuning.ipynb) | cuDNN, TF32, OpenMP, opt_einsum, performance checklist |
 | 21 | [`21_cuda_graphs.ipynb`](notebooks/21_cuda_graphs.ipynb) | CUDA Graph capture/replay, static inputs, benchmarking |
+| 22 | [`22_llm_recipes.ipynb`](notebooks/22_llm_recipes.ipynb) | RoPE, KV Cache, GQA, SwiGLU, RMSNorm, mini-LLM |
 
 ---
 
@@ -233,7 +235,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-21 modules | 21 READMEs | 60+ Python scripts | 21 Jupyter notebooks | 45,000+ lines of content
+22 modules | 22 READMEs | 63+ Python scripts | 22 Jupyter notebooks | 46,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -259,6 +261,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 19 Tensor Dispatch | 387 | 1 | 19 | `__torch_function__`, `__torch_dispatch__` |
 | 20 Backends Tuning | 320 | 1 | 20 | cuDNN, TF32, OpenMP, opt_einsum |
 | 21 CUDA Graphs | 350+ | 1 | 21 | Graph capture, static inputs, reduce-overhead |
+| 22 LLM Training Recipes | 400+ | 3 | 22 | RoPE, KV Cache, GQA, SwiGLU, mini-LLM |
 
 ---
 
@@ -288,7 +291,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 5 | `__torch_function__` & Tensor Subclassing | **Done** |
 | Day 6 | `torch.backends` Performance Tuning | **Done** |
 | Day 7 | CUDA Graphs | **Done** |
-| Day 8 | LLM Training Recipes (RoPE, KV Cache) | Planned |
+| Day 8 | LLM Training Recipes (RoPE, KV Cache) | **Done** |
 | Day 9 | `torch.fx` Graph Transforms | Planned |
 | Day 10 | `torch.masked` (MaskedTensor) | Planned |
 

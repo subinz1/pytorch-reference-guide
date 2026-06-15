@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../20_backends_tuning/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../20_backends_tuning/) | [🏠 Home](../README.md) | [Next Module →](../22_llm_recipes/)
 
 </div>
 
@@ -669,7 +669,7 @@ FlexAttention now uses a dedicated `INDEX_DTYPE` for pointer arithmetic in block
 
 <div align="center">
 
-[← Previous Module](../20_backends_tuning/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../20_backends_tuning/) | [🏠 Home](../README.md) | [Next Module →](../22_llm_recipes/)
 
 **Notebook**: [`21_cuda_graphs.ipynb`](../notebooks/21_cuda_graphs.ipynb)
 
