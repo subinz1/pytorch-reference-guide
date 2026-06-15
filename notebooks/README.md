@@ -38,6 +38,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 18 | `18_torch_package.ipynb` | [torch.package](../18_torch_package/) | PackageExporter/Importer, intern/extern/mock, model shipping |
 | 19 | `19_torch_function_dispatch.ipynb` | [Dispatch](../19_torch_function_dispatch/) | __torch_function__, __torch_dispatch__, modes, custom tensors |
 | 20 | `20_backends_tuning.ipynb` | [Backends Tuning](../20_backends_tuning/) | cuDNN, TF32, OpenMP, performance checklist |
+| 21 | `21_cuda_graphs.ipynb` | [CUDA Graphs](../21_cuda_graphs/) | Graph capture/replay, static inputs, torch.compile reduce-overhead |
 
 ## Requirements
 

@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../19_torch_function_dispatch/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../19_torch_function_dispatch/) | [🏠 Home](../README.md) | [Next Module →](../21_cuda_graphs/)
 
 </div>
 
@@ -472,7 +472,7 @@ torch.backends — what to remember:
 
 <div align="center">
 
-[← Previous Module](../19_torch_function_dispatch/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../19_torch_function_dispatch/) | [🏠 Home](../README.md) | [Next Module →](../21_cuda_graphs/)
 
 **Notebook**: [`20_backends_tuning.ipynb`](../notebooks/20_backends_tuning.ipynb)
 
