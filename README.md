@@ -9,9 +9,9 @@
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-22-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-58%2B-green" alt="Examples"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-73%2B-green" alt="Examples"></a>
   <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-22-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-45%2C000%2B-orange" alt="Lines"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
@@ -235,7 +235,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-22 modules | 22 READMEs | 63+ Python scripts | 22 Jupyter notebooks | 46,000+ lines of content
+22 modules | 22 READMEs | 73+ Python scripts | 22 Jupyter notebooks | 55,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
