@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-23-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-75%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-23-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-24-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-76%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-24-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>23 modules</strong> and <strong>23 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>24 modules</strong> and <strong>24 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -101,12 +101,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 21 | [**CUDA Graphs**](21_cuda_graphs/) | `torch.cuda.CUDAGraph`, capture/replay, static inputs, `reduce-overhead` mode, `make_graphed_callables` | 1 README + 1 script |
 | 22 | [**LLM Training Recipes**](22_llm_recipes/) | RoPE, KV Cache, GQA, Sliding Window, RMSNorm, SwiGLU, weight tying, bf16, gradient accumulation, mini-LLM | 1 README + 3 scripts |
 | 23 | [**torch.fx Graph Transforms**](23_fx_transforms/) | Symbolic tracing, FX Graph IR, graph passes, pattern matching, Interpreter, Transformer | 1 README + 2 scripts |
+| 24 | [**torch.masked (MaskedTensor)**](24_masked_tensor/) | MaskedTensor, masked reductions, masked softmax, mask propagation, padded sequences | 1 README + 1 script |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **23 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **24 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -133,6 +134,7 @@ The [`notebooks/`](notebooks/) folder contains **23 interactive playbooks** — 
 | 21 | [`21_cuda_graphs.ipynb`](notebooks/21_cuda_graphs.ipynb) | CUDA Graph capture/replay, static inputs, benchmarking |
 | 22 | [`22_llm_recipes.ipynb`](notebooks/22_llm_recipes.ipynb) | RoPE, KV Cache, GQA, SwiGLU, RMSNorm, mini-LLM |
 | 23 | [`23_fx_transforms.ipynb`](notebooks/23_fx_transforms.ipynb) | Symbolic tracing, FX Graph IR, passes, pattern matching |
+| 24 | [`24_masked_tensor.ipynb`](notebooks/24_masked_tensor.ipynb) | torch.masked, MaskedTensor, masked reductions, masked softmax |
 
 ---
 
@@ -237,7 +239,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-23 modules | 23 READMEs | 75+ Python scripts | 23 Jupyter notebooks | 55,000+ lines of content
+24 modules | 24 READMEs | 76+ Python scripts | 24 Jupyter notebooks | 55,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -265,6 +267,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 21 CUDA Graphs | 350+ | 1 | 21 | Graph capture, static inputs, reduce-overhead |
 | 22 LLM Training Recipes | 400+ | 3 | 22 | RoPE, KV Cache, GQA, SwiGLU, mini-LLM |
 | 23 FX Graph Transforms | 400+ | 2 | 23 | Symbolic tracing, graph IR, passes, patterns |
+| 24 MaskedTensor | 300+ | 1 | 24 | torch.masked, masked reductions, softmax, propagation |
 
 ---
 
@@ -296,7 +299,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 7 | CUDA Graphs | **Done** |
 | Day 8 | LLM Training Recipes (RoPE, KV Cache) | **Done** |
 | Day 9 | `torch.fx` Graph Transforms | **Done** |
-| Day 10 | `torch.masked` (MaskedTensor) | Planned |
+| Day 10 | `torch.masked` (MaskedTensor) | **Done** |
 
 ## Contributing
 

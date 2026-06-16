@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../22_llm_recipes/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../22_llm_recipes/) | [🏠 Home](../README.md) | [Next Module →](../24_masked_tensor/)
 
 </div>
 
@@ -811,7 +811,7 @@ Added support for the `__invert__` / `nb_inv` numeric slot in Dynamo's variable 
 
 <div align="center">
 
-[← Previous Module](../22_llm_recipes/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../22_llm_recipes/) | [🏠 Home](../README.md) | [Next Module →](../24_masked_tensor/)
 
 **Notebook**: [`23_fx_transforms.ipynb`](../notebooks/23_fx_transforms.ipynb)
 

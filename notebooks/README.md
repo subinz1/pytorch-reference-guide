@@ -41,6 +41,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 21 | `21_cuda_graphs.ipynb` | [CUDA Graphs](../21_cuda_graphs/) | Graph capture/replay, static inputs, torch.compile reduce-overhead |
 | 22 | `22_llm_recipes.ipynb` | [LLM Recipes](../22_llm_recipes/) | RoPE, KV Cache, GQA, SwiGLU, RMSNorm, mini-LLM training |
 | 23 | `23_fx_transforms.ipynb` | [FX Transforms](../23_fx_transforms/) | Symbolic tracing, graph IR, passes, pattern matching |
+| 24 | `24_masked_tensor.ipynb` | [MaskedTensor](../24_masked_tensor/) | torch.masked, MaskedTensor, masked reductions, masked softmax |
 
 ## Requirements
 
