@@ -589,7 +589,7 @@ The `log_sigmoid` operation on Apple Silicon (MPS backend) has been migrated fro
 
 <div align="center">
 
-[← Previous Module](../21_cuda_graphs/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../21_cuda_graphs/) | [🏠 Home](../README.md) | [Next Module →](../23_fx_transforms/)
 
 **Notebook**: [`22_llm_recipes.ipynb`](../notebooks/22_llm_recipes.ipynb)
 

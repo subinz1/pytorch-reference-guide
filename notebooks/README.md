@@ -40,6 +40,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 20 | `20_backends_tuning.ipynb` | [Backends Tuning](../20_backends_tuning/) | cuDNN, TF32, OpenMP, performance checklist |
 | 21 | `21_cuda_graphs.ipynb` | [CUDA Graphs](../21_cuda_graphs/) | Graph capture/replay, static inputs, torch.compile reduce-overhead |
 | 22 | `22_llm_recipes.ipynb` | [LLM Recipes](../22_llm_recipes/) | RoPE, KV Cache, GQA, SwiGLU, RMSNorm, mini-LLM training |
+| 23 | `23_fx_transforms.ipynb` | [FX Transforms](../23_fx_transforms/) | Symbolic tracing, graph IR, passes, pattern matching |
 
 ## Requirements
 
