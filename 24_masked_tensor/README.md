@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../23_fx_transforms/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../23_fx_transforms/) | [🏠 Home](../README.md) | [Next Module →](../25_triton_kernels/)
 
 </div>
 
@@ -634,7 +634,7 @@ torch.masked.normalize(data, ord=2, dim=1, mask=mask)
 
 <div align="center">
 
-[← Previous Module](../23_fx_transforms/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../23_fx_transforms/) | [🏠 Home](../README.md) | [Next Module →](../25_triton_kernels/)
 
 **Notebook**: [`24_masked_tensor.ipynb`](../notebooks/24_masked_tensor.ipynb)
 

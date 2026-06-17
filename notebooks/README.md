@@ -42,6 +42,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 22 | `22_llm_recipes.ipynb` | [LLM Recipes](../22_llm_recipes/) | RoPE, KV Cache, GQA, SwiGLU, RMSNorm, mini-LLM training |
 | 23 | `23_fx_transforms.ipynb` | [FX Transforms](../23_fx_transforms/) | Symbolic tracing, graph IR, passes, pattern matching |
 | 24 | `24_masked_tensor.ipynb` | [MaskedTensor](../24_masked_tensor/) | torch.masked, MaskedTensor, masked reductions, masked softmax |
+| 25 | `25_triton_kernels.ipynb` | [Triton Kernels](../25_triton_kernels/) | Custom Triton kernels, fusion, torch.library, autotuning |
 
 ## Requirements
 
