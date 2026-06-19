@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../26_memory_profiling/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../26_memory_profiling/) | [🏠 Home](../README.md) | [Next Module →](../28_benchmarking/)
 
 </div>
 
@@ -805,7 +805,7 @@ Before deploying a multi-GPU inference system:
 
 <div align="center">
 
-[← Previous Module](../26_memory_profiling/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../26_memory_profiling/) | [🏠 Home](../README.md) | [Next Module →](../28_benchmarking/)
 
 **Notebook**: [`27_multi_gpu_inference.ipynb`](../notebooks/27_multi_gpu_inference.ipynb)
 
