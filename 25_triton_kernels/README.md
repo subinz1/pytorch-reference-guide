@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../24_masked_tensor/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../24_masked_tensor/) | [🏠 Home](../README.md) | [Next Module →](../26_memory_profiling/)
 
 </div>
 
@@ -794,7 +794,7 @@ These updates reflect the ongoing evolution of PyTorch's compilation stack, dist
 
 <div align="center">
 
-[← Previous Module](../24_masked_tensor/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../24_masked_tensor/) | [🏠 Home](../README.md) | [Next Module →](../26_memory_profiling/)
 
 **Notebook**: [`25_triton_kernels.ipynb`](../notebooks/25_triton_kernels.ipynb)
 

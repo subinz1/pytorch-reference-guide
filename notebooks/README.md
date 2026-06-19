@@ -43,6 +43,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 23 | `23_fx_transforms.ipynb` | [FX Transforms](../23_fx_transforms/) | Symbolic tracing, graph IR, passes, pattern matching |
 | 24 | `24_masked_tensor.ipynb` | [MaskedTensor](../24_masked_tensor/) | torch.masked, MaskedTensor, masked reductions, masked softmax |
 | 25 | `25_triton_kernels.ipynb` | [Triton Kernels](../25_triton_kernels/) | Custom Triton kernels, fusion, torch.library, autotuning |
+| 26 | `26_memory_profiling.ipynb` | [Memory Profiling](../26_memory_profiling/) | GPU memory anatomy, profiling tools, optimization techniques |
 
 ## Requirements
 
