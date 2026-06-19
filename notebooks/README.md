@@ -44,6 +44,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 24 | `24_masked_tensor.ipynb` | [MaskedTensor](../24_masked_tensor/) | torch.masked, MaskedTensor, masked reductions, masked softmax |
 | 25 | `25_triton_kernels.ipynb` | [Triton Kernels](../25_triton_kernels/) | Custom Triton kernels, fusion, torch.library, autotuning |
 | 26 | `26_memory_profiling.ipynb` | [Memory Profiling](../26_memory_profiling/) | GPU memory anatomy, profiling tools, optimization techniques |
+| 27 | `27_multi_gpu_inference.ipynb` | [Multi-GPU Inference](../27_multi_gpu_inference/) | TP, PP, device_map, quantization, continuous batching, AOTInductor |
 
 ## Requirements
 

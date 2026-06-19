@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../25_triton_kernels/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../25_triton_kernels/) | [🏠 Home](../README.md) | [Next Module →](../27_multi_gpu_inference/)
 
 </div>
 
@@ -973,7 +973,7 @@ Before training a large model, work through this checklist:
 
 <div align="center">
 
-[← Previous Module](../25_triton_kernels/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../25_triton_kernels/) | [🏠 Home](../README.md) | [Next Module →](../27_multi_gpu_inference/)
 
 **Notebook**: [`26_memory_profiling.ipynb`](../notebooks/26_memory_profiling.ipynb)
 
