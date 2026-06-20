@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../27_multi_gpu_inference/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../27_multi_gpu_inference/) | [🏠 Home](../README.md) | [Next Module →](../29_mixed_precision/)
 
 </div>
 
@@ -911,7 +911,7 @@ def loop_fn(x, n):
 
 <div align="center">
 
-[← Previous Module](../27_multi_gpu_inference/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../27_multi_gpu_inference/) | [🏠 Home](../README.md) | [Next Module →](../29_mixed_precision/)
 
 **Notebook**: [`28_benchmarking.ipynb`](../notebooks/28_benchmarking.ipynb)
 
