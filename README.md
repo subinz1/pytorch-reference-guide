@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-28-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-84%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-28-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-29-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-86%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-29-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>28 modules</strong> and <strong>28 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>29 modules</strong> and <strong>29 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -106,12 +106,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 26 | [**Memory Profiling & Optimization**](26_memory_profiling/) | GPU memory anatomy, profiling tools, snapshots, optimization techniques, memory-efficient training | 1 README + 2 scripts |
 | 27 | [**Multi-GPU Inference Patterns**](27_multi_gpu_inference/) | Tensor Parallel, Pipeline Parallel, device_map, KV cache, quantization, continuous batching, AOTInductor | 1 README + 2 scripts |
 | 28 | [**torch.utils.benchmark Deep Dive**](28_benchmarking/) | Timer, blocked_autorange, Compare, Fuzzer, Callgrind, torch.compile benchmarking, shape sweeps | 1 README + 2 scripts |
+| 29 | [**Mixed Precision Deep Dive**](29_mixed_precision/) | FP32, FP16, BF16, FP8, AMP autocast, GradScaler, FSDP2 mixed precision, torch.compile | 1 README + 2 scripts |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **28 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **29 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -143,6 +144,7 @@ The [`notebooks/`](notebooks/) folder contains **28 interactive playbooks** — 
 | 26 | [`26_memory_profiling.ipynb`](notebooks/26_memory_profiling.ipynb) | GPU memory profiling, optimization techniques, memory estimation |
 | 27 | [`27_multi_gpu_inference.ipynb`](notebooks/27_multi_gpu_inference.ipynb) | Multi-GPU inference, TP, PP, quantization, continuous batching |
 | 28 | [`28_benchmarking.ipynb`](notebooks/28_benchmarking.ipynb) | Timer, blocked_autorange, Compare, Fuzzer, torch.compile benchmarking |
+| 29 | [`29_mixed_precision.ipynb`](notebooks/29_mixed_precision.ipynb) | FP32, FP16, BF16, FP8, AMP, GradScaler, FSDP2 mixed precision |
 
 ---
 
@@ -247,7 +249,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-28 modules | 28 READMEs | 84+ Python scripts | 28 Jupyter notebooks | 56,000+ lines of content
+29 modules | 29 READMEs | 86+ Python scripts | 29 Jupyter notebooks | 58,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -280,6 +282,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 26 Memory Profiling | 400+ | 2 | 26 | GPU memory anatomy, profiling, optimization, estimation |
 | 27 Multi-GPU Inference | 400+ | 2 | 27 | TP, PP, device_map, quantization, continuous batching |
 | 28 Benchmarking | 400+ | 2 | 28 | Timer, Compare, Fuzzer, Callgrind, torch.compile |
+| 29 Mixed Precision | 450+ | 2 | 29 | FP32, FP16, BF16, FP8, AMP, GradScaler, FSDP2 |
 
 ---
 
@@ -316,6 +319,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 12 | Memory Profiling & Optimization | **Done** |
 | Day 13 | Multi-GPU Inference Patterns | **Done** |
 | Day 14 | `torch.utils.benchmark` Deep Dive | **Done** |
+| Day 15 | Mixed Precision Deep Dive (FP8) | **Done** |
 
 ## Contributing
 

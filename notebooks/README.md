@@ -46,6 +46,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 26 | `26_memory_profiling.ipynb` | [Memory Profiling](../26_memory_profiling/) | GPU memory anatomy, profiling tools, optimization techniques |
 | 27 | `27_multi_gpu_inference.ipynb` | [Multi-GPU Inference](../27_multi_gpu_inference/) | TP, PP, device_map, quantization, continuous batching, AOTInductor |
 | 28 | `28_benchmarking.ipynb` | [Benchmarking](../28_benchmarking/) | Timer, blocked_autorange, Compare, Fuzzer, Callgrind, torch.compile |
+| 29 | `29_mixed_precision.ipynb` | [Mixed Precision](../29_mixed_precision/) | FP32, FP16, BF16, FP8, AMP, GradScaler, FSDP2 mixed precision |
 
 ## Requirements
 
