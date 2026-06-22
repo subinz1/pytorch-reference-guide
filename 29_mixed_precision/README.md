@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module](../28_benchmarking/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../28_benchmarking/) | [🏠 Home](../README.md) | [Next Module (Debugging) →](../30_debugging/)
 
 </div>
 
@@ -837,7 +837,7 @@ Fixes a Native DSL RMSNorm implementation that could produce incorrect results w
 
 <div align="center">
 
-[← Previous Module](../28_benchmarking/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module](../28_benchmarking/) | [🏠 Home](../README.md) | [Next Module (Debugging) →](../30_debugging/)
 
 **Notebook**: [`29_mixed_precision.ipynb`](../notebooks/29_mixed_precision.ipynb)
 
