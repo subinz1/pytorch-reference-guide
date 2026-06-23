@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[← Previous Module (Mixed Precision)](../29_mixed_precision/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module (Mixed Precision)](../29_mixed_precision/) | [🏠 Home](../README.md) | [Next Module (torchao) →](../31_torchao/)
 
 </div>
 
@@ -969,7 +969,7 @@ Recent PyTorch commits relevant to debugging and general usage:
 
 <div align="center">
 
-[← Previous Module (Mixed Precision)](../29_mixed_precision/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module (Mixed Precision)](../29_mixed_precision/) | [🏠 Home](../README.md) | [Next Module (torchao) →](../31_torchao/)
 
 **Notebook**: [`30_debugging.ipynb`](../notebooks/30_debugging.ipynb)
 
