@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-31-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-90%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-31-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-32-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-92%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-32-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>31 modules</strong> and <strong>31 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>32 modules</strong> and <strong>32 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -109,12 +109,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 29 | [**Mixed Precision Deep Dive**](29_mixed_precision/) | FP32, FP16, BF16, FP8, AMP autocast, GradScaler, FSDP2 mixed precision, torch.compile | 1 README + 2 scripts |
 | 30 | [**Debugging PyTorch Models**](30_debugging/) | Anomaly detection, NaN/Inf checks, gradient flow, shape debugging, torch.compile debugging, memory leaks | 1 README + 2 scripts |
 | 31 | [**torchao — Architecture Optimization**](31_torchao/) | Quantization (INT8/INT4/FP8), sparsity (2:4), `quantize_()`, torch.compile integration, PT2E flow | 1 README + 2 scripts |
+| 32 | [**Efficient Data Pipelines**](32_data_pipelines/) | IterableDataset, memory-mapped files, prefetching, distributed loading, bucketed batching | 1 README + 2 scripts |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **31 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **32 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -253,7 +254,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-31 modules | 31 READMEs | 90+ Python scripts | 31 Jupyter notebooks | 60,000+ lines of content
+32 modules | 31 READMEs | 90+ Python scripts | 31 Jupyter notebooks | 60,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
