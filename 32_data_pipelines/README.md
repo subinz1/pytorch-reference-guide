@@ -879,7 +879,7 @@ loader = DataLoader(
 
 <div align="center">
 
-[← Previous Module (torchao)](../31_torchao/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module (torchao)](../31_torchao/) | [🏠 Home](../README.md) | [Next Module (Model Interpretability with Hooks) →](../33_interpretability/)
 
 **Notebook**: [`32_data_pipelines.ipynb`](../notebooks/32_data_pipelines.ipynb)
 

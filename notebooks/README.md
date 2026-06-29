@@ -50,6 +50,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 30 | `30_debugging.ipynb` | [Debugging](../30_debugging/) | Anomaly detection, NaN checks, gradient flow, compile debugging |
 | 31 | `31_torchao.ipynb` | [torchao](../31_torchao/) | Quantization, INT8/INT4, sparsity, torch.compile integration |
 | 32 | `32_data_pipelines.ipynb` | [Data Pipelines](../32_data_pipelines/) | IterableDataset, mmap, prefetching, distributed loading |
+| 33 | `33_interpretability.ipynb` | [Interpretability](../33_interpretability/) | Hooks, Grad-CAM, saliency maps, attention extraction |
 
 ## Requirements
 
@@ -58,4 +59,3 @@ All notebooks run on **CPU only** â€” no GPU required. GPU-specific examples are
 ```bash
 pip install torch torchvision torchaudio jupyter
 ```
-| 32 | `32_data_pipelines.ipynb` | [Data Pipelines](../32_data_pipelines/) | IterableDataset, mmap, prefetching, bucketed batching |
