@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-32-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-92%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-32-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-33-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-94%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-33-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>32 modules</strong> and <strong>32 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>33 modules</strong> and <strong>33 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -110,12 +110,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 30 | [**Debugging PyTorch Models**](30_debugging/) | Anomaly detection, NaN/Inf checks, gradient flow, shape debugging, torch.compile debugging, memory leaks | 1 README + 2 scripts |
 | 31 | [**torchao — Architecture Optimization**](31_torchao/) | Quantization (INT8/INT4/FP8), sparsity (2:4), `quantize_()`, torch.compile integration, PT2E flow | 1 README + 2 scripts |
 | 32 | [**Efficient Data Pipelines**](32_data_pipelines/) | IterableDataset, memory-mapped files, prefetching, distributed loading, bucketed batching | 1 README + 2 scripts |
+| 33 | [**Model Interpretability with Hooks**](33_interpretability/) | Forward/backward hooks, Grad-CAM, saliency maps, guided backprop, attention extraction | 1 README + 2 scripts |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **32 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **33 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -150,6 +151,8 @@ The [`notebooks/`](notebooks/) folder contains **32 interactive playbooks** — 
 | 29 | [`29_mixed_precision.ipynb`](notebooks/29_mixed_precision.ipynb) | FP32, FP16, BF16, FP8, AMP, GradScaler, FSDP2 mixed precision |
 | 30 | [`30_debugging.ipynb`](notebooks/30_debugging.ipynb) | Anomaly detection, NaN checks, gradient flow, compile debugging |
 | 31 | [`31_torchao.ipynb`](notebooks/31_torchao.ipynb) | Quantization, INT8/INT4, sparsity, torch.compile integration |
+| 32 | [`32_data_pipelines.ipynb`](notebooks/32_data_pipelines.ipynb) | IterableDataset, mmap, prefetching, distributed loading |
+| 33 | [`33_interpretability.ipynb`](notebooks/33_interpretability.ipynb) | Hooks, Grad-CAM, saliency maps, attention extraction |
 
 ---
 
@@ -254,7 +257,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-32 modules | 31 READMEs | 90+ Python scripts | 31 Jupyter notebooks | 60,000+ lines of content
+33 modules | 33 READMEs | 94+ Python scripts | 33 Jupyter notebooks | 62,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -290,6 +293,8 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 29 Mixed Precision | 450+ | 2 | 29 | FP32, FP16, BF16, FP8, AMP, GradScaler, FSDP2 |
 | 30 Debugging | 400+ | 2 | 30 | Anomaly detection, NaN, gradients, compile debugging |
 | 31 torchao | 400+ | 2 | 31 | Quantization, INT8/INT4/FP8, sparsity, torch.compile |
+| 32 Data Pipelines | 400+ | 2 | 32 | IterableDataset, mmap, prefetching, distributed |
+| 33 Interpretability | 400+ | 2 | 33 | Hooks, Grad-CAM, saliency, guided backprop |
 
 ---
 
@@ -329,6 +334,8 @@ This guide grows incrementally. Upcoming topics:
 | Day 15 | Mixed Precision Deep Dive (FP8) | **Done** |
 | Day 16 | Debugging PyTorch Models | **Done** |
 | Day 17 | torchao — Architecture Optimization | **Done** |
+| Day 18 | Efficient Data Pipelines | **Done** |
+| Day 19 | Model Interpretability with Hooks | **Done** |
 
 ## Contributing
 
