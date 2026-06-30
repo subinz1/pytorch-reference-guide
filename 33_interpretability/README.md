@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[← Previous Module (Efficient Data Pipelines)](../32_data_pipelines/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module (Efficient Data Pipelines)](../32_data_pipelines/) | [🏠 Home](../README.md) | [Next Module (End-to-End: Fine-Tuning an LLM) →](../34_llm_finetuning/)
 
 </div>
 
@@ -739,7 +739,7 @@ extractor.close()
 
 <div align="center">
 
-[← Previous Module (Efficient Data Pipelines)](../32_data_pipelines/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module (Efficient Data Pipelines)](../32_data_pipelines/) | [🏠 Home](../README.md) | [Next Module (End-to-End: Fine-Tuning an LLM) →](../34_llm_finetuning/)
 
 **Notebook**: [`33_interpretability.ipynb`](../notebooks/33_interpretability.ipynb)
 
