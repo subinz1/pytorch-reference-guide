@@ -51,6 +51,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 31 | `31_torchao.ipynb` | [torchao](../31_torchao/) | Quantization, INT8/INT4, sparsity, torch.compile integration |
 | 32 | `32_data_pipelines.ipynb` | [Data Pipelines](../32_data_pipelines/) | IterableDataset, mmap, prefetching, distributed loading |
 | 33 | `33_interpretability.ipynb` | [Interpretability](../33_interpretability/) | Hooks, Grad-CAM, saliency maps, attention extraction |
+| 34 | `34_llm_finetuning.ipynb` | [LLM Fine-Tuning](../34_llm_finetuning/) | LoRA, QLoRA, instruction tuning, training loop, merge, export |
 
 ## Requirements
 
