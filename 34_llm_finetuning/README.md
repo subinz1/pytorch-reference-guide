@@ -670,7 +670,7 @@ Fine-tuning is not just about LoRA — it's about combining all these techniques
 
 <div align="center">
 
-[← Previous Module (Model Interpretability)](../33_interpretability/) | [🏠 Home](../README.md) | Next Module →
+[← Previous Module (Model Interpretability)](../33_interpretability/) | [🏠 Home](../README.md) | [Next Module (PyTorch Internals: The Dispatcher) →](../35_dispatcher/)
 
 **Notebook**: [`34_llm_finetuning.ipynb`](../notebooks/34_llm_finetuning.ipynb)
 
