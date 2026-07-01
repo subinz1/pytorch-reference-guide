@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-34-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-97%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-34-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-35-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-99%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-35-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>34 modules</strong> and <strong>34 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>35 modules</strong> and <strong>35 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -112,12 +112,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 32 | [**Efficient Data Pipelines**](32_data_pipelines/) | IterableDataset, memory-mapped files, prefetching, distributed loading, bucketed batching | 1 README + 2 scripts |
 | 33 | [**Model Interpretability with Hooks**](33_interpretability/) | Forward/backward hooks, Grad-CAM, saliency maps, guided backprop, attention extraction | 1 README + 2 scripts |
 | 34 | [**End-to-End: Fine-Tuning an LLM**](34_llm_finetuning/) | LoRA, QLoRA, instruction tuning, full training pipeline, merge, export | 1 README + 3 scripts |
+| 35 | [**PyTorch Internals: The Dispatcher**](35_dispatcher/) | Dispatch keys, priority chain, custom ops, torch.library, structured kernels, torch.compile interaction | 1 README + 2 scripts |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **34 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **35 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -155,6 +156,7 @@ The [`notebooks/`](notebooks/) folder contains **34 interactive playbooks** — 
 | 32 | [`32_data_pipelines.ipynb`](notebooks/32_data_pipelines.ipynb) | IterableDataset, mmap, prefetching, distributed loading |
 | 33 | [`33_interpretability.ipynb`](notebooks/33_interpretability.ipynb) | Hooks, Grad-CAM, saliency maps, attention extraction |
 | 34 | [`34_llm_finetuning.ipynb`](notebooks/34_llm_finetuning.ipynb) | LoRA, QLoRA, instruction tuning, training pipeline, merge, export |
+| 35 | [`35_dispatcher.ipynb`](notebooks/35_dispatcher.ipynb) | Dispatch keys, priority chain, custom ops, TorchDispatchMode |
 
 ---
 
@@ -259,7 +261,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-34 modules | 34 READMEs | 97+ Python scripts | 34 Jupyter notebooks | 63,000+ lines of content
+35 modules | 35 READMEs | 99+ Python scripts | 35 Jupyter notebooks | 64,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -298,6 +300,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 32 Data Pipelines | 400+ | 2 | 32 | IterableDataset, mmap, prefetching, distributed |
 | 33 Interpretability | 400+ | 2 | 33 | Hooks, Grad-CAM, saliency, guided backprop |
 | 34 LLM Fine-Tuning | 450+ | 3 | 34 | LoRA, QLoRA, instruction tuning, training, export |
+| 35 The Dispatcher | 400+ | 2 | 35 | Dispatch keys, priority chain, custom ops, torch.library |
 
 ---
 
@@ -340,6 +343,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 18 | Efficient Data Pipelines | **Done** |
 | Day 19 | Model Interpretability with Hooks | **Done** |
 | Day 20 | End-to-End: Fine-Tuning an LLM | **Done** |
+| Day 21 | PyTorch Internals: The Dispatcher | **Done** |
 
 ## Contributing
 
