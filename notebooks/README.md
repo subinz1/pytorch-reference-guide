@@ -52,6 +52,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 32 | `32_data_pipelines.ipynb` | [Data Pipelines](../32_data_pipelines/) | IterableDataset, mmap, prefetching, distributed loading |
 | 33 | `33_interpretability.ipynb` | [Interpretability](../33_interpretability/) | Hooks, Grad-CAM, saliency maps, attention extraction |
 | 34 | `34_llm_finetuning.ipynb` | [LLM Fine-Tuning](../34_llm_finetuning/) | LoRA, QLoRA, instruction tuning, training loop, merge, export |
+| 35 | `35_dispatcher.ipynb` | [The Dispatcher](../35_dispatcher/) | Dispatch keys, priority chain, custom ops, torch.library, TorchDispatchMode |
 
 ## Requirements
 
