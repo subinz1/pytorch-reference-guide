@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[← Previous Module (LLM Fine-Tuning)](../34_llm_finetuning/) | [🏠 Home](../README.md) | Next Module → (none)
+[← Previous Module (LLM Fine-Tuning)](../34_llm_finetuning/) | [🏠 Home](../README.md) | [Next Module (C++ Extensions) →](../36_cpp_extensions/)
 
 **Deep Dive**: How every PyTorch operation gets routed to the right kernel
 
@@ -659,7 +659,7 @@ Understanding the dispatcher transforms PyTorch from a "magic box" into a transp
 
 <div align="center">
 
-[← Previous Module (LLM Fine-Tuning)](../34_llm_finetuning/) | [🏠 Home](../README.md) | Next Module → (none)
+[← Previous Module (LLM Fine-Tuning)](../34_llm_finetuning/) | [🏠 Home](../README.md) | [Next Module (C++ Extensions) →](../36_cpp_extensions/)
 
 **Notebook**: [`35_dispatcher.ipynb`](../notebooks/35_dispatcher.ipynb)
 
