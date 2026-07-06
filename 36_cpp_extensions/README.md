@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[← Previous Module (The Dispatcher)](../35_dispatcher/) | [🏠 Home](../README.md) | Next Module → (none)
+[← Previous Module (The Dispatcher)](../35_dispatcher/) | [🏠 Home](../README.md) | [Next Module (torch.export Deep Dive) →](../37_export_deep_dive/)
 
 **Notebook**: [`36_cpp_extensions.ipynb`](../notebooks/36_cpp_extensions.ipynb)
 
@@ -1028,7 +1028,7 @@ Understanding the dispatcher ([Module 35](../35_dispatcher/)) is essential — C
 
 <div align="center">
 
-[← Previous Module (The Dispatcher)](../35_dispatcher/) | [🏠 Home](../README.md) | Next Module → (none)
+[← Previous Module (The Dispatcher)](../35_dispatcher/) | [🏠 Home](../README.md) | [Next Module (torch.export Deep Dive) →](../37_export_deep_dive/)
 
 **Notebook**: [`36_cpp_extensions.ipynb`](../notebooks/36_cpp_extensions.ipynb)
 
