@@ -11,7 +11,7 @@
   <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-37-blue" alt="Modules"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-103%2B-green" alt="Examples"></a>
   <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-37-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-94%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
@@ -187,8 +187,8 @@ The [`notebooks/`](notebooks/) folder contains **37 interactive playbooks** — 
                        │  16 Checkpointing     │
                        │  17 Compile Control   │
                        │  18 torch.package     │
-                       │  19 Tensor Dispatch   │
-                       │  ... more coming      │
+                       │  19-37 Deep Dives     │
+                       │  (23 bonus modules)   │
                        └──────────────────────┘
 ```
 
@@ -265,7 +265,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-37 modules | 37 READMEs | 103+ Python scripts | 37 Jupyter notebooks | 66,000+ lines of content
+37 modules | 37 READMEs | 103+ Python scripts | 37 Jupyter notebooks | 94,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -352,6 +352,13 @@ This guide grows incrementally. Upcoming topics:
 | Day 21 | PyTorch Internals: The Dispatcher | **Done** |
 | Day 22 | Custom C++ Extensions | **Done** |
 | Day 23 | torch.export Deep Dive | **Done** |
+| Day 24 | Compiled Autograd & AOTAutograd | Planned |
+| Day 25 | Building a Text Classifier | Planned |
+| Day 26 | Building an Image Classifier | Planned |
+| Day 27 | Building a Diffusion Model | Planned |
+| Day 28 | Building a RAG Pipeline | Planned |
+| Day 29 | Production Serving Patterns | Planned |
+| Day 30 | Performance Case Studies | Planned |
 
 ## Contributing
 
@@ -364,5 +371,5 @@ This guide is a personal compilation for educational purposes. PyTorch itself is
 ---
 
 <p align="center">
-  <i>Built with PyTorch v2.14+ — Updated June 2026</i>
+  <i>Built with PyTorch v2.14+ — Updated July 2026
 </p>
