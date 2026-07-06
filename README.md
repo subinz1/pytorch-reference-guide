@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-36-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-101%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-36-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-37-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-103%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-37-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-55%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>36 modules</strong> and <strong>36 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>37 modules</strong> and <strong>37 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -114,12 +114,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 34 | [**End-to-End: Fine-Tuning an LLM**](34_llm_finetuning/) | LoRA, QLoRA, instruction tuning, full training pipeline, merge, export | 1 README + 3 scripts |
 | 35 | [**PyTorch Internals: The Dispatcher**](35_dispatcher/) | Dispatch keys, priority chain, custom ops, torch.library, structured kernels, torch.compile interaction | 1 README + 2 scripts |
 | 36 | [**Custom C++ Extensions**](36_cpp_extensions/) | C++ ops, CUDA kernels, load(), CppExtension, autograd integration, triton_op, packaging | 1 README + 2 scripts |
+| 37 | [**torch.export Deep Dive**](37_export_deep_dive/) | ExportedProgram anatomy, torch.cond, while_loop, Dim API, custom ops, draft_export, IR levels | 1 README + 2 scripts |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **36 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **37 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -159,6 +160,7 @@ The [`notebooks/`](notebooks/) folder contains **36 interactive playbooks** — 
 | 34 | [`34_llm_finetuning.ipynb`](notebooks/34_llm_finetuning.ipynb) | LoRA, QLoRA, instruction tuning, training pipeline, merge, export |
 | 35 | [`35_dispatcher.ipynb`](notebooks/35_dispatcher.ipynb) | Dispatch keys, priority chain, custom ops, TorchDispatchMode |
 | 36 | [`36_cpp_extensions.ipynb`](notebooks/36_cpp_extensions.ipynb) | C++ ops, CUDA kernels, load(), autograd, triton_op |
+| 37 | [`37_export_deep_dive.ipynb`](notebooks/37_export_deep_dive.ipynb) | ExportedProgram, torch.cond, while_loop, Dim API, custom ops |
 
 ---
 
@@ -263,7 +265,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-36 modules | 36 READMEs | 101+ Python scripts | 36 Jupyter notebooks | 65,000+ lines of content
+37 modules | 37 READMEs | 103+ Python scripts | 37 Jupyter notebooks | 66,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -304,6 +306,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 34 LLM Fine-Tuning | 450+ | 3 | 34 | LoRA, QLoRA, instruction tuning, training, export |
 | 35 The Dispatcher | 400+ | 2 | 35 | Dispatch keys, priority chain, custom ops, torch.library |
 | 36 C++ Extensions | 400+ | 2 | 36 | C++ ops, CUDA kernels, load(), autograd, triton_op |
+| 37 Export Deep Dive | 400+ | 2 | 37 | ExportedProgram, torch.cond, while_loop, Dim API, custom ops |
 
 ---
 
@@ -348,6 +351,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 20 | End-to-End: Fine-Tuning an LLM | **Done** |
 | Day 21 | PyTorch Internals: The Dispatcher | **Done** |
 | Day 22 | Custom C++ Extensions | **Done** |
+| Day 23 | torch.export Deep Dive | **Done** |
 
 ## Contributing
 
