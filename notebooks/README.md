@@ -55,6 +55,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 35 | `35_dispatcher.ipynb` | [The Dispatcher](../35_dispatcher/) | Dispatch keys, priority chain, custom ops, torch.library, TorchDispatchMode |
 | 36 | `36_cpp_extensions.ipynb` | [C++ Extensions](../36_cpp_extensions/) | C++ ops, CUDA kernels, load(), CppExtension, autograd, triton_op |
 | 37 | `37_export_deep_dive.ipynb` | [Export Deep Dive](../37_export_deep_dive/) | ExportedProgram, torch.cond, while_loop, Dim API, custom ops, draft_export |
+| 38 | `38_compiled_autograd.ipynb` | [Compiled Autograd](../38_compiled_autograd/) | AOTAutograd, compiled backward, joint graph, min-cut partitioner, saved tensors |
 
 ## Requirements
 
