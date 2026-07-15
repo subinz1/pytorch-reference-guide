@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-38-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-105%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-38-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-39-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-108%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-39-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-94%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>38 modules</strong> and <strong>38 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>39 modules</strong> and <strong>39 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -116,12 +116,13 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 36 | [**Custom C++ Extensions**](36_cpp_extensions/) | C++ ops, CUDA kernels, load(), CppExtension, autograd integration, triton_op, packaging | 1 README + 2 scripts |
 | 37 | [**torch.export Deep Dive**](37_export_deep_dive/) | ExportedProgram anatomy, torch.cond, while_loop, Dim API, custom ops, draft_export, IR levels | 1 README + 2 scripts |
 | 38 | [**Compiled Autograd & AOTAutograd**](38_compiled_autograd/) | AOTAutograd, compiled backward, joint graph, min-cut partitioner, saved tensors, debugging | 1 README + 2 scripts |
+| 39 | [**Building a Text Classifier**](39_text_classifier/) | Tokenizer, embeddings, transformer encoder, training loop, evaluation metrics, inference, torch.compile | 1 README + 3 scripts |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **38 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **39 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -163,6 +164,7 @@ The [`notebooks/`](notebooks/) folder contains **38 interactive playbooks** — 
 | 36 | [`36_cpp_extensions.ipynb`](notebooks/36_cpp_extensions.ipynb) | C++ ops, CUDA kernels, load(), autograd, triton_op |
 | 37 | [`37_export_deep_dive.ipynb`](notebooks/37_export_deep_dive.ipynb) | ExportedProgram, torch.cond, while_loop, Dim API, custom ops |
 | 38 | [`38_compiled_autograd.ipynb`](notebooks/38_compiled_autograd.ipynb) | AOTAutograd, compiled backward, joint graph, min-cut partitioner |
+| 39 | [`39_text_classifier.ipynb`](notebooks/39_text_classifier.ipynb) | Tokenizer, transformer encoder, training, evaluation, inference |
 
 ---
 
@@ -267,7 +269,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-38 modules | 38 READMEs | 105+ Python scripts | 38 Jupyter notebooks | 95,000+ lines of content
+39 modules | 39 READMEs | 108+ Python scripts | 39 Jupyter notebooks | 96,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -310,6 +312,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 36 C++ Extensions | 400+ | 2 | 36 | C++ ops, CUDA kernels, load(), autograd, triton_op |
 | 37 Export Deep Dive | 400+ | 2 | 37 | ExportedProgram, torch.cond, while_loop, Dim API, custom ops |
 | 38 Compiled Autograd | 400+ | 2 | 38 | AOTAutograd, compiled backward, joint graph, min-cut, saved tensors |
+| 39 Text Classifier | 400+ | 3 | 39 | Tokenizer, embeddings, transformer, training, evaluation, inference |
 
 ---
 
@@ -356,7 +359,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 22 | Custom C++ Extensions | **Done** |
 | Day 23 | torch.export Deep Dive | **Done** |
 | Day 24 | Compiled Autograd & AOTAutograd | **Done** |
-| Day 25 | Building a Text Classifier | Planned |
+| Day 25 | Building a Text Classifier | **Done** |
 | Day 26 | Building an Image Classifier | Planned |
 | Day 27 | Building a Diffusion Model | Planned |
 | Day 28 | Building a RAG Pipeline | Planned |
