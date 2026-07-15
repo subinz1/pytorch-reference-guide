@@ -1,6 +1,6 @@
 <div align="center">
 
-[← Previous Module (torch.export Deep Dive)](../37_export_deep_dive/) | [🏠 Home](../README.md) | Next Module → (none)
+[← Previous Module (torch.export Deep Dive)](../37_export_deep_dive/) | [🏠 Home](../README.md) | [Next Module (Building a Text Classifier) →](../39_text_classifier/)
 
 </div>
 
@@ -667,7 +667,7 @@ The NativeRT inference engine now correctly queries the GPU's warp size when run
 
 <div align="center">
 
-[← Previous Module (torch.export Deep Dive)](../37_export_deep_dive/) | [🏠 Home](../README.md) | Next Module → (none)
+[← Previous Module (torch.export Deep Dive)](../37_export_deep_dive/) | [🏠 Home](../README.md) | [Next Module (Building a Text Classifier) →](../39_text_classifier/)
 
 **Notebook**: [`38_compiled_autograd.ipynb`](../notebooks/38_compiled_autograd.ipynb)
 
