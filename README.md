@@ -9,13 +9,13 @@
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-41-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-108%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-39-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-94%2C000%2B-orange" alt="Lines"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-111%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-40-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-96%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>41 modules</strong> and <strong>39 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>41 modules</strong> and <strong>40 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -117,14 +117,15 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 37 | [**torch.export Deep Dive**](37_export_deep_dive/) | ExportedProgram anatomy, torch.cond, while_loop, Dim API, custom ops, draft_export, IR levels | 1 README + 2 scripts |
 | 38 | [**Compiled Autograd & AOTAutograd**](38_compiled_autograd/) | AOTAutograd, compiled backward, joint graph, min-cut partitioner, saved tensors, debugging | 1 README + 2 scripts |
 | 39 | [**Building a Text Classifier**](39_text_classifier/) | Tokenizer, embeddings, transformer encoder, training loop, evaluation metrics, inference, torch.compile | 1 README + 3 scripts |
-| 40 | [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repo CI relay architecture, dispatches, callbacks, nightly workflows, HUD integration | 1 README |
+| 40 | [**Building an Image Classifier**](40_image_classifier/) | Data augmentation, CNN, ResNet, transfer learning, MixUp/CutMix, AMP training, TTA, Grad-CAM | 1 README + 3 scripts |
+| — | [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repo CI relay architecture, dispatches, callbacks, nightly workflows, HUD integration | 1 README |
 | 41 | [**Targeted Test Selection**](41_targeted_tests/) | Diff-based heuristics, TorchTalk structural analysis, run_test.py, CI integration | 1 README |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **39 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **40 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -167,6 +168,7 @@ The [`notebooks/`](notebooks/) folder contains **39 interactive playbooks** — 
 | 37 | [`37_export_deep_dive.ipynb`](notebooks/37_export_deep_dive.ipynb) | ExportedProgram, torch.cond, while_loop, Dim API, custom ops |
 | 38 | [`38_compiled_autograd.ipynb`](notebooks/38_compiled_autograd.ipynb) | AOTAutograd, compiled backward, joint graph, min-cut partitioner |
 | 39 | [`39_text_classifier.ipynb`](notebooks/39_text_classifier.ipynb) | Tokenizer, transformer encoder, training, evaluation, inference |
+| 40 | [`40_image_classifier.ipynb`](notebooks/40_image_classifier.ipynb) | Data augmentation, CNN, ResNet, transfer learning, TTA, Grad-CAM |
 
 ---
 
@@ -271,7 +273,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-41 modules | 39 READMEs | 108+ Python scripts | 39 Jupyter notebooks | 96,000+ lines of content
+41 modules | 40 READMEs | 111+ Python scripts | 40 Jupyter notebooks | 98,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -315,6 +317,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 37 Export Deep Dive | 400+ | 2 | 37 | ExportedProgram, torch.cond, while_loop, Dim API, custom ops |
 | 38 Compiled Autograd | 400+ | 2 | 38 | AOTAutograd, compiled backward, joint graph, min-cut, saved tensors |
 | 39 Text Classifier | 400+ | 3 | 39 | Tokenizer, embeddings, transformer, training, evaluation, inference |
+| 40 Image Classifier | 400+ | 3 | 40 | Data augmentation, CNN, ResNet, transfer learning, TTA, Grad-CAM |
 
 ---
 
@@ -362,7 +365,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 23 | torch.export Deep Dive | **Done** |
 | Day 24 | Compiled Autograd & AOTAutograd | **Done** |
 | Day 25 | Building a Text Classifier | **Done** |
-| Day 26 | Building an Image Classifier | Planned |
+| Day 26 | Building an Image Classifier | **Done** |
 | Day 27 | Building a Diffusion Model | Planned |
 | Day 28 | Building a RAG Pipeline | Planned |
 | Day 29 | Production Serving Patterns | Planned |
