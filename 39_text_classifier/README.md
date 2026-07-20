@@ -968,7 +968,7 @@ Fixed a numerical issue in `nn.CrossEntropyLoss` with `label_smoothing > 0` when
 
 <div align="center">
 
-[← Previous Module (Compiled Autograd & AOTAutograd)](../38_compiled_autograd/) | [🏠 Home](../README.md) | Next Module → (none)
+[← Previous Module (Compiled Autograd & AOTAutograd)](../38_compiled_autograd/) | [🏠 Home](../README.md) | [Next Module (Image Classifier) →](../40_image_classifier/)
 
 **Notebook**: [`39_text_classifier.ipynb`](../notebooks/39_text_classifier.ipynb)
 
