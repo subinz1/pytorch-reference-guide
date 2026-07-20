@@ -57,6 +57,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 37 | `37_export_deep_dive.ipynb` | [Export Deep Dive](../37_export_deep_dive/) | ExportedProgram, torch.cond, while_loop, Dim API, custom ops, draft_export |
 | 38 | `38_compiled_autograd.ipynb` | [Compiled Autograd](../38_compiled_autograd/) | AOTAutograd, compiled backward, joint graph, min-cut partitioner, saved tensors |
 | 39 | `39_text_classifier.ipynb` | [Text Classifier](../39_text_classifier/) | Tokenizer, transformer encoder, training loop, evaluation, inference pipeline |
+| 40 | `40_image_classifier.ipynb` | [Image Classifier](../40_image_classifier/) | Data augmentation, CNN, ResNet, transfer learning, training, TTA, Grad-CAM |
 
 ## Requirements
 
