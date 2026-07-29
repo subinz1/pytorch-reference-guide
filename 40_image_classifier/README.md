@@ -949,7 +949,7 @@ python evaluation.py
 
 <div align="center">
 
-[← Previous Module (Text Classifier)](../39_text_classifier/) | [🏠 Home](../README.md) | Next Module → (coming soon)
+[← Previous Module (Text Classifier)](../39_text_classifier/) | [🏠 Home](../README.md) | [Next Module (Diffusion Model) →](../41_diffusion_model/)
 
 **Notebook**: [`40_image_classifier.ipynb`](../notebooks/40_image_classifier.ipynb)
 
