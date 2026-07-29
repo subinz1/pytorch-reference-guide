@@ -58,6 +58,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 38 | `38_compiled_autograd.ipynb` | [Compiled Autograd](../38_compiled_autograd/) | AOTAutograd, compiled backward, joint graph, min-cut partitioner, saved tensors |
 | 39 | `39_text_classifier.ipynb` | [Text Classifier](../39_text_classifier/) | Tokenizer, transformer encoder, training loop, evaluation, inference pipeline |
 | 40 | `40_image_classifier.ipynb` | [Image Classifier](../40_image_classifier/) | Data augmentation, CNN, ResNet, transfer learning, training, TTA, Grad-CAM |
+| 41 | `41_diffusion_model.ipynb` | [Diffusion Model](../41_diffusion_model/) | Noise schedules, UNet, DDPM/DDIM sampling, 2D distributions, classifier-free guidance |
 
 ## Requirements
 
