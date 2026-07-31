@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-42-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-114%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-41-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-98%2C000%2B-orange" alt="Lines"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-43-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-117%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-42-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-100%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>42 modules</strong> and <strong>41 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>43 modules</strong> and <strong>42 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -126,7 +126,7 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **41 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **42 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -171,6 +171,7 @@ The [`notebooks/`](notebooks/) folder contains **41 interactive playbooks** — 
 | 39 | [`39_text_classifier.ipynb`](notebooks/39_text_classifier.ipynb) | Tokenizer, transformer encoder, training, evaluation, inference |
 | 40 | [`40_image_classifier.ipynb`](notebooks/40_image_classifier.ipynb) | Data augmentation, CNN, ResNet, transfer learning, TTA, Grad-CAM |
 | 41 | [`41_diffusion_model.ipynb`](notebooks/41_diffusion_model.ipynb) | Noise schedules, UNet, DDPM/DDIM sampling, 2D distributions |
+| 42 | [`42_rag_pipeline.ipynb`](notebooks/42_rag_pipeline.ipynb) | Embeddings, vector store, chunking, retrieval, prompt construction, generation |
 
 ---
 
@@ -275,7 +276,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-42 modules | 41 READMEs | 114+ Python scripts | 41 Jupyter notebooks | 100,000+ lines of content
+43 modules | 42 READMEs | 117+ Python scripts | 42 Jupyter notebooks | 100,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -321,6 +322,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | 39 Text Classifier | 400+ | 3 | 39 | Tokenizer, embeddings, transformer, training, evaluation, inference |
 | 40 Image Classifier | 400+ | 3 | 40 | Data augmentation, CNN, ResNet, transfer learning, TTA, Grad-CAM |
 | 41 Diffusion Model | 450+ | 3 | 41 | Noise schedules, UNet, DDPM/DDIM, classifier-free guidance, 2D data |
+| 42 RAG Pipeline | 400+ | 3 | 42 | Embeddings, vector store, chunking, retrieval, prompt construction, generation |
 
 ---
 
@@ -370,7 +372,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 25 | Building a Text Classifier | **Done** |
 | Day 26 | Building an Image Classifier | **Done** |
 | Day 27 | Building a Diffusion Model | **Done** |
-| Day 28 | Building a RAG Pipeline | Planned |
+| Day 28 | Building a RAG Pipeline | **Done** |
 | Day 29 | Production Serving Patterns | Planned |
 | Day 30 | Performance Case Studies | Planned |
 
