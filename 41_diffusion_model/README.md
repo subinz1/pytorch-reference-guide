@@ -776,7 +776,7 @@ t=1000 (start)     t=750              t=500            t=250           t=0 (gene
 
 <div align="center">
 
-[← Previous Module (Image Classifier)](../40_image_classifier/) | [🏠 Home](../README.md) | Next Module → (coming soon)
+[← Previous Module (Image Classifier)](../40_image_classifier/) | [🏠 Home](../README.md) | [Next Module (RAG Pipeline) →](../42_rag_pipeline/)
 
 **Notebook**: [`41_diffusion_model.ipynb`](../notebooks/41_diffusion_model.ipynb)
 
