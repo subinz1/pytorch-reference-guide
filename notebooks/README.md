@@ -59,6 +59,7 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 | 39 | `39_text_classifier.ipynb` | [Text Classifier](../39_text_classifier/) | Tokenizer, transformer encoder, training loop, evaluation, inference pipeline |
 | 40 | `40_image_classifier.ipynb` | [Image Classifier](../40_image_classifier/) | Data augmentation, CNN, ResNet, transfer learning, training, TTA, Grad-CAM |
 | 41 | `41_diffusion_model.ipynb` | [Diffusion Model](../41_diffusion_model/) | Noise schedules, UNet, DDPM/DDIM sampling, 2D distributions, classifier-free guidance |
+| 42 | `42_rag_pipeline.ipynb` | [RAG Pipeline](../42_rag_pipeline/) | Embeddings, vector store, chunking, retrieval, prompt construction, generation, evaluation |
 
 ## Requirements
 
