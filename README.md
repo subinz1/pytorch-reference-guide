@@ -121,6 +121,7 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 41 | [**Building a Diffusion Model**](41_diffusion_model/) | Noise schedules, UNet with time embedding, DDPM/DDIM sampling, classifier-free guidance, 2D distributions | 1 README + 3 scripts |
 | — | [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repo CI relay architecture, dispatches, callbacks, nightly workflows, HUD integration | 1 README |
 | 42 | [**Targeted Test Selection**](41_targeted_tests/) | Diff-based heuristics, TorchTalk structural analysis, run_test.py, CI integration | 1 README |
+| 43 | [**Building a RAG Pipeline**](42_rag_pipeline/) | Document encoding, vector index, chunking strategies, retrieval evaluation, end-to-end RAG | 1 README + 3 scripts |
 
 ### Interactive Notebooks
 
@@ -171,6 +172,7 @@ The [`notebooks/`](notebooks/) folder contains **41 interactive playbooks** — 
 | 39 | [`39_text_classifier.ipynb`](notebooks/39_text_classifier.ipynb) | Tokenizer, transformer encoder, training, evaluation, inference |
 | 40 | [`40_image_classifier.ipynb`](notebooks/40_image_classifier.ipynb) | Data augmentation, CNN, ResNet, transfer learning, TTA, Grad-CAM |
 | 41 | [`41_diffusion_model.ipynb`](notebooks/41_diffusion_model.ipynb) | Noise schedules, UNet, DDPM/DDIM sampling, 2D distributions |
+| 42 | [`42_rag_pipeline.ipynb`](notebooks/42_rag_pipeline.ipynb) | RAG pipeline, vector index, chunking, retrieval evaluation |
 
 ---
 
@@ -370,7 +372,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 25 | Building a Text Classifier | **Done** |
 | Day 26 | Building an Image Classifier | **Done** |
 | Day 27 | Building a Diffusion Model | **Done** |
-| Day 28 | Building a RAG Pipeline | Planned |
+| Day 28 | Building a RAG Pipeline | **Done** |
 | Day 29 | Production Serving Patterns | Planned |
 | Day 30 | Performance Case Studies | Planned |
 
