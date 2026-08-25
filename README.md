@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-42-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-114%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-41-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-98%2C000%2B-orange" alt="Lines"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-46-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-127%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-44-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-111%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>42 modules</strong> and <strong>41 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>46 modules</strong> and <strong>44 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
