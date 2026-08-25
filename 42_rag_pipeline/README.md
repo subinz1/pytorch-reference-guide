@@ -243,3 +243,7 @@ class GPUVectorIndex(VectorIndex):
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401) (Lewis et al., 2020)
 - [Dense Passage Retrieval](https://arxiv.org/abs/2004.04906) (Karpukhin et al., 2020)
 - [Sentence-BERT](https://arxiv.org/abs/1908.10084) (Reimers & Gurevych, 2019)
+
+---
+
+← [Module 41: Diffusion Model](../41_diffusion_model/) | [Module 43: Production Serving Patterns](../43_production_serving/) →
