@@ -122,6 +122,7 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | — | [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repo CI relay architecture, dispatches, callbacks, nightly workflows, HUD integration | 1 README |
 | 42 | [**Targeted Test Selection**](41_targeted_tests/) | Diff-based heuristics, TorchTalk structural analysis, run_test.py, CI integration | 1 README |
 | 43 | [**Building a RAG Pipeline**](42_rag_pipeline/) | Document encoding, vector index, chunking strategies, retrieval evaluation, end-to-end RAG | 1 README + 3 scripts |
+| 44 | [**Production Serving Patterns**](43_production_serving/) | Batched inference, dynamic batching, torch.compile + CUDA Graphs, monitoring, end-to-end server | 1 README + 4 scripts |
 
 ### Interactive Notebooks
 
@@ -373,7 +374,7 @@ This guide grows incrementally. Upcoming topics:
 | Day 26 | Building an Image Classifier | **Done** |
 | Day 27 | Building a Diffusion Model | **Done** |
 | Day 28 | Building a RAG Pipeline | **Done** |
-| Day 29 | Production Serving Patterns | Planned |
+| Day 29 | Production Serving Patterns | **Done** |
 | Day 30 | Performance Case Studies | Planned |
 
 ## Contributing
