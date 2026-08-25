@@ -29,7 +29,7 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 - **Python scripts** — Self-contained, runnable examples (`python filename.py`) with detailed output
 - **Jupyter notebooks** — Interactive playbooks with markdown + code cells, exercises, and visualizations
 
-**Updated for PyTorch 2.14+ (June 2026)** — includes modern features like `torch.compile`, FlexAttention, FSDP2, and more.
+**Updated for PyTorch 2.14+ (August 2026)** — includes modern features like `torch.compile`, FlexAttention, FSDP2, and more.
 
 > **New modules added daily** — see the [Bonus: Practical Deep Dives](#bonus-practical-deep-dives) section for the latest additions.
 
@@ -389,5 +389,5 @@ This guide is a personal compilation for educational purposes. PyTorch itself is
 ---
 
 <p align="center">
-  <i>Built with PyTorch v2.14+ — Updated July 2026
+  <i>Built with PyTorch v2.14+ — Updated August 2026
 </p>
