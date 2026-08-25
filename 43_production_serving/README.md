@@ -57,3 +57,7 @@ python server.py
 - Pin memory for CPU→GPU transfers in the request path
 - Profile with `torch.profiler` to find launch-bound vs compute-bound phases
 - Set `torch.set_float32_matmul_precision('high')` for TF32 on Ampere+
+
+---
+
+← [Module 42: Building a RAG Pipeline](../42_rag_pipeline/) | [Module 44: Performance Case Studies](../44_performance_case_studies/) →
