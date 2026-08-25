@@ -410,11 +410,10 @@ def build_html(modules):
     for dir_name, path in modules:
         sections.append(build_module_section(dir_name, path))
 
-    return HTML_TEMPLATE.format(
-        sidebar=sidebar,
-        sections="\n".join(sections),
-        module_count=len(modules),
-    )
+    result = HTML_TEMPLATE.replace("{{sidebar}}", sidebar)
+    result = result.replace("{{sections}}", "\n".join(sections))
+    result = result.replace("{{module_count}}", str(len(modules)))
+    return result
 
 
 HTML_TEMPLATE = """\
@@ -429,7 +428,7 @@ HTML_TEMPLATE = """\
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
     <style>
-{css}
+{{css}}
     </style>
 </head>
 <body>
@@ -442,7 +441,7 @@ HTML_TEMPLATE = """\
             <input type="text" id="search-input" placeholder="Search modules..." autocomplete="off">
         </div>
         <div class="sidebar-nav" id="sidebar-nav">
-            {sidebar}
+            {{sidebar}}
         </div>
     </nav>
 
@@ -457,13 +456,13 @@ HTML_TEMPLATE = """\
             <p class="hero-subtitle">From Absolute Beginner to Advanced Practitioner</p>
             <div class="hero-badges">
                 <span class="badge badge-red">PyTorch 2.14+</span>
-                <span class="badge badge-blue">{module_count} Modules</span>
+                <span class="badge badge-blue">{{module_count}} Modules</span>
                 <span class="badge badge-green">127+ Code Examples</span>
                 <span class="badge badge-purple">44 Notebooks</span>
                 <span class="badge badge-orange">111,000+ Lines</span>
             </div>
             <p class="hero-desc">
-                A structured, self-contained course organized into <strong>{module_count} modules</strong> and
+                A structured, self-contained course organized into <strong>{{module_count}} modules</strong> and
                 <strong>44 interactive notebooks</strong>. Each module contains detailed explanations, theory,
                 formulas, runnable Python scripts, and a Jupyter playbook.
             </p>
@@ -473,7 +472,7 @@ HTML_TEMPLATE = """\
             </div>
         </header>
 
-        {sections}
+        {{sections}}
 
         <footer class="site-footer">
             <p>Built with PyTorch v2.14+ — Updated August 2026</p>
@@ -491,7 +490,7 @@ HTML_TEMPLATE = """\
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-toml.min.js"></script>
     <script>
-{js}
+{{js}}
     </script>
 </body>
 </html>
@@ -869,8 +868,8 @@ def main():
     html_content = build_html(modules)
 
     # Inject CSS and JS
-    html_content = html_content.replace("{css}", CSS)
-    html_content = html_content.replace("{js}", JS)
+    html_content = html_content.replace("{{css}}", CSS)
+    html_content = html_content.replace("{{js}}", JS)
 
     output_path = REPO_ROOT / "docs" / "index.html"
     output_path.parent.mkdir(exist_ok=True)
