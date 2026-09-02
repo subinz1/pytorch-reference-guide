@@ -112,9 +112,43 @@ CRCR results appear on:
 - **CRCR Summary page**: Aggregated health metrics across all backends
 - **Main HUD grid**: CRCR columns alongside in-tree CI (grouped by level)
 
+## Quick Start: Adding a New Downstream Backend
+
+1. **Fork the template**: Start from the
+   [CRCR starter workflow](https://github.com/pytorch/test-infra/tree/main/.github/actions/cross-repo-ci-relay-callback).
+2. **Register**: Open a PR to add your repo to `.github/allowlist.yml` under L2.
+3. **Configure dispatch handler**: Add a `repository_dispatch` workflow that
+   builds PyTorch from the dispatched SHA and runs your backend tests.
+4. **Add the callback step**: Include `pytorch/test-infra/.github/actions/cross-repo-ci-relay-callback@main`
+   as the final step with `if: always()`.
+5. **Verify on HUD**: After merge, trigger a test dispatch and check
+   [hud.pytorch.org](https://hud.pytorch.org) for your results.
+
+## Troubleshooting
+
+| Symptom | Cause | Fix |
+|---------|-------|-----|
+| Dispatch never received | Repo not in allowlist | Add to `.github/allowlist.yml` |
+| OIDC token mint fails | Missing `id-token: write` permission | Add `permissions: id-token: write` to workflow |
+| Results not on HUD | Callback URL wrong or Lambda down | Check callback action logs; verify endpoint |
+| Build fails at dispatched SHA | Submodules out of sync | Run `git submodule update --init --recursive` |
+| Nightly SHA resolution fails | Commit message format changed | Update grep pattern for SHA extraction |
+
+## Environment Variables
+
+The dispatch payload sets these environment variables for your workflow:
+
+| Variable | Description |
+|----------|-------------|
+| `github.event.client_payload.pr_number` | PR number that triggered the dispatch |
+| `github.event.client_payload.head_sha` | Git SHA to build and test against |
+| `github.event.client_payload.base_sha` | Base branch SHA for diff context |
+| `github.event.client_payload.sender` | GitHub user who authored the PR |
+
 ## Key Resources
 
 - [CRCR Blog Post](https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/)
 - [Lambda Source](https://github.com/pytorch/test-infra/tree/main/aws/lambda/cross_repo_ci_relay)
 - [Callback Action](https://github.com/pytorch/test-infra/tree/main/.github/actions/cross-repo-ci-relay-callback)
 - [RFC 98: Nightly & Periodic](https://github.com/pytorch/rfcs/pull/98)
+- [Allowlist schema](https://github.com/pytorch/pytorch/blob/main/.github/allowlist.yml)
