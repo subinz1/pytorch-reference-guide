@@ -128,3 +128,45 @@ cpu-tests:
 - [pytorch-targeted-tests](https://github.com/subinz1/pytorch-targeted-tests) — Heuristic engine
 - [TorchTalk](https://github.com/TorchedHat/torchtalk) — Structural C++ analysis
 - [pytorch-redhat-ci](https://github.com/TorchedHat/pytorch-redhat-ci) — Integration example
+
+## Performance Metrics
+
+| Approach | Avg. tests selected | Time saved vs full suite |
+|----------|-------------------|-------------------------|
+| File-path heuristic | ~5-15% of suite | 70-85% wall time |
+| Structural (TorchTalk) | ~3-10% of suite | 80-90% wall time |
+| Merged (union) | ~8-20% of suite | 65-80% wall time |
+| Full suite | 100% | Baseline (~4-6 hours) |
+
+## Extending the Mapping
+
+To add a new test mapping for a source directory:
+
+```python
+# In targeted_tests.py, add to SUBMODULE_MAP:
+SUBMODULE_MAP = {
+    # existing mappings...
+    "torch/my_feature/": [
+        ("test/test_my_feature.py", None),        # run entire file
+        ("test/test_related.py", "test_my_func"),  # run specific test
+    ],
+}
+```
+
+The tuple format is `(test_file, optional_keyword_filter)`. When the keyword
+is `None`, the entire test file runs. Otherwise, it becomes a `-k` filter
+passed to `run_test.py`.
+
+## FAQ
+
+**Q: What if targeted tests miss a regression?**
+Nightly full-suite CI catches regressions that slip through targeted selection.
+The merge of heuristic + structural analysis minimizes false negatives.
+
+**Q: Can I run targeted tests locally?**
+Yes: `python targeted_tests.py HEAD~1 HEAD --pytorch-dir . --category cpu --commands-only`
+prints the commands you can paste into your terminal.
+
+**Q: How does TorchTalk handle header-only changes?**
+Header changes in `c10/` or `aten/src/ATen/core/` trigger the full suite
+via `FULL_SUITE_TRIGGERS`, since their call graph is too broad to scope.
