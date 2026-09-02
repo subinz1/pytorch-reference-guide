@@ -1,0 +1,33 @@
+# PyTorch Reference Guide - Python Dependencies
+#
+# Install: pip install -r requirements.txt
+#
+# Core
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Training & optimization
+torchao>=0.1.0
+
+# Data & utilities
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+
+# Notebooks
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# Profiling & debugging
+tensorboard>=2.13.0
+torch-tb-profiler>=0.4.0
+
+# Export & deployment
+onnx>=1.14.0
+onnxruntime>=1.15.0
+
+# Testing
+pytest>=7.3.0
+expecttest>=0.1.6
