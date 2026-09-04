@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-46-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-127%2B-green" alt="Examples"></a>
-  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-44-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-111%2C000%2B-orange" alt="Lines"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-50-blue" alt="Modules"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-133%2B-green" alt="Examples"></a>
+  <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-50-blueviolet?logo=jupyter" alt="Notebooks"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-116%2C000%2B-orange" alt="Lines"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>46 modules</strong> and <strong>44 interactive notebooks</strong>.<br>
+  A structured, self-contained PyTorch course organized into <strong>50 modules</strong> and <strong>50 interactive notebooks</strong>.<br>
   Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
 </p>
 
@@ -123,17 +123,23 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 39 | [**Building a Text Classifier**](39_text_classifier/) | Tokenizer, embeddings, transformer encoder, training loop, evaluation metrics, inference, torch.compile | 1 README + 3 scripts |
 | 40 | [**Building an Image Classifier**](40_image_classifier/) | Data augmentation, CNN, ResNet, transfer learning, MixUp/CutMix, AMP training, TTA, Grad-CAM | 1 README + 3 scripts |
 | 41 | [**Building a Diffusion Model**](41_diffusion_model/) | Noise schedules, UNet with time embedding, DDPM/DDIM sampling, classifier-free guidance, 2D distributions | 1 README + 3 scripts |
-| — | [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repo CI relay architecture, dispatches, callbacks, nightly workflows, HUD integration | 1 README |
-| 42 | [**Targeted Test Selection**](41_targeted_tests/) | Diff-based heuristics, TorchTalk structural analysis, run_test.py, CI integration | 1 README |
+| — | [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repo CI relay architecture, dispatches, callbacks, nightly workflows, HUD integration | 1 README + 1 script |
+| 42 | [**Targeted Test Selection**](41_targeted_tests/) | Diff-based heuristics, TorchTalk structural analysis, run_test.py, CI integration | 1 README + 1 script |
 | 43 | [**Building a RAG Pipeline**](42_rag_pipeline/) | Document encoding, vector index, chunking strategies, retrieval evaluation, end-to-end RAG | 1 README + 3 scripts |
 | 44 | [**Production Serving Patterns**](43_production_serving/) | Batched inference, dynamic batching, torch.compile + CUDA Graphs, monitoring, end-to-end server | 1 README + 4 scripts |
 | 45 | [**Performance Case Studies**](44_performance_case_studies/) | DataLoader pinning, attention scaling, torch.compile graph breaks, memory reduction, multi-GPU comm overlap | 1 README + 5 scripts |
+| — | [**PyTorch Profiler**](45_torch_profiler/) | `torch.profiler`, schedules, key averages, Chrome/Perfetto traces | 1 README + 2 scripts + trace guide |
+| — | [**Quantization Recipes**](46_quantization_recipes/) | Dynamic/static quantization, QAT checklist and pitfalls | 1 README + 2 scripts + QAT guide |
+| — | [**DDP Patterns**](47_ddp_patterns/) | Process groups, gradient sync, accumulation, common DDP pitfalls | 1 README + 1 script + pitfalls guide |
+| 48 | [**Custom Autograd Functions**](48_custom_autograd/) | `torch.autograd.Function`, STE, gradcheck, double backward | 1 README + 2 scripts |
+| 49 | [**Advanced Gradient Checkpointing**](49_gradient_checkpointing_advanced/) | Selective checkpointing, reentrant vs non-reentrant, activation offload | 1 README + 1 script |
+| 50 | [**Sparse Tensors**](50_torch_sparse/) | COO/CSR layouts, coalesce, sparse matmul, sparsity heuristics | 1 README + 1 script |
 
 ### Interactive Notebooks
 
 > *Open in Jupyter or Google Colab. Run cells, experiment, learn by doing.*
 
-The [`notebooks/`](notebooks/) folder contains **41 interactive playbooks** — one per module:
+The [`notebooks/`](notebooks/) folder contains **50 interactive playbooks** — one per module:
 
 | # | Notebook | Topic |
 |---|----------|-------|
@@ -179,11 +185,21 @@ The [`notebooks/`](notebooks/) folder contains **41 interactive playbooks** — 
 | 40 | [`40_image_classifier.ipynb`](notebooks/40_image_classifier.ipynb) | Data augmentation, CNN, ResNet, transfer learning, TTA, Grad-CAM |
 | 41 | [`41_diffusion_model.ipynb`](notebooks/41_diffusion_model.ipynb) | Noise schedules, UNet, DDPM/DDIM sampling, 2D distributions |
 | 42 | [`42_rag_pipeline.ipynb`](notebooks/42_rag_pipeline.ipynb) | RAG pipeline, vector index, chunking, retrieval evaluation |
+| 43 | [`43_production_serving.ipynb`](notebooks/43_production_serving.ipynb) | Batched inference, CUDA Graphs, monitoring, serving patterns |
+| 44 | [`44_performance_case_studies.ipynb`](notebooks/44_performance_case_studies.ipynb) | DataLoader, attention, compile, memory, multi-GPU case studies |
+| 45 | [`45_torch_profiler.ipynb`](notebooks/45_torch_profiler.ipynb) | Profiler context, schedules, key averages, shapes |
+| 46 | [`46_quantization_recipes.ipynb`](notebooks/46_quantization_recipes.ipynb) | Dynamic and static quantization recipes |
+| 47 | [`47_ddp_patterns.ipynb`](notebooks/47_ddp_patterns.ipynb) | DDP process groups, sync, accumulation patterns |
+| 48 | [`48_custom_autograd.ipynb`](notebooks/48_custom_autograd.ipynb) | Custom Function, STE, gradcheck, double backward |
+| 49 | [`49_gradient_checkpointing_advanced.ipynb`](notebooks/49_gradient_checkpointing_advanced.ipynb) | Selective checkpointing, reentrant modes, offload |
+| 50 | [`50_torch_sparse.ipynb`](notebooks/50_torch_sparse.ipynb) | COO/CSR sparse tensors, SpMM, sparsity stats |
 
 ---
 
 ## Recommended Learning Path
 
+For a staged beginner→advanced route (with optional deep dives), see
+[`docs/learning_path.md`](docs/learning_path.md). Summary diagram:
 ```
  Week 1-2                    Week 3-4                     Week 5-6
 ┌──────────────────┐   ┌──────────────────────┐   ┌──────────────────────┐
@@ -205,8 +221,8 @@ The [`notebooks/`](notebooks/) folder contains **41 interactive playbooks** — 
                        │  16 Checkpointing     │
                        │  17 Compile Control   │
                        │  18 torch.package     │
-                       │  19-38 Deep Dives     │
-                       │  (24 bonus modules)   │
+                       │  19-50 Deep Dives     │
+                       │  (bonus modules)      │
                        └──────────────────────┘
 ```
 
@@ -262,7 +278,9 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 | NativeRT C++ inference engine | [11](11_export_deploy/) |
 | `torch.package` (hermetic model archives) | [18](18_torch_package/) |
 | Compiled Autograd | [03](03_autograd/), [08](08_torch_compile/) |
-| Selective Activation Checkpointing (SAC) | [16](16_activation_checkpointing/) |
+| Selective Activation Checkpointing (SAC) | [16](16_activation_checkpointing/), [49](49_gradient_checkpointing_advanced/) |
+| Custom `autograd.Function` / double backward | [48](48_custom_autograd/) |
+| Sparse tensors (COO/CSR) | [50](50_torch_sparse/) |
 | RMSNorm, SiLU, Flash Attention | [04](04_neural_networks/), [09](09_attention/) |
 | Functorch (`vmap`, `grad`, `jacrev`) | [13](13_advanced/) |
 | `__torch_function__` & `__torch_dispatch__` | [19](19_torch_function_dispatch/) |
@@ -283,7 +301,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-42 modules | 41 READMEs | 114+ Python scripts | 41 Jupyter notebooks | 100,000+ lines of content
+50 modules | 50+ READMEs | 133+ Python scripts | 50 Jupyter notebooks | 116,000+ lines of content
 ```
 
 | Module | README | Scripts | Notebook | Key Topics |
@@ -381,6 +399,12 @@ This guide grows incrementally. Upcoming topics:
 | Day 28 | Building a RAG Pipeline | **Done** |
 | Day 29 | Production Serving Patterns | **Done** |
 | Day 30 | Performance Case Studies | **Done** |
+| Day 31 | PyTorch Profiler + Chrome Trace Guide | **Done** |
+| Day 32 | Quantization Recipes + QAT Walkthrough | **Done** |
+| Day 33 | DDP Patterns + Pitfalls | **Done** |
+| Day 34 | Custom Autograd Functions | **Done** |
+| Day 35 | Advanced Gradient Checkpointing | **Done** |
+| Day 36 | Sparse Tensors | **Done** |
 
 ## Contributing
 
