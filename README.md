@@ -23,6 +23,10 @@
   <a href="https://subinz1.github.io/pytorch-reference-guide/"><strong>📖 Browse the Documentation Site →</strong></a>
 </p>
 
+<p align="center">
+  <a href="docs/reference_cards/"><strong>🧭 Use the Practical Reference Cards →</strong></a>
+</p>
+
 ---
 
 ## About This Guide
