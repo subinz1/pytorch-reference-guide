@@ -24,6 +24,17 @@ and checklist.
 | [Tensor testing](tensor-testing.md) | test numerical PyTorch code reliably |
 | [Export preflight](export-preflight.md) | validate a model before `torch.export` |
 | [Inference batching](inference-batching.md) | build a correct, efficient inference path |
+| [Compile correctness](compile-correctness.md) | compare eager and compiled results safely |
+| [Compile dynamic shapes](compile-dynamic-shapes.md) | control recompiles caused by shape variation |
+| [Compile logging](compile-logging.md) | produce a concise compiler reproducer |
+| [CI failure reproducer](ci-reproducer.md) | reduce a remote CI failure locally |
+| [CI result reporting](ci-result-reporting.md) | retain actionable downstream result identity |
+| [Distributed debugging](distributed-debugging.md) | diagnose a `torchrun` hang or mismatch |
+| [Extension preflight](extension-preflight.md) | verify C++/CUDA extension compatibility |
+| [Data-pipeline debugging](data-pipeline-debugging.md) | investigate worker, sampler, and input stalls |
+| [Performance regression](performance-regression.md) | measure and localize a slowdown |
+| [Checkpoint compatibility](serialization-compatibility.md) | make save/load contracts explicit |
+| [Randomness audit](randomness-audit.md) | reason about seeds, workers, and ranks |
 
 The longer module guides explain the concepts in depth; these cards focus on
 the operational details that are easy to forget under time pressure.
