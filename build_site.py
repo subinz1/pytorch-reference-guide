@@ -15,16 +15,85 @@ REPO_URL = "https://github.com/subinz1/pytorch-reference-guide/blob/main"
 REPO_ROOT = Path(__file__).parent
 
 CATEGORIES = {
-    "Foundations": ["01", "02", "03", "04", "05", "06", "07"],
-    "Compilation & Performance": ["08", "16", "17", "20", "21", "38"],
-    "Attention & Transformers": ["09", "22", "34"],
-    "Distributed Training": ["10", "27"],
-    "Export & Deployment": ["11", "37"],
-    "Architecture & Design": ["12", "13", "19", "23", "24", "35"],
-    "Testing & Debugging": ["14", "28", "30"],
-    "Utilities & Tooling": ["15", "18", "26", "29", "31", "32", "33"],
-    "Projects": ["39", "40", "41", "42", "43", "44"],
+    "Foundations": [
+        "01_foundations",
+        "02_tensors",
+        "03_autograd",
+        "04_neural_networks",
+        "05_optimizers",
+        "06_data_loading",
+        "07_training",
+    ],
+    "Compilation & Performance": [
+        "08_torch_compile",
+        "16_activation_checkpointing",
+        "17_compile_decorators",
+        "20_backends_tuning",
+        "21_cuda_graphs",
+        "25_triton_kernels",
+        "26_memory_profiling",
+        "28_benchmarking",
+        "29_mixed_precision",
+        "38_compiled_autograd",
+        "45_torch_profiler",
+    ],
+    "Attention & Transformers": [
+        "09_attention",
+        "22_llm_recipes",
+        "34_llm_finetuning",
+    ],
+    "Distributed Training": [
+        "10_distributed",
+        "27_multi_gpu_inference",
+        "47_ddp_patterns",
+    ],
+    "Export & Deployment": [
+        "11_export_deploy",
+        "37_export_deep_dive",
+        "43_production_serving",
+        "46_quantization_recipes",
+    ],
+    "Architecture & Design": [
+        "12_model_architectures",
+        "13_advanced",
+        "19_torch_function_dispatch",
+        "23_fx_transforms",
+        "24_masked_tensor",
+        "31_torchao",
+        "35_dispatcher",
+        "36_cpp_extensions",
+        "48_custom_autograd",
+        "50_torch_sparse",
+    ],
+    "Testing & Debugging": [
+        "14_testing",
+        "30_debugging",
+        "41_targeted_tests",
+    ],
+    "Utilities & Tooling": [
+        "15_practical_utilities",
+        "18_torch_package",
+        "32_data_pipelines",
+        "33_interpretability",
+        "49_gradient_checkpointing_advanced",
+    ],
+    "Projects": [
+        "39_text_classifier",
+        "40_image_classifier",
+        "41_diffusion_model",
+        "42_rag_pipeline",
+        "44_performance_case_studies",
+    ],
+    "Operational Guides": [
+        "40_crcr_downstream_ci",
+    ],
 }
+
+CURRICULUM_MODULE_COUNT = 50
+OPERATIONAL_GUIDE_COUNT = 2
+EXAMPLE_COUNT = 150
+NOTEBOOK_COUNT = 50
+REFERENCE_CARD_COUNT = 28
 
 
 def discover_modules():
@@ -323,9 +392,8 @@ def slugify(text):
 
 def get_category(dir_name):
     """Get the category for a module directory."""
-    prefix = dir_name[:2]
-    for cat, prefixes in CATEGORIES.items():
-        if prefix in prefixes:
+    for cat, directories in CATEGORIES.items():
+        if dir_name in directories:
             return cat
     return "Other"
 
@@ -412,7 +480,11 @@ def build_html(modules):
 
     result = HTML_TEMPLATE.replace("{{sidebar}}", sidebar)
     result = result.replace("{{sections}}", "\n".join(sections))
-    result = result.replace("{{module_count}}", str(len(modules)))
+    result = result.replace("{{curriculum_module_count}}", str(CURRICULUM_MODULE_COUNT))
+    result = result.replace("{{operational_guide_count}}", str(OPERATIONAL_GUIDE_COUNT))
+    result = result.replace("{{example_count}}", str(EXAMPLE_COUNT))
+    result = result.replace("{{notebook_count}}", str(NOTEBOOK_COUNT))
+    result = result.replace("{{reference_card_count}}", str(REFERENCE_CARD_COUNT))
     return result
 
 
@@ -423,7 +495,7 @@ HTML_TEMPLATE = """\
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyTorch: The Complete Reference Guide</title>
-    <meta name="description" content="A structured, self-contained PyTorch course — 46 modules from foundations to production serving.">
+    <meta name="description" content="A structured PyTorch course with 50 curriculum modules, 50 notebooks, and practical operational guides.">
     <link rel="icon" href="https://pytorch.org/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
@@ -456,15 +528,15 @@ HTML_TEMPLATE = """\
             <p class="hero-subtitle">From Absolute Beginner to Advanced Practitioner</p>
             <div class="hero-badges">
                 <span class="badge badge-red">PyTorch 2.14+</span>
-                <span class="badge badge-blue">{{module_count}} Modules</span>
-                <span class="badge badge-green">127+ Code Examples</span>
-                <span class="badge badge-purple">44 Notebooks</span>
-                <span class="badge badge-orange">111,000+ Lines</span>
+                <span class="badge badge-blue">{{curriculum_module_count}} Curriculum Modules</span>
+                <span class="badge badge-green">{{example_count}} Code Examples</span>
+                <span class="badge badge-purple">{{notebook_count}} Notebooks</span>
+                <span class="badge badge-orange">{{reference_card_count}} Reference Cards</span>
             </div>
             <p class="hero-desc">
-                A structured, self-contained course organized into <strong>{{module_count}} modules</strong> and
-                <strong>44 interactive notebooks</strong>. Each module contains detailed explanations, theory,
-                formulas, runnable Python scripts, and a Jupyter playbook.
+                A structured, self-contained course organized into <strong>{{curriculum_module_count}} curriculum modules</strong>,
+                <strong>{{operational_guide_count}} operational guides</strong>, and <strong>{{notebook_count}} interactive notebooks</strong>.
+                Each curriculum module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
             </p>
             <div class="hero-links">
                 <a href="https://github.com/subinz1/pytorch-reference-guide" class="btn btn-primary" target="_blank">GitHub Repository</a>
