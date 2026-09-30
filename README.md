@@ -329,11 +329,15 @@ The checked inventory in [docs/content_inventory.md](docs/content_inventory.md) 
 
 ```
 Python >= 3.10
-PyTorch >= 2.0
+PyTorch >= 2.14
 ```
 
+The guide supports a CPU learning path as well as CUDA, ROCm, and multi-device
+workflows. Read the [compatibility and installation guide](docs/compatibility.md)
+before choosing an accelerator build.
+
 ```bash
-pip install torch torchvision torchaudio
+python -m pip install -r requirements.txt
 ```
 
 ---
