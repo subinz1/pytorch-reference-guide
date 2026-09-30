@@ -47,10 +47,7 @@ test. It does not make a GPU-only result equivalent to CPU coverage.
 
 ## Validation contract
 
-The [CPU smoke manifest](../tools/cpu_smoke_manifest.json) lists examples that
-must remain CPU-safe. Do not add an accelerator-required example to that
-manifest. For a new hardware-specific example, document the required runtime
-in its module README and follow the safe-skip pattern above.
-
-See [compatibility and installation](compatibility.md) for selecting the
-PyTorch build and [validation](validation.md) for the available checks.
+Keep CPU validation separate from accelerator-required examples. For a new
+hardware-specific example, document the required runtime in its module README
+and follow the safe-skip pattern above. Select a matching PyTorch build before
+running it.
