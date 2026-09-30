@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyTorch: The Complete Reference Guide</title>
-    <meta name="description" content="A structured, self-contained PyTorch course — 46 modules from foundations to production serving.">
+    <meta name="description" content="A structured PyTorch course with 50 curriculum modules, 50 notebooks, and practical operational guides.">
     <link rel="icon" href="https://pytorch.org/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
@@ -321,7 +321,12 @@ th { background: var(--bg-secondary); font-weight: 600; }
 <a class="nav-item" href="#module-17_compile_decorators" title="torch.compile Decorators & Control APIs"><span class="nav-num">17</span>torch.compile Decorators & Control APIs</a>
 <a class="nav-item" href="#module-20_backends_tuning" title="Performance Tuning"><span class="nav-num">20</span>Performance Tuning</a>
 <a class="nav-item" href="#module-21_cuda_graphs" title="Eliminating CPU Launch Overhead"><span class="nav-num">21</span>Eliminating CPU Launch Overhead</a>
+<a class="nav-item" href="#module-25_triton_kernels" title="GPU Programming in Python"><span class="nav-num">25</span>GPU Programming in Python</a>
+<a class="nav-item" href="#module-26_memory_profiling" title="Every Byte Accounted For"><span class="nav-num">26</span>Every Byte Accounted For</a>
+<a class="nav-item" href="#module-28_benchmarking" title="Measuring Performance Correctly"><span class="nav-num">28</span>Measuring Performance Correctly</a>
+<a class="nav-item" href="#module-29_mixed_precision" title="FP32, FP16, BF16, and FP8"><span class="nav-num">29</span>FP32, FP16, BF16, and FP8</a>
 <a class="nav-item" href="#module-38_compiled_autograd" title="Compiled Autograd & AOTAutograd"><span class="nav-num">38</span>Compiled Autograd & AOTAutograd</a>
+<a class="nav-item" href="#module-45_torch_profiler" title="PyTorch Profiler Deep Dive"><span class="nav-num">45</span>PyTorch Profiler Deep Dive</a>
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Attention & Transformers</div>
@@ -333,11 +338,14 @@ th { background: var(--bg-secondary); font-weight: 600; }
 <div class="nav-category-title">Distributed Training</div>
 <a class="nav-item" href="#module-10_distributed" title="Distributed Training in PyTorch"><span class="nav-num">10</span>Distributed Training in PyTorch</a>
 <a class="nav-item" href="#module-27_multi_gpu_inference" title="Serving Large Models at Scale"><span class="nav-num">27</span>Serving Large Models at Scale</a>
+<a class="nav-item" href="#module-47_ddp_patterns" title="DistributedDataParallel Patterns"><span class="nav-num">47</span>DistributedDataParallel Patterns</a>
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Export & Deployment</div>
 <a class="nav-item" href="#module-11_export_deploy" title="Export and Deployment"><span class="nav-num">11</span>Export and Deployment</a>
 <a class="nav-item" href="#module-37_export_deep_dive" title="torch.export Deep Dive"><span class="nav-num">37</span>torch.export Deep Dive</a>
+<a class="nav-item" href="#module-43_production_serving" title="Production Serving Patterns"><span class="nav-num">43</span>Production Serving Patterns</a>
+<a class="nav-item" href="#module-46_quantization_recipes" title="Quantization Recipes"><span class="nav-num">46</span>Quantization Recipes</a>
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Architecture & Design</div>
@@ -346,34 +354,37 @@ th { background: var(--bg-secondary); font-weight: 600; }
 <a class="nav-item" href="#module-19_torch_function_dispatch" title="Tensor Subclassing"><span class="nav-num">19</span>Tensor Subclassing</a>
 <a class="nav-item" href="#module-23_fx_transforms" title="Graph-Level Model Transformation"><span class="nav-num">23</span>Graph-Level Model Transformation</a>
 <a class="nav-item" href="#module-24_masked_tensor" title="First-Class Missing Data in PyTorch"><span class="nav-num">24</span>First-Class Missing Data in PyTorch</a>
+<a class="nav-item" href="#module-31_torchao" title="torchao: Architecture Optimization"><span class="nav-num">31</span>torchao: Architecture Optimization</a>
 <a class="nav-item" href="#module-35_dispatcher" title="The Dispatcher"><span class="nav-num">35</span>The Dispatcher</a>
+<a class="nav-item" href="#module-36_cpp_extensions" title="Custom C++ Extensions"><span class="nav-num">36</span>Custom C++ Extensions</a>
+<a class="nav-item" href="#module-48_custom_autograd" title="Custom Autograd Functions"><span class="nav-num">48</span>Custom Autograd Functions</a>
+<a class="nav-item" href="#module-50_torch_sparse" title="Sparse Tensors & Sparse Ops"><span class="nav-num">50</span>Sparse Tensors & Sparse Ops</a>
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Testing & Debugging</div>
 <a class="nav-item" href="#module-14_testing" title="Testing and Reproducibility"><span class="nav-num">14</span>Testing and Reproducibility</a>
-<a class="nav-item" href="#module-28_benchmarking" title="Measuring Performance Correctly"><span class="nav-num">28</span>Measuring Performance Correctly</a>
 <a class="nav-item" href="#module-30_debugging" title="Debugging PyTorch Models"><span class="nav-num">30</span>Debugging PyTorch Models</a>
+<a class="nav-item" href="#module-41_targeted_tests" title="Targeted Test Selection"><span class="nav-num">41</span>Targeted Test Selection</a>
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Utilities & Tooling</div>
 <a class="nav-item" href="#module-15_practical_utilities" title="Practical PyTorch Utilities"><span class="nav-num">15</span>Practical PyTorch Utilities</a>
 <a class="nav-item" href="#module-18_torch_package" title="Self-Contained Model Packaging"><span class="nav-num">18</span>Self-Contained Model Packaging</a>
-<a class="nav-item" href="#module-26_memory_profiling" title="Every Byte Accounted For"><span class="nav-num">26</span>Every Byte Accounted For</a>
-<a class="nav-item" href="#module-29_mixed_precision" title="FP32, FP16, BF16, and FP8"><span class="nav-num">29</span>FP32, FP16, BF16, and FP8</a>
-<a class="nav-item" href="#module-31_torchao" title="torchao: Architecture Optimization"><span class="nav-num">31</span>torchao: Architecture Optimization</a>
 <a class="nav-item" href="#module-32_data_pipelines" title="Efficient Data Pipelines"><span class="nav-num">32</span>Efficient Data Pipelines</a>
 <a class="nav-item" href="#module-33_interpretability" title="Model Interpretability with Hooks"><span class="nav-num">33</span>Model Interpretability with Hooks</a>
+<a class="nav-item" href="#module-49_gradient_checkpointing_advanced" title="Advanced"><span class="nav-num">49</span>Advanced</a>
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Projects</div>
 <a class="nav-item" href="#module-39_text_classifier" title="Building a Text Classifier"><span class="nav-num">39</span>Building a Text Classifier</a>
-<a class="nav-item" href="#module-40_crcr_downstream_ci" title="Cross-Repository CI Relay (CRCR)"><span class="nav-num">40</span>Cross-Repository CI Relay (CRCR)</a>
 <a class="nav-item" href="#module-40_image_classifier" title="End-to-End Computer Vision Project"><span class="nav-num">40</span>End-to-End Computer Vision Project</a>
 <a class="nav-item" href="#module-41_diffusion_model" title="From Noise to Data"><span class="nav-num">41</span>From Noise to Data</a>
-<a class="nav-item" href="#module-41_targeted_tests" title="Targeted Test Selection"><span class="nav-num">41</span>Targeted Test Selection</a>
 <a class="nav-item" href="#module-42_rag_pipeline" title="Building a RAG Pipeline with PyTorch"><span class="nav-num">42</span>Building a RAG Pipeline with PyTorch</a>
-<a class="nav-item" href="#module-43_production_serving" title="Production Serving Patterns"><span class="nav-num">43</span>Production Serving Patterns</a>
 <a class="nav-item" href="#module-44_performance_case_studies" title="Performance Case Studies"><span class="nav-num">44</span>Performance Case Studies</a>
+</div>
+<div class="nav-category">
+<div class="nav-category-title">Operational Guides</div>
+<a class="nav-item" href="#module-40_crcr_downstream_ci" title="Cross-Repository CI Relay (CRCR)"><span class="nav-num">40</span>Cross-Repository CI Relay (CRCR)</a>
 </div>
         </div>
     </nav>
@@ -389,15 +400,15 @@ th { background: var(--bg-secondary); font-weight: 600; }
             <p class="hero-subtitle">From Absolute Beginner to Advanced Practitioner</p>
             <div class="hero-badges">
                 <span class="badge badge-red">PyTorch 2.14+</span>
-                <span class="badge badge-blue">46 Modules</span>
-                <span class="badge badge-green">127+ Code Examples</span>
-                <span class="badge badge-purple">44 Notebooks</span>
-                <span class="badge badge-orange">111,000+ Lines</span>
+                <span class="badge badge-blue">50 Curriculum Modules</span>
+                <span class="badge badge-green">150 Code Examples</span>
+                <span class="badge badge-purple">50 Notebooks</span>
+                <span class="badge badge-orange">28 Reference Cards</span>
             </div>
             <p class="hero-desc">
-                A structured, self-contained course organized into <strong>46 modules</strong> and
-                <strong>44 interactive notebooks</strong>. Each module contains detailed explanations, theory,
-                formulas, runnable Python scripts, and a Jupyter playbook.
+                A structured, self-contained course organized into <strong>50 curriculum modules</strong>,
+                <strong>2 operational guides</strong>, and <strong>50 interactive notebooks</strong>.
+                Each curriculum module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
             </p>
             <div class="hero-links">
                 <a href="https://github.com/subinz1/pytorch-reference-guide" class="btn btn-primary" target="_blank">GitHub Repository</a>
@@ -19165,12 +19176,36 @@ jobs:
 <li><strong>CRCR Summary page</strong>: Aggregated health metrics across all backends</li>
 <li><strong>Main HUD grid</strong>: CRCR columns alongside in-tree CI (grouped by level)</li>
 </ul>
+<h2 id="quick-start-adding-a-new-downstream-backend">Quick Start: Adding a New Downstream Backend</h2>
+<ul>
+<li><strong>Fork the template</strong>: Start from the</li>
+</ul>
+<p>   <a href="https://github.com/pytorch/test-infra/tree/main/.github/actions/cross-repo-ci-relay-callback">CRCR starter workflow</a>.</p>
+<ul>
+<li><strong>Register</strong>: Open a PR to add your repo to <code>.github/allowlist.yml</code> under L2.</li>
+<li><strong>Configure dispatch handler</strong>: Add a <code>repository_dispatch</code> workflow that</li>
+</ul>
+<p>   builds PyTorch from the dispatched SHA and runs your backend tests.</p>
+<ul>
+<li><strong>Add the callback step</strong>: Include <code>pytorch/test-infra/.github/actions/cross-repo-ci-relay-callback@main</code></li>
+</ul>
+<p>   as the final step with <code>if: always()</code>.</p>
+<ul>
+<li><strong>Verify on HUD</strong>: After merge, trigger a test dispatch and check</li>
+</ul>
+<p>   <a href="https://hud.pytorch.org">hud.pytorch.org</a> for your results.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table-wrap"><table><thead><tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr></thead><tbody><tr><td>Dispatch never received</td><td>Repo not in allowlist</td><td>Add to <code>.github/allowlist.yml</code></td></tr><tr><td>OIDC token mint fails</td><td>Missing <code>id-token: write</code> permission</td><td>Add <code>permissions: id-token: write</code> to workflow</td></tr><tr><td>Results not on HUD</td><td>Callback URL wrong or Lambda down</td><td>Check callback action logs; verify endpoint</td></tr><tr><td>Build fails at dispatched SHA</td><td>Submodules out of sync</td><td>Run <code>git submodule update --init --recursive</code></td></tr><tr><td>Nightly SHA resolution fails</td><td>Commit message format changed</td><td>Update grep pattern for SHA extraction</td></tr></tbody></table></div>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>The dispatch payload sets these environment variables for your workflow:</p>
+<div class="table-wrap"><table><thead><tr><th>Variable</th><th>Description</th></tr></thead><tbody><tr><td><code>github.event.client_payload.pr_number</code></td><td>PR number that triggered the dispatch</td></tr><tr><td><code>github.event.client_payload.head_sha</code></td><td>Git SHA to build and test against</td></tr><tr><td><code>github.event.client_payload.base_sha</code></td><td>Base branch SHA for diff context</td></tr><tr><td><code>github.event.client_payload.sender</code></td><td>GitHub user who authored the PR</td></tr></tbody></table></div>
 <h2 id="key-resources">Key Resources</h2>
 <ul>
 <li><a href="https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/">CRCR Blog Post</a></li>
 <li><a href="https://github.com/pytorch/test-infra/tree/main/aws/lambda/cross_repo_ci_relay">Lambda Source</a></li>
 <li><a href="https://github.com/pytorch/test-infra/tree/main/.github/actions/cross-repo-ci-relay-callback">Callback Action</a></li>
 <li><a href="https://github.com/pytorch/rfcs/pull/98">RFC 98: Nightly &amp; Periodic</a></li>
+<li><a href="https://github.com/pytorch/pytorch/blob/main/.github/allowlist.yml">Allowlist schema</a></li>
 </ul>
   </div>
   
@@ -20424,6 +20459,23 @@ cpu-tests:
 <li><a href="https://github.com/TorchedHat/torchtalk">TorchTalk</a> — Structural C++ analysis</li>
 <li><a href="https://github.com/TorchedHat/pytorch-redhat-ci">pytorch-redhat-ci</a> — Integration example</li>
 </ul>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<div class="table-wrap"><table><thead><tr><th>Approach</th><th>Avg. tests selected</th><th>Time saved vs full suite</th></tr></thead><tbody><tr><td>File-path heuristic</td><td>~5-15% of suite</td><td>70-85% wall time</td></tr><tr><td>Structural (TorchTalk)</td><td>~3-10% of suite</td><td>80-90% wall time</td></tr><tr><td>Merged (union)</td><td>~8-20% of suite</td><td>65-80% wall time</td></tr><tr><td>Full suite</td><td>100%</td><td>Baseline (~4-6 hours)</td></tr></tbody></table></div>
+<h2 id="extending-the-mapping">Extending the Mapping</h2>
+<p>To add a new test mapping for a source directory:</p>
+<pre><code class="language-python"># In targeted_tests.py, add to SUBMODULE_MAP:
+SUBMODULE_MAP = {
+    # existing mappings...
+    &quot;torch/my_feature/&quot;: [
+        (&quot;test/test_my_feature.py&quot;, None),        # run entire file
+        (&quot;test/test_related.py&quot;, &quot;test_my_func&quot;),  # run specific test
+    ],
+}</code></pre>
+<p>The tuple format is <code>(test_file, optional_keyword_filter)</code>. When the keyword is <code>None</code>, the entire test file runs. Otherwise, it becomes a <code>-k</code> filter passed to <code>run_test.py</code>.</p>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: What if targeted tests miss a regression?</strong> Nightly full-suite CI catches regressions that slip through targeted selection. The merge of heuristic + structural analysis minimizes false negatives.</p>
+<p><strong>Q: Can I run targeted tests locally?</strong> Yes: <code>python targeted_tests.py HEAD~1 HEAD --pytorch-dir . --category cpu --commands-only</code> prints the commands you can paste into your terminal.</p>
+<p><strong>Q: How does TorchTalk handle header-only changes?</strong> Header changes in <code>c10/</code> or <code>aten/src/ATen/core/</code> trigger the full suite via <code>FULL_SUITE_TRIGGERS</code>, since their call graph is too broad to scope.</p>
   </div>
   
 </section>
@@ -20713,6 +20765,355 @@ python case5_distributed.py  # requires 2+ GPUs or use NCCL CPU backend</code></
 </ul>
   </div>
   <div class="module-files"><h4>Source Files</h4><ul><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/44_performance_case_studies/case1_dataloader.py" target="_blank"><code>case1_dataloader.py</code></a> — DataLoader pinned memory and prefetch optimization</li><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/44_performance_case_studies/case2_attention.py" target="_blank"><code>case2_attention.py</code></a> — Attention implementation: naive → memory-efficient → flash</li><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/44_performance_case_studies/case3_compile.py" target="_blank"><code>case3_compile.py</code></a> — torch.compile graph breaks analysis and fix</li><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/44_performance_case_studies/case4_inference_memory.py" target="_blank"><code>case4_inference_memory.py</code></a> — Inference memory reduction techniques</li><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/44_performance_case_studies/case5_distributed.py" target="_blank"><code>case5_distributed.py</code></a> — Multi-GPU communication overlap patterns</li></ul></div>
+</section>
+
+
+<section class="module-section" id="module-45_torch_profiler">
+  <div class="module-header">
+    <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/45_torch_profiler" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
+  </div>
+  <div class="module-content">
+    <h1>Module 45: PyTorch Profiler Deep Dive</h1>
+<h2 id="overview">Overview</h2>
+<p>The <strong>PyTorch Profiler</strong> (<code>torch.profiler</code>) provides fine-grained visibility into CPU and GPU execution, memory allocation, and operator-level timing. It replaces the legacy <code>torch.autograd.profiler</code> with a unified API that integrates with Chrome Trace Viewer, TensorBoard, and HTA (Holistic Trace Analysis).</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3>Profiler Context Manager</h3>
+<p>The primary entry point is <code>torch.profiler.profile()</code>, which records events within a <code>with</code> block. Configure it with <code>activities</code> (CPU, CUDA), <code>schedule</code> for warm-up/active/repeat cycles, and <code>on_trace_ready</code> callbacks for automatic export.</p>
+<h3>Scheduling</h3>
+<p><code>torch.profiler.schedule(wait, warmup, active, repeat)</code> controls when the profiler records. The <strong>wait</strong> phase skips steps, <strong>warmup</strong> discards initial noisy steps, and <strong>active</strong> captures the trace. This avoids profiling cold-start overhead.</p>
+<h3>Trace Export</h3>
+<ul>
+<li><strong>Chrome Trace</strong>: <code>prof.export_chrome_trace(&quot;trace.json&quot;)</code> produces a JSON file</li>
+</ul>
+<p>  viewable at <code>chrome://tracing</code> or <a href="https://ui.perfetto.dev/">Perfetto UI</a>.</p>
+<ul>
+<li><strong>TensorBoard</strong>: <code>torch.profiler.tensorboard_trace_handler(&quot;./logs&quot;)</code> writes</li>
+</ul>
+<p>  traces consumable by the TensorBoard PyTorch Profiler plugin.</p>
+<ul>
+<li><strong>Stacks</strong>: <code>prof.export_stacks(&quot;stacks.txt&quot;)</code> exports flame-graph-ready data.</li>
+</ul>
+<h3>Key Averages</h3>
+<p><code>prof.key_averages()</code> aggregates events by operator name, returning a table with <code>self_cpu_time_total</code>, <code>self_cuda_time_total</code>, <code>cpu_memory_usage</code>, and call counts. Sort by any column to find hotspots.</p>
+<h3>Memory Profiling</h3>
+<p>Enable <code>profile_memory=True</code> to track tensor allocations. Combine with <code>torch.cuda.memory._record_memory_history()</code> for allocation-level snapshots viewable in the <a href="https://pytorch.org/memory_viz">Memory Visualizer</a>.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python">import torch
+from torch.profiler import profile, ProfilerActivity, schedule, tensorboard_trace_handler
+
+with profile(
+    activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+    schedule=schedule(wait=1, warmup=1, active=3, repeat=1),
+    on_trace_ready=tensorboard_trace_handler(&quot;./tb_logs&quot;),
+    record_shapes=True,
+    profile_memory=True,
+    with_stack=True,
+) as prof:
+    for step in range(10):
+        train_step(model, data)
+        prof.step()
+
+print(prof.key_averages().table(sort_by=&quot;cuda_time_total&quot;, row_limit=20))</code></pre>
+<h2 id="files-in-this-module">Files in This Module</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody><tr><td><code>profiler_basics.py</code></td><td>Context manager usage, scheduling, key averages</td></tr><tr><td><code>trace_analysis.py</code></td><td>Advanced trace analysis, memory snapshots, CUDA activity</td></tr></tbody></table></div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/profiler.html">PyTorch Profiler docs</a></li>
+<li><a href="https://pytorch.org/tutorials/recipes/recipes/profiler_recipe.html">Profiler tutorial</a></li>
+<li><a href="https://pytorch.org/tutorials/intermediate/tensorboard_profiler_tutorial.html">TensorBoard plugin</a></li>
+<li><a href="https://github.com/facebookresearch/HolisticTraceAnalysis">Holistic Trace Analysis</a></li>
+<li><a href="https://pytorch.org/memory_viz">Memory Visualizer</a></li>
+</ul>
+  </div>
+  <div class="module-files"><h4>Source Files</h4><ul><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/45_torch_profiler/profiler_basics.py" target="_blank"><code>profiler_basics.py</code></a> — Context manager usage, scheduling, key averages</li><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/45_torch_profiler/trace_analysis.py" target="_blank"><code>trace_analysis.py</code></a> — Advanced trace analysis, memory snapshots, CUDA activity</li></ul></div>
+</section>
+
+
+<section class="module-section" id="module-46_quantization_recipes">
+  <div class="module-header">
+    <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/46_quantization_recipes" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
+  </div>
+  <div class="module-content">
+    <h1>Module 46: Quantization Recipes</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>Quantization</strong> reduces model size and inference latency by representing weights and activations with lower-precision data types (INT8, INT4, FP8). PyTorch provides three main approaches: <strong>dynamic quantization</strong>, <strong>static quantization</strong>, and <strong>quantization-aware training (QAT)</strong>.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3>Dynamic Quantization</h3>
+<p>Weights are quantized ahead of time; activations are quantized on-the-fly during inference. Best for models dominated by <code>nn.Linear</code> (e.g., LSTMs, Transformers). No calibration data required.</p>
+<h3>Static Quantization</h3>
+<p>Both weights and activations are quantized using calibration data to determine activation ranges. Requires inserting <code>QuantStub</code>/<code>DeQuantStub</code> and running a representative dataset through the model. Produces faster inference than dynamic.</p>
+<h3>Quantization-Aware Training (QAT)</h3>
+<p>Simulates quantization during training using fake-quantize operators. The model learns to compensate for quantization error, yielding higher accuracy than post-training quantization—especially for aggressive quantization (INT4).</p>
+<h3>PyTorch 2 Export Quantization (pt2e)</h3>
+<p>The modern path uses <code>torch.export</code> + <code>torchao</code> for quantization. Define a <code>Quantizer</code> that annotates the FX graph, then lower to a backend (XNNPack, Executorch, etc.). This replaces the legacy <code>torch.quantization</code> eager-mode API.</p>
+<h3>Data Types</h3>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Bits</th><th>Use Case</th></tr></thead><tbody><tr><td>INT8</td><td>8</td><td>General-purpose server/edge inference</td></tr><tr><td>INT4</td><td>4</td><td>LLM weight-only quantization</td></tr><tr><td>FP8 (E4M3/E5M2)</td><td>8</td><td>Training and inference on Hopper+ GPUs</td></tr><tr><td>UINT4</td><td>4</td><td>Asymmetric weight packing (torchao)</td></tr></tbody></table></div>
+<h2 id="files-in-this-module">Files in This Module</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody><tr><td><code>dynamic_quantization.py</code></td><td>Dynamic quantization with <code>torch.ao.quantization</code></td></tr><tr><td><code>static_quantization.py</code></td><td>Static quantization with calibration and QAT</td></tr></tbody></table></div>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python"># Dynamic quantization (simplest path)
+import torch.ao.quantization as quant
+quantized_model = torch.ao.quantization.quantize_dynamic(
+    model, {torch.nn.Linear}, dtype=torch.qint8
+)</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/quantization.html">Quantization docs</a></li>
+<li><a href="https://pytorch.org/tutorials/prototype/pt2e_quant_ptq.html">PT2E Quantization tutorial</a></li>
+<li><a href="https://github.com/pytorch/ao">torchao</a> — Modern quantization and sparsity</li>
+<li><a href="https://pytorch.org/tutorials/advanced/static_quantization_tutorial.html">Quantization-Aware Training</a></li>
+<li><a href="https://arxiv.org/abs/2208.07339">LLM.int8() paper</a></li>
+</ul>
+  </div>
+  <div class="module-files"><h4>Source Files</h4><ul><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/46_quantization_recipes/dynamic_quantization.py" target="_blank"><code>dynamic_quantization.py</code></a> — Dynamic quantization with `torch.ao.quantization`</li><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/46_quantization_recipes/static_quantization.py" target="_blank"><code>static_quantization.py</code></a> — Static quantization with calibration and QAT</li></ul></div>
+</section>
+
+
+<section class="module-section" id="module-47_ddp_patterns">
+  <div class="module-header">
+    <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/47_ddp_patterns" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
+  </div>
+  <div class="module-content">
+    <h1>Module 47: DistributedDataParallel Patterns</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>DistributedDataParallel (DDP)</strong> is PyTorch&#x27;s primary API for multi-GPU and multi-node training. Unlike <code>DataParallel</code>, DDP uses one process per GPU with NCCL/Gloo backends for efficient gradient all-reduce, avoiding the GIL bottleneck.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3>Process Groups</h3>
+<p>DDP communicates via <strong>process groups</strong>. <code>init_process_group()</code> establishes a default group; custom sub-groups enable overlapping communication patterns (e.g., intra-node all-reduce + inter-node reduce-scatter).</p>
+<h3>Gradient Synchronization</h3>
+<p>DDP hooks into <code>autograd</code> to overlap gradient all-reduce with backward computation. Gradients are bucketed by parameter order (reverse of <code>model.parameters()</code>) for coalesced communication. Bucket size is tunable via <code>bucket_cap_mb</code>.</p>
+<h3>Launch Methods</h3>
+<ul>
+<li><strong>torchrun</strong>: Recommended launcher (<code>torchrun --nproc_per_node=4 train.py</code>)</li>
+<li><strong>mp.spawn</strong>: Programmatic launch for testing</li>
+<li><strong>SLURM</strong>: Multi-node via <code>srun</code> with <code>MASTER_ADDR</code>/<code>MASTER_PORT</code> env vars</li>
+</ul>
+<h3>Gradient Accumulation</h3>
+<p>To accumulate gradients across micro-batches without synchronizing each step, use <code>model.no_sync()</code> as a context manager for all but the last micro-batch.</p>
+<h3>Mixed Precision + DDP</h3>
+<p>Combine DDP with <code>torch.amp.autocast</code> and <code>GradScaler</code> for FP16/BF16 training. The scaler handles gradient unscaling before the all-reduce.</p>
+<h2 id="files-in-this-module">Files in This Module</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody><tr><td><code>ddp_training.py</code></td><td>Full DDP training loop with process groups, gradient sync, mixed precision</td></tr></tbody></table></div>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-bash"># Single-node, 4 GPUs
+torchrun --nproc_per_node=4 ddp_training.py
+
+# Multi-node (2 nodes, 4 GPUs each)
+torchrun --nnodes=2 --nproc_per_node=4 \
+    --rdzv_backend=c10d --rdzv_endpoint=$MASTER_ADDR:29500 \
+    ddp_training.py</code></pre>
+<h2 id="common-pitfalls">Common Pitfalls</h2>
+<ul>
+<li><strong>Unused parameters</strong>: Set <code>find_unused_parameters=True</code> if not all params</li>
+</ul>
+<p>   participate in every forward pass (but this adds overhead).</p>
+<ul>
+<li><strong>Non-deterministic reductions</strong>: Floating-point all-reduce is not bitwise</li>
+</ul>
+<p>   reproducible across runs. Use <code>torch.use_deterministic_algorithms(True)</code> cautiously.</p>
+<ul>
+<li><strong>State dict loading</strong>: Save/load the <code>module</code> attribute (<code>model.module.state_dict()</code>)</li>
+</ul>
+<p>   to get a clean checkpoint without DDP wrapper keys.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pytorch.org/tutorials/intermediate/ddp_tutorial.html">DDP tutorial</a></li>
+<li><a href="https://pytorch.org/docs/stable/elastic/run.html">torchrun docs</a></li>
+<li><a href="https://pytorch.org/tutorials/intermediate/FSDP_tutorial.html">FSDP for large models</a></li>
+<li><a href="https://pytorch.org/docs/stable/notes/ddp.html">DDP design notes</a></li>
+</ul>
+  </div>
+  <div class="module-files"><h4>Source Files</h4><ul><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/47_ddp_patterns/ddp_training.py" target="_blank"><code>ddp_training.py</code></a> — Full DDP training loop with process groups, gradient sync, mixed precision</li></ul></div>
+</section>
+
+
+<section class="module-section" id="module-48_custom_autograd">
+  <div class="module-header">
+    <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/48_custom_autograd" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
+  </div>
+  <div class="module-content">
+    <h1>Module 48: Custom Autograd Functions</h1>
+<h2 id="overview">Overview</h2>
+<p><code>torch.autograd.Function</code> lets you define <strong>custom forward and backward</strong> behavior when built-in ops are not enough: fused kernels, numerically stable formulas, or ops that need a hand-written gradient. This module goes beyond the intro in <a href="../03_autograd/">Module 03</a> and focuses on production patterns: <code>ctx</code> usage, <code>@staticmethod</code>, <code>gradcheck</code>, and preparing for higher-order gradients.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3>Subclassing <code>torch.autograd.Function</code></h3>
+<p>Implement two static methods:</p>
+<ul>
+<li>*<em><code>forward(ctx, </em>args)</code>** — compute the output; save tensors needed for backward</li>
+</ul>
+<p>  with <code>ctx.save_for_backward(...)</code> (preferred) or set attributes on <code>ctx</code>.</p>
+<ul>
+<li>*<em><code>backward(ctx, </em>grad_outputs)</code>** — return gradients for each forward input</li>
+</ul>
+<p>  that requires grad (use <code>None</code> for non-tensor / non-differentiable args).</p>
+<p>Call the function with <code>MyOp.apply(x, y)</code> — never instantiate the class yourself.</p>
+<h3>What to Save on <code>ctx</code></h3>
+<ul>
+<li>Prefer <code>ctx.save_for_backward(*tensors)</code> so autograd can free memory when safe.</li>
+<li>Store non-tensor metadata as plain <code>ctx</code> attributes (<code>ctx.dim</code>, <code>ctx.eps</code>).</li>
+<li>Avoid saving huge intermediates if you can recompute them cheaply in backward.</li>
+</ul>
+<h3>Correctness: <code>gradcheck</code> / <code>gradgradcheck</code></h3>
+<p>Always verify analytical gradients against finite differences:</p>
+<pre><code class="language-python">from torch.autograd import gradcheck
+assert gradcheck(MyOp.apply, (x.double(),), eps=1e-6, atol=1e-4)</code></pre>
+<p>Use <code>gradgradcheck</code> when you need second-order correctness (see <code>double_backward.py</code>).</p>
+<h3>Common Patterns</h3>
+<div class="table-wrap"><table><thead><tr><th>Pattern</th><th>When</th></tr></thead><tbody><tr><td>Elementwise fused op</td><td>Custom CUDA/Triton forward + matching backward</td></tr><tr><td>Numerically stable log-sum-exp</td><td>Forward uses max-trick; backward uses softmax</td></tr><tr><td>Straight-through estimator (STE)</td><td>Forward discrete; backward identity</td></tr><tr><td>Non-differentiable arg</td><td>Return <code>None</code> in that backward slot</td></tr></tbody></table></div>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python">import torch
+from torch.autograd import Function
+
+class Square(Function):
+    @staticmethod
+    def forward(ctx, x):
+        ctx.save_for_backward(x)
+        return x * x
+
+    @staticmethod
+    def backward(ctx, grad_output):
+        (x,) = ctx.saved_tensors
+        return grad_output * 2 * x
+
+x = torch.tensor(3.0, requires_grad=True)
+y = Square.apply(x)
+y.backward()
+print(x.grad)  # 6.0</code></pre>
+<h2 id="when-to-use">When to Use</h2>
+<ul>
+<li>You need a <strong>custom gradient</strong> (STE, clipped grads, surrogate losses).</li>
+<li>You fuse ops for performance and must teach autograd the fused backward.</li>
+<li>Built-in ops lack the formula you need, or you want a stable formulation.</li>
+<li>Prefer functorch / existing ops when they already cover the math — less code, fewer bugs.</li>
+</ul>
+<h2 id="files-in-this-module">Files in This Module</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody><tr><td><code>autograd_function_basics.py</code></td><td>Forward/backward patterns, STE, gradcheck</td></tr><tr><td><code>double_backward.py</code></td><td>Higher-order grads and <code>create_graph</code></td></tr></tbody></table></div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/notes/extending.html">Extending PyTorch — Custom Functions</a></li>
+<li><a href="https://pytorch.org/docs/stable/autograd.html#function">torch.autograd.Function</a></li>
+<li><a href="https://pytorch.org/docs/stable/generated/torch.autograd.gradcheck.html">gradcheck</a></li>
+<li>Module 03: <a href="../03_autograd/">Autograd</a> · Module 38: <a href="../38_compiled_autograd/">Compiled Autograd</a></li>
+</ul>
+  </div>
+  <div class="module-files"><h4>Source Files</h4><ul><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/48_custom_autograd/autograd_function_basics.py" target="_blank"><code>autograd_function_basics.py</code></a> — Forward/backward patterns, STE, gradcheck</li><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/48_custom_autograd/double_backward.py" target="_blank"><code>double_backward.py</code></a> — Higher-order grads and `create_graph`</li></ul></div>
+</section>
+
+
+<section class="module-section" id="module-49_gradient_checkpointing_advanced">
+  <div class="module-header">
+    <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/49_gradient_checkpointing_advanced" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
+  </div>
+  <div class="module-content">
+    <h1>Module 49: Gradient Checkpointing — Advanced</h1>
+<h2 id="overview">Overview</h2>
+<p><a href="../16_activation_checkpointing/">Module 16</a> covers basic activation checkpointing. This module goes deeper: <strong>selective</strong> policies, <strong>reentrant vs non-reentrant</strong> implementations, activation <strong>offload</strong> to CPU, and how checkpointing interacts with <code>torch.compile</code> and DDP/FSDP. Use these tools when naive <code>checkpoint(layer, x)</code> is not enough for memory or correctness.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3>Reentrant vs Non-Reentrant</h3>
+<div class="table-wrap"><table><thead><tr><th>Mode</th><th>Flag</th><th>Notes</th></tr></thead><tbody><tr><td>Reentrant (legacy)</td><td><code>use_reentrant=True</code></td><td>Re-enters autograd; needed for some older patterns; more edge cases</td></tr><tr><td>Non-reentrant (preferred)</td><td><code>use_reentrant=False</code></td><td>Cleaner saved-tensor handling; recommended in modern PyTorch</td></tr></tbody></table></div>
+<p>Prefer <code>use_reentrant=False</code> unless you hit a known compatibility issue.</p>
+<h3>Selective Activation Checkpointing (SAC)</h3>
+<p>Instead of recomputing <em>everything</em> in a region, apply a <strong>policy</strong> that saves cheap ops (e.g. pointwise) and recomputes expensive ones (matmul/attention), or the reverse — depending on memory vs compute priorities.</p>
+<pre><code class="language-python">from torch.utils.checkpoint import checkpoint, create_selective_checkpoint_contexts</code></pre>
+<p>Policies typically inspect <code>ops</code> / op types during the forward pack phase.</p>
+<h3>Offloading Activations</h3>
+<p>When GPU memory is still tight after SAC, offload saved activations to <strong>CPU (pinned) memory</strong> during forward and prefetch them for backward. This adds PCIe traffic but can unlock larger batch sizes.</p>
+<h3>Interaction with Distributed &amp; Compile</h3>
+<ul>
+<li><strong>DDP / FSDP</strong>: Checkpoint <em>inside</em> each transformer block so recompute stays</li>
+</ul>
+<p>  local; avoid wrapping the entire model in one checkpoint.</p>
+<ul>
+<li><strong><code>torch.compile</code></strong>: Non-reentrant checkpointing composes better; graph breaks</li>
+</ul>
+<p>  can appear at checkpoint boundaries — profile before/after.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python">import torch
+from torch.utils.checkpoint import checkpoint
+
+def block(x, weight):
+    return torch.nn.functional.gelu(x @ weight)
+
+x = torch.randn(2, 128, requires_grad=True)
+w = torch.randn(128, 128, requires_grad=True)
+
+y = checkpoint(block, x, w, use_reentrant=False)
+y.sum().backward()</code></pre>
+<h2 id="when-to-use">When to Use</h2>
+<ul>
+<li>Model OOMs with full activation storage (LLM / ViT training).</li>
+<li>You need a finer memory/compute tradeoff than “checkpoint every layer”.</li>
+<li>GPU memory is scarce but host RAM / PCIe bandwidth is available (offload).</li>
+<li>Skip if the model already fits — checkpointing adds ~20–40% compute.</li>
+</ul>
+<h2 id="files-in-this-module">Files in This Module</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody><tr><td><code>selective_checkpoint.py</code></td><td>Reentrant vs non-reentrant, SAC-style policy, offload sketch</td></tr></tbody></table></div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/checkpoint.html">torch.utils.checkpoint</a></li>
+<li><a href="https://pytorch.org/docs/stable/checkpoint.html#torch.utils.checkpoint.checkpoint">Activation Checkpointing tutorial</a></li>
+<li>Module 16: <a href="../16_activation_checkpointing/">Activation Checkpointing</a></li>
+<li>Module 10: <a href="../10_distributed/">Distributed</a> · Module 26: <a href="../26_memory_profiling/">Memory Profiling</a></li>
+</ul>
+  </div>
+  <div class="module-files"><h4>Source Files</h4><ul><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/49_gradient_checkpointing_advanced/selective_checkpoint.py" target="_blank"><code>selective_checkpoint.py</code></a> — Reentrant vs non-reentrant, SAC-style policy, offload sketch</li></ul></div>
+</section>
+
+
+<section class="module-section" id="module-50_torch_sparse">
+  <div class="module-header">
+    <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/50_torch_sparse" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
+  </div>
+  <div class="module-content">
+    <h1>Module 50: Sparse Tensors &amp; Sparse Ops</h1>
+<h2 id="overview">Overview</h2>
+<p>PyTorch <strong>sparse tensors</strong> store only nonzero values (plus indices), saving memory and compute when data is highly sparse — recommendation matrices, graph adjacency, embeddings with large vocabularies. This module surveys layouts (<code>coo</code>, <code>csr</code>, <code>csc</code>, <code>csc</code>), conversion, and the sparse operator surface.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3>Layouts</h3>
+<div class="table-wrap"><table><thead><tr><th>Layout</th><th>Best for</th><th>Structure</th></tr></thead><tbody><tr><td><strong>COO</strong></td><td>Construction, irregular sparsity</td><td>indices <code>[ndim, nnz]</code> + values</td></tr><tr><td><strong>CSR</strong></td><td>Fast row slices, SpMM on CPU/CUDA</td><td>crow_indices, col_indices, values</td></tr><tr><td><strong>CSC</strong></td><td>Fast column slices</td><td>ccol_indices, row_indices, values</td></tr><tr><td><strong>BSR / BSC</strong></td><td>Block-sparse (structured)</td><td>block indices + dense blocks</td></tr></tbody></table></div>
+<p>Create with <code>torch.sparse_coo_tensor</code> / <code>torch.sparse_csr_tensor</code>, or <code>dense.to_sparse()</code> / <code>dense.to_sparse_csr()</code>.</p>
+<h3>Hybrid Tensors</h3>
+<p>A tensor can be sparse in some leading dims and dense in others (batched sparse). Example: batched graph adjacency <code>[B, N, N]</code> stored as sparse batches.</p>
+<h3>Sparse Ops</h3>
+<p>Common ops with sparse support (version-dependent):</p>
+<ul>
+<li>Arithmetic: <code>+</code>, <code>*</code>, <code>sparse.addmm</code> / <code>torch.sparse.mm</code></li>
+<li>Reductions: <code>sum</code>, <code>softmax</code> (layout-specific)</li>
+<li>Conversions: <code>to_dense()</code>, <code>coalesce()</code> (merge duplicate COO indices)</li>
+</ul>
+<p>Always <strong><code>coalesce()</code></strong> COO tensors before relying on unique indices.</p>
+<h3>Gradients</h3>
+<p>Sparse tensors can participate in autograd when ops support it. Gradients w.r.t. sparse parameters may be sparse or dense depending on the op — check docs and test with small examples.</p>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-python">import torch
+
+i = torch.tensor([[0, 1, 1],
+                  [2, 0, 2]])
+v = torch.tensor([3.0, 4.0, 5.0])
+s = torch.sparse_coo_tensor(i, v, (2, 3)).coalesce()
+print(s.to_dense())
+
+# CSR SpMM-style matmul with a dense vector
+csr = s.to_sparse_csr()
+x = torch.randn(3)
+y = torch.sparse.mm(csr, x.unsqueeze(1)).squeeze(1)</code></pre>
+<h2 id="when-to-use">When to Use</h2>
+<ul>
+<li>Density below ~1–5% and ops you need are sparse-aware.</li>
+<li>Graph NNs, sparse attention masks, large embedding bags.</li>
+<li>Prefer dense + masking when sparsity is moderate or ops lack sparse kernels.</li>
+<li>Structured 2:4 sparsity for Ampere+ Tensor Cores — see Module 31 (torchao).</li>
+</ul>
+<h2 id="files-in-this-module">Files in This Module</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th><th>Description</th></tr></thead><tbody><tr><td><code>sparse_basics.py</code></td><td>COO/CSR creation, coalesce, matmul, autograd sketch</td></tr></tbody></table></div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://pytorch.org/docs/stable/sparse.html">torch.sparse docs</a></li>
+<li><a href="https://pytorch.org/docs/stable/sparse.html#sparse-semi-structured-tensors">Sparse semi-structured</a></li>
+<li>Module 13: <a href="../13_advanced/">Advanced</a> · Module 31: <a href="../31_torchao/">torchao</a></li>
+</ul>
+  </div>
+  <div class="module-files"><h4>Source Files</h4><ul><li><a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/50_torch_sparse/sparse_basics.py" target="_blank"><code>sparse_basics.py</code></a> — COO/CSR creation, coalesce, matmul, autograd sketch</li></ul></div>
 </section>
 
 
