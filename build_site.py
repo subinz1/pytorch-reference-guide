@@ -68,7 +68,6 @@ CATEGORIES = {
     "Testing & Debugging": [
         "14_testing",
         "30_debugging",
-        "41_targeted_tests",
     ],
     "Utilities & Tooling": [
         "15_practical_utilities",
@@ -86,7 +85,13 @@ CATEGORIES = {
     ],
     "Operational Guides": [
         "40_crcr_downstream_ci",
+        "41_targeted_tests",
     ],
+}
+
+OPERATIONAL_GUIDES = {
+    "40_crcr_downstream_ci": "crcr-downstream-ci",
+    "41_targeted_tests": "targeted-test-selection",
 }
 
 CURRICULUM_MODULE_COUNT = 50
@@ -398,6 +403,21 @@ def get_category(dir_name):
     return "Other"
 
 
+def section_id(dir_name):
+    """Return the stable navigation identifier for a documentation section."""
+    guide_slug = OPERATIONAL_GUIDES.get(dir_name)
+    if guide_slug:
+        return f"guide-{guide_slug}"
+    return f"module-{dir_name}"
+
+
+def navigation_marker(dir_name):
+    """Return the sidebar label for a curriculum module or operational guide."""
+    if dir_name in OPERATIONAL_GUIDES:
+        return "Guide"
+    return dir_name[:2]
+
+
 def build_sidebar(modules):
     """Build sidebar navigation HTML."""
     categorized = {}
@@ -419,9 +439,10 @@ def build_sidebar(modules):
         parts.append(f'<div class="nav-category">')
         parts.append(f'<div class="nav-category-title">{cat_name}</div>')
         for dir_name, short_title in categorized[cat_name]:
+            marker_class = " nav-guide" if dir_name in OPERATIONAL_GUIDES else ""
             parts.append(
-                f'<a class="nav-item" href="#module-{dir_name}" title="{short_title}">'
-                f'<span class="nav-num">{dir_name[:2]}</span>{short_title}</a>'
+                f'<a class="nav-item" href="#{section_id(dir_name)}" title="{short_title}">'
+                f'<span class="nav-num{marker_class}">{navigation_marker(dir_name)}</span>{short_title}</a>'
             )
         parts.append("</div>")
 
@@ -457,14 +478,19 @@ def build_module_section(dir_name, path):
         file_links += "</ul></div>"
 
     repo_link = f"{REPO_URL}/{dir_name}"
+    legacy_anchor = ""
+    section_kind = ""
+    if dir_name in OPERATIONAL_GUIDES:
+        legacy_anchor = f'<span id="module-{dir_name}" aria-hidden="true"></span>'
+        section_kind = '<p class="section-kind">Operational guide</p>\n    '
 
     return f'''
-<section class="module-section" id="module-{dir_name}">
+{legacy_anchor}<section class="module-section" id="{section_id(dir_name)}">
   <div class="module-header">
     <a href="{repo_link}" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
   </div>
   <div class="module-content">
-    {content_html}
+    {section_kind}{content_html}
   </div>
   {file_links}
 </section>
@@ -703,6 +729,13 @@ pre code { background: none; padding: 0; font-size: inherit; }
     color: var(--text-muted);
     margin-right: 6px;
 }
+.nav-num.nav-guide {
+    width: 36px;
+    color: var(--link);
+    font-size: 0.6rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
 
 /* Main content */
 .main-content {
@@ -756,6 +789,14 @@ pre code { background: none; padding: 0; font-size: inherit; }
     display: flex;
     justify-content: flex-end;
     margin-bottom: 8px;
+}
+.section-kind {
+    margin: 0 0 8px;
+    color: var(--link);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 .module-repo-link {
     font-size: 0.8rem;

@@ -142,6 +142,13 @@ pre code { background: none; padding: 0; font-size: inherit; }
     color: var(--text-muted);
     margin-right: 6px;
 }
+.nav-num.nav-guide {
+    width: 36px;
+    color: var(--link);
+    font-size: 0.6rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
 
 /* Main content */
 .main-content {
@@ -195,6 +202,14 @@ pre code { background: none; padding: 0; font-size: inherit; }
     display: flex;
     justify-content: flex-end;
     margin-bottom: 8px;
+}
+.section-kind {
+    margin: 0 0 8px;
+    color: var(--link);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 .module-repo-link {
     font-size: 0.8rem;
@@ -364,7 +379,6 @@ th { background: var(--bg-secondary); font-weight: 600; }
 <div class="nav-category-title">Testing & Debugging</div>
 <a class="nav-item" href="#module-14_testing" title="Testing and Reproducibility"><span class="nav-num">14</span>Testing and Reproducibility</a>
 <a class="nav-item" href="#module-30_debugging" title="Debugging PyTorch Models"><span class="nav-num">30</span>Debugging PyTorch Models</a>
-<a class="nav-item" href="#module-41_targeted_tests" title="Targeted Test Selection"><span class="nav-num">41</span>Targeted Test Selection</a>
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Utilities & Tooling</div>
@@ -384,7 +398,8 @@ th { background: var(--bg-secondary); font-weight: 600; }
 </div>
 <div class="nav-category">
 <div class="nav-category-title">Operational Guides</div>
-<a class="nav-item" href="#module-40_crcr_downstream_ci" title="Cross-Repository CI Relay (CRCR)"><span class="nav-num">40</span>Cross-Repository CI Relay (CRCR)</a>
+<a class="nav-item" href="#guide-crcr-downstream-ci" title="Cross-Repository CI Relay (CRCR)"><span class="nav-num nav-guide">Guide</span>Cross-Repository CI Relay (CRCR)</a>
+<a class="nav-item" href="#guide-targeted-test-selection" title="Targeted Test Selection"><span class="nav-num nav-guide">Guide</span>Targeted Test Selection</a>
 </div>
         </div>
     </nav>
@@ -19083,11 +19098,12 @@ loss = 0.7 * soft_loss + 0.3 * hard_loss</code></pre>
 </section>
 
 
-<section class="module-section" id="module-40_crcr_downstream_ci">
+<span id="module-40_crcr_downstream_ci" aria-hidden="true"></span><section class="module-section" id="guide-crcr-downstream-ci">
   <div class="module-header">
     <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/40_crcr_downstream_ci" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
   </div>
   <div class="module-content">
+    <p class="section-kind">Operational guide</p>
     <h1>Cross-Repository CI Relay (CRCR)</h1>
 <p>PyTorch&#x27;s <strong>Cross-Repository CI Relay</strong> enables downstream backends (Intel XPU, AMD ROCm, Apple MPS, Red Hat RHEL, etc.) to run their own CI against upstream PyTorch PRs and report results back to the <a href="https://hud.pytorch.org">PyTorch HUD</a>.</p>
 <h2 id="architecture">Architecture</h2>
@@ -20370,11 +20386,12 @@ def make_moons(n_samples=1000):
 </section>
 
 
-<section class="module-section" id="module-41_targeted_tests">
+<span id="module-41_targeted_tests" aria-hidden="true"></span><section class="module-section" id="guide-targeted-test-selection">
   <div class="module-header">
     <a href="https://github.com/subinz1/pytorch-reference-guide/blob/main/41_targeted_tests" target="_blank" class="module-repo-link" title="View on GitHub">View Source</a>
   </div>
   <div class="module-content">
+    <p class="section-kind">Operational guide</p>
     <h1>Targeted Test Selection</h1>
 <p>Running the full PyTorch test suite takes hours. <strong>Targeted test selection</strong> identifies which tests are affected by a code change and runs only those, reducing CI time from hours to minutes.</p>
 <h2 id="approaches">Approaches</h2>
