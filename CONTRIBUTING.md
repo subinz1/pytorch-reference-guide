@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
 1. Fork the repository and create a feature branch.
 2. Make your changes following the guidelines above.
-3. Test that all Python scripts run without errors.
+3. Run the relevant example directly, then follow the [validation workflow](docs/validation.md).
 4. Open a pull request with a clear description of what you added or changed.
 
 ## Reporting Issues
