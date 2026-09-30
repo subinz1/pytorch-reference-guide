@@ -64,5 +64,5 @@ wheel solely to make an example start.
 - When an API is unavailable, upgrade to the maintained baseline rather than
   silently replacing the example with a different API.
 
-See [runtime requirements](runtime_requirements.md) for the CPU, accelerator,
-and multi-device execution contract used by the examples.
+For accelerator-specific work, read the prerequisites in the relevant module
+before running an example.
