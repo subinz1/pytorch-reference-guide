@@ -64,7 +64,11 @@ Upload any `.ipynb` file to [Google Colab](https://colab.research.google.com/) â
 
 ## Requirements
 
-All notebooks run on **CPU only** â€” no GPU required. GPU-specific examples are clearly marked.
+The core notebook sequence can be explored on **CPU**. Notebooks covering CUDA
+graphs, Triton, memory profiling, multi-GPU inference, and accelerator
+performance require matching hardware for those sections. See the
+[runtime requirements](../docs/runtime_requirements.md) before running an
+accelerator-specific notebook.
 
 ```bash
 pip install torch torchvision torchaudio jupyter
