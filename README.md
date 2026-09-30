@@ -9,14 +9,15 @@
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
   <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-50-blue" alt="Modules"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Code_Examples-133%2B-green" alt="Examples"></a>
+  <a href="docs/content_inventory.md"><img src="https://img.shields.io/badge/Code_Examples-150-green" alt="Examples"></a>
   <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-50-blueviolet?logo=jupyter" alt="Notebooks"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Lines-116%2C000%2B-orange" alt="Lines"></a>
+  <a href="docs/reference_cards/"><img src="https://img.shields.io/badge/Reference_Cards-28-orange" alt="Reference Cards"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>50 modules</strong> and <strong>50 interactive notebooks</strong>.<br>
-  Each module contains detailed explanations, theory, formulas, runnable Python scripts, and a Jupyter playbook.
+  A structured, self-contained PyTorch course organized into <strong>50 curriculum modules</strong>,
+  <strong>50 interactive notebooks</strong>, and <strong>2 operational guides</strong>.<br>
+  The curriculum modules pair explanations with runnable Python scripts and a Jupyter playbook.
 </p>
 
 <p align="center">
@@ -25,6 +26,8 @@
 
 <p align="center">
   <a href="docs/reference_cards/"><strong>🧭 Use the Practical Reference Cards →</strong></a>
+  &nbsp;·&nbsp;
+  <a href="docs/content_inventory.md"><strong>📋 View the Content Inventory →</strong></a>
 </p>
 
 ---
@@ -39,7 +42,8 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 
 **Updated for PyTorch 2.14+ (August 2026)** — includes modern features like `torch.compile`, FlexAttention, FSDP2, and more.
 
-> **New modules added daily** — see the [Bonus: Practical Deep Dives](#bonus-practical-deep-dives) section for the latest additions.
+> See the [content inventory](docs/content_inventory.md) for the canonical curriculum,
+> operational guides, and reference-card counts.
 
 ---
 
@@ -127,17 +131,26 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 39 | [**Building a Text Classifier**](39_text_classifier/) | Tokenizer, embeddings, transformer encoder, training loop, evaluation metrics, inference, torch.compile | 1 README + 3 scripts |
 | 40 | [**Building an Image Classifier**](40_image_classifier/) | Data augmentation, CNN, ResNet, transfer learning, MixUp/CutMix, AMP training, TTA, Grad-CAM | 1 README + 3 scripts |
 | 41 | [**Building a Diffusion Model**](41_diffusion_model/) | Noise schedules, UNet with time embedding, DDPM/DDIM sampling, classifier-free guidance, 2D distributions | 1 README + 3 scripts |
-| — | [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repo CI relay architecture, dispatches, callbacks, nightly workflows, HUD integration | 1 README + 1 script |
-| 42 | [**Targeted Test Selection**](41_targeted_tests/) | Diff-based heuristics, TorchTalk structural analysis, run_test.py, CI integration | 1 README + 1 script |
-| 43 | [**Building a RAG Pipeline**](42_rag_pipeline/) | Document encoding, vector index, chunking strategies, retrieval evaluation, end-to-end RAG | 1 README + 3 scripts |
-| 44 | [**Production Serving Patterns**](43_production_serving/) | Batched inference, dynamic batching, torch.compile + CUDA Graphs, monitoring, end-to-end server | 1 README + 4 scripts |
-| 45 | [**Performance Case Studies**](44_performance_case_studies/) | DataLoader pinning, attention scaling, torch.compile graph breaks, memory reduction, multi-GPU comm overlap | 1 README + 5 scripts |
-| — | [**PyTorch Profiler**](45_torch_profiler/) | `torch.profiler`, schedules, key averages, Chrome/Perfetto traces | 1 README + 2 scripts + trace guide |
-| — | [**Quantization Recipes**](46_quantization_recipes/) | Dynamic/static quantization, QAT checklist and pitfalls | 1 README + 2 scripts + QAT guide |
-| — | [**DDP Patterns**](47_ddp_patterns/) | Process groups, gradient sync, accumulation, common DDP pitfalls | 1 README + 1 script + pitfalls guide |
+| 42 | [**Building a RAG Pipeline**](42_rag_pipeline/) | Document encoding, vector index, chunking strategies, retrieval evaluation, end-to-end RAG | 1 README + 3 scripts |
+| 43 | [**Production Serving Patterns**](43_production_serving/) | Batched inference, dynamic batching, torch.compile + CUDA Graphs, monitoring, end-to-end server | 1 README + 4 scripts |
+| 44 | [**Performance Case Studies**](44_performance_case_studies/) | DataLoader pinning, attention scaling, torch.compile graph breaks, memory reduction, multi-GPU comm overlap | 1 README + 5 scripts |
+| 45 | [**PyTorch Profiler**](45_torch_profiler/) | `torch.profiler`, schedules, key averages, Chrome/Perfetto traces | 1 README + 2 scripts + trace guide |
+| 46 | [**Quantization Recipes**](46_quantization_recipes/) | Dynamic/static quantization, QAT checklist and pitfalls | 1 README + 2 scripts + QAT guide |
+| 47 | [**DDP Patterns**](47_ddp_patterns/) | Process groups, gradient sync, accumulation, common DDP pitfalls | 1 README + 1 script + pitfalls guide |
 | 48 | [**Custom Autograd Functions**](48_custom_autograd/) | `torch.autograd.Function`, STE, gradcheck, double backward | 1 README + 2 scripts |
 | 49 | [**Advanced Gradient Checkpointing**](49_gradient_checkpointing_advanced/) | Selective checkpointing, reentrant vs non-reentrant, activation offload | 1 README + 1 script |
 | 50 | [**Sparse Tensors**](50_torch_sparse/) | COO/CSR layouts, coalesce, sparse matmul, sparsity heuristics | 1 README + 1 script |
+
+### Operational Guides
+
+These guides are practical complements to the numbered curriculum. Their
+directory prefixes are historical and should not be read as curriculum module
+numbers.
+
+| Guide | Description | Files |
+|---|---|---|
+| [**CRCR & Downstream CI**](40_crcr_downstream_ci/) | Cross-repository CI relay architecture, dispatches, callbacks, nightly workflows, and HUD integration | 1 README + 4 scripts |
+| [**Targeted Test Selection**](41_targeted_tests/) | Diff-based heuristics, structural analysis, test manifests, risk budgets, and CI integration | 1 README + 4 scripts |
 
 ### Interactive Notebooks
 
@@ -305,52 +318,10 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-50 modules | 50+ READMEs | 133+ Python scripts | 50 Jupyter notebooks | 116,000+ lines of content
+50 curriculum modules | 2 operational guides | 150 Python examples | 50 Jupyter notebooks | 28 reference cards
 ```
 
-| Module | README | Scripts | Notebook | Key Topics |
-|--------|:------:|:-------:|:--------:|------------|
-| 01 Foundations | 640 | 1 | 01 | Math, installation, philosophy |
-| 02 Tensors | 930 | 5 | 01 | Creation, ops, indexing, broadcasting |
-| 03 Autograd | 833 | 4 | 02 | Gradients, custom functions, Jacobians |
-| 04 Neural Networks | 1,003 | 5 | 03 | All layers, losses, hooks, save/load |
-| 05 Optimizers | 469 | 3 | 05 | SGD, Adam, schedulers |
-| 06 Data Loading | 559 | 4 | 06 | Dataset, DataLoader, augmentation |
-| 07 Training | 832 | 5 | 04 | AMP, transfer learning, EMA |
-| 08 torch.compile | 526 | 5 | 08 | Dynamo, Inductor, graph breaks |
-| 09 Attention | 495 | 5 | 07 | SDPA, FlexAttention, RoPE |
-| 10 Distributed | 1,322 | 5 | 10 | DDP, FSDP2, TP, PP, DCP |
-| 11 Export & Deploy | 836 | 4 | 11 | torch.export, AOTInductor, NativeRT |
-| 12 Architectures | 646 | 5 | 09 | ResNet, GPT, ViT, VAE |
-| 13 Advanced | 624 | 6 | 12 | functorch, profiling, custom ops |
-| 14 Testing | 363 | 3 | 13 | TestCase, reproducibility, benchmarks |
-| 15 Practical Utilities | 432 | 4 | 14 | Parametrize, pruning, nested tensors |
-| 16 Activation Checkpointing | 260 | 1 | 15, 16 | SAC, memory/compute tradeoffs |
-| 17 Compile Decorators | 224 | 1 | 17 | Stances, disable, mark_dynamic |
-| 18 torch.package | 331 | 1 | 18 | PackageExporter/Importer |
-| 19 Tensor Dispatch | 387 | 1 | 19 | `__torch_function__`, `__torch_dispatch__` |
-| 20 Backends Tuning | 320 | 1 | 20 | cuDNN, TF32, OpenMP, opt_einsum |
-| 21 CUDA Graphs | 350+ | 1 | 21 | Graph capture, static inputs, reduce-overhead |
-| 22 LLM Training Recipes | 400+ | 3 | 22 | RoPE, KV Cache, GQA, SwiGLU, mini-LLM |
-| 23 FX Graph Transforms | 400+ | 2 | 23 | Symbolic tracing, graph IR, passes, patterns |
-| 24 MaskedTensor | 300+ | 1 | 24 | torch.masked, masked reductions, softmax, propagation |
-| 25 Triton Kernels | 400+ | 2 | 25 | Triton programming, fusion, torch.library, autotuning |
-| 26 Memory Profiling | 400+ | 2 | 26 | GPU memory anatomy, profiling, optimization, estimation |
-| 27 Multi-GPU Inference | 400+ | 2 | 27 | TP, PP, device_map, quantization, continuous batching |
-| 28 Benchmarking | 400+ | 2 | 28 | Timer, Compare, Fuzzer, Callgrind, torch.compile |
-| 29 Mixed Precision | 450+ | 2 | 29 | FP32, FP16, BF16, FP8, AMP, GradScaler, FSDP2 |
-| 30 Debugging | 400+ | 2 | 30 | Anomaly detection, NaN, gradients, compile debugging |
-| 31 torchao | 400+ | 2 | 31 | Quantization, INT8/INT4/FP8, sparsity, torch.compile |
-| 32 Data Pipelines | 400+ | 2 | 32 | IterableDataset, mmap, prefetching, distributed |
-| 33 Interpretability | 400+ | 2 | 33 | Hooks, Grad-CAM, saliency, guided backprop |
-| 34 LLM Fine-Tuning | 450+ | 3 | 34 | LoRA, QLoRA, instruction tuning, training, export |
-| 35 The Dispatcher | 400+ | 2 | 35 | Dispatch keys, priority chain, custom ops, torch.library |
-| 36 C++ Extensions | 400+ | 2 | 36 | C++ ops, CUDA kernels, load(), autograd, triton_op |
-| 37 Export Deep Dive | 400+ | 2 | 37 | ExportedProgram, torch.cond, while_loop, Dim API, custom ops |
-| 38 Compiled Autograd | 400+ | 2 | 38 | AOTAutograd, compiled backward, joint graph, min-cut, saved tensors |
-| 39 Text Classifier | 400+ | 3 | 39 | Tokenizer, embeddings, transformer, training, evaluation, inference |
-| 40 Image Classifier | 400+ | 3 | 40 | Data augmentation, CNN, ResNet, transfer learning, TTA, Grad-CAM |
-| 41 Diffusion Model | 450+ | 3 | 41 | Noise schedules, UNet, DDPM/DDIM, classifier-free guidance, 2D data |
+The checked inventory in [docs/content_inventory.md](docs/content_inventory.md) is the canonical source for these counts. It intentionally separates the numbered curriculum from operational guides, whose directory names overlap the curriculum numbering.
 
 ---
 
@@ -367,9 +338,9 @@ pip install torch torchvision torchaudio
 
 ---
 
-## Daily Updates Roadmap
+## Completed Deep-Dive Milestones
 
-This guide grows incrementally. Upcoming topics:
+The following deep dives are available in the guide:
 
 | Day | Topic | Status |
 |-----|-------|--------|
