@@ -35,4 +35,4 @@ python tools/run_cpu_smoke.py --only 03_autograd/gradient_basics.py
 ```
 
 The command uses the active interpreter. Install the guide's supported PyTorch
-environment first; see [compatibility and installation](compatibility.md).
+environment first and follow the project [requirements](../README.md#requirements).
