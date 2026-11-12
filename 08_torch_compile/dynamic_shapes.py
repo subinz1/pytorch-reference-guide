@@ -36,22 +36,22 @@ def counting_backend(gm, example_inputs):
 def simple_fn(x):
     return x.sin() + x.cos()
 
-# Without dynamic shapes: each new shape triggers recompilation
+# With dynamic=False, each new shape may require a specialized graph.
 torch._dynamo.reset()
 compile_count = 0
 compiled_fn = torch.compile(simple_fn, backend=counting_backend)
 
-print("  Without dynamic=True:")
+print("  With dynamic=False:")
 for batch_size in [8, 16, 32, 8, 16]:
     x = torch.randn(batch_size, 64)
     compiled_fn(x)
     print(f"    batch_size={batch_size:3d}: compilations so far = {compile_count}")
 
 print(f"\n  Total compilations: {compile_count}")
-print("  (Recompiled for each new shape, but cached for seen shapes)")
+print("  (Specialization can compile a graph for each unseen shape.)")
 
 # =============================================================================
-# 2. dynamic=True — compile once for any shape
+# 2. dynamic=True — request dynamic kernels up front
 # =============================================================================
 
 print("\n" + "=" * 60)
@@ -69,7 +69,7 @@ for batch_size in [8, 16, 32, 64, 128]:
     print(f"    batch_size={batch_size:3d}: compilations so far = {compile_count}")
 
 print(f"\n  Total compilations: {compile_count}")
-print("  (Compiled ONCE with symbolic shapes, works for any batch size!)")
+print("  (Dynamic tracing can reduce recompiles, but specialization may remain.)")
 
 # =============================================================================
 # 3. What dynamic=True does internally
@@ -79,11 +79,11 @@ print("\n" + "=" * 60)
 print("--- How Dynamic Shapes Work ---")
 print("=" * 60 + "\n")
 
-print("""  With dynamic=True, TorchDynamo uses symbolic integers:
+print("""  With dynamic=True, TorchDynamo can use symbolic integers:
     - Instead of recording shape = [32, 64]
     - It records shape = [s0, s1] where s0, s1 are symbolic
-    - Generated code handles any concrete value for s0, s1
-    - Guards only check: dtype, device, rank (not exact sizes)
+    - Generated code can reuse a graph across compatible sizes
+    - Guards and shape-dependent branches can still require specialization
 """)
 
 # Demonstrate with a function that depends on shape
@@ -97,13 +97,13 @@ torch._dynamo.reset()
 compile_count = 0
 compiled_shape = torch.compile(shape_dependent_fn, backend=counting_backend, dynamic=True)
 
-# All these work without recompilation
+# These calls may reuse dynamic graphs, subject to operation constraints.
 for shape in [(8, 64), (16, 128), (32, 256), (4, 512)]:
     x = torch.randn(*shape)
     result = compiled_shape(x)
 
 print(f"  Ran with 4 different shapes: {compile_count} compilation(s)")
-print(f"  dynamic=True handles varying shapes in ALL dimensions")
+print("  Inspect TORCH_LOGS=dynamic,recompiles if the count grows unexpectedly")
 
 # =============================================================================
 # 4. mark_dynamic — fine-grained control
@@ -132,7 +132,7 @@ for batch_size in [8, 16, 32, 64]:
     print(f"    batch={batch_size:3d}, output shape={result.shape}, "
           f"compilations={compile_count}")
 
-print(f"\n  Only 1 compilation for varying batch sizes!")
+print("\n  A stable count indicates the marked batch dimension was reused.")
 
 # =============================================================================
 # 5. Automatic dynamic shapes
@@ -142,8 +142,8 @@ print("\n" + "=" * 60)
 print("--- Automatic Dynamic Shape Detection ---")
 print("=" * 60 + "\n")
 
-print("  PyTorch automatically marks dimensions as dynamic after")
-print("  seeing recompilation on the same dimension.\n")
+print("  With dynamic=None (the default), PyTorch begins with static assumptions.")
+print("  After a shape-triggered recompile it can generalize the changed dimension.\n")
 
 torch._dynamo.reset()
 compile_count = 0
@@ -157,7 +157,7 @@ for bs in batch_sizes:
 
 print(f"  Ran with {len(batch_sizes)} different batch sizes")
 print(f"  Total compilations: {compile_count}")
-print(f"  After initial recompilations, Dynamo marks dim 0 as dynamic")
+print("  Use compiler logs to confirm which guards and dimensions were generalized")
 
 # =============================================================================
 # 6. Dynamic shapes with models
@@ -200,7 +200,7 @@ with torch.no_grad():
         print(f"    Input: [{batch:3d}, {seq_len:3d}, 128] -> Output: {list(out.shape)}, "
               f"compilations={compile_count}")
 
-print(f"\n  All shapes handled with {compile_count} compilation(s)!")
+print(f"\n  Completed variable-shape calls with {compile_count} compilation(s)")
 
 # =============================================================================
 # 7. When dynamic shapes DON'T help
@@ -250,20 +250,23 @@ print("\n" + "=" * 60)
 print("BEST PRACTICES FOR DYNAMIC SHAPES")
 print("=" * 60)
 print("""
-  1. Use dynamic=True when batch sizes vary (most common case)
+  1. Start with dynamic=None (the default) and measure recompilations.
 
-  2. Use mark_dynamic for fine-grained control:
+  2. Prefer mark_dynamic when one dimension is known to vary:
      - Mark batch dim as dynamic, keep feature dim static
-     - Helps the compiler generate better code for known dimensions
+     - Add min/max bounds when they are part of the input contract
 
-  3. Pad sequences to a few fixed lengths to reduce recompilation:
+  3. Use dynamic=True as a diagnostic or when broad dynamism is justified:
+     - It can increase compile time and expose dynamic-shape limitations
+
+  4. Pad sequences to a few fixed lengths to reduce recompilation:
      - Instead of 1-512 different lengths
      - Bucket into [32, 64, 128, 256, 512]
 
-  4. Use torch.compiler.set_stance("fail_on_recompile") in production
+  5. Use torch.compiler.set_stance("fail_on_recompile") in production
      to catch unexpected recompilations
 
-  5. Profile to verify: sometimes recompilation for a few fixed sizes
+  6. Profile to verify: sometimes recompilation for a few fixed sizes
      is faster than dynamic code for all sizes
 """)
 

@@ -20,6 +20,9 @@
 | `graph_breaks.py` | Graph breaks — examples, causes, and fixes |
 | `dynamic_shapes.py` | Dynamic shapes — handling varying input sizes |
 | `custom_backend.py` | Custom backends — writing your own torch.compile backend |
+| `compile_shape_cache.py` | Compare specialized and dynamic shape-cache behavior |
+| `compile_debug_workflow.py` | Inspect graph breaks and recompilations with compiler logs |
+| `compile_correctness_harness.py` | Compare eager and compiled results across an input matrix |
 
 ---
 
