@@ -8,14 +8,14 @@
 <p align="center">
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.14%2B-EE4C2C?logo=pytorch" alt="PyTorch"></a>
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white" alt="Python"></a>
-  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-50-blue" alt="Modules"></a>
-  <a href="docs/content_inventory.md"><img src="https://img.shields.io/badge/Code_Examples-150-green" alt="Examples"></a>
+  <a href="#course-structure"><img src="https://img.shields.io/badge/Modules-52-blue" alt="Modules"></a>
+  <a href="docs/content_inventory.md"><img src="https://img.shields.io/badge/Code_Examples-152-green" alt="Examples"></a>
   <a href="#interactive-notebooks"><img src="https://img.shields.io/badge/Notebooks-50-blueviolet?logo=jupyter" alt="Notebooks"></a>
   <a href="docs/reference_cards/"><img src="https://img.shields.io/badge/Reference_Cards-28-orange" alt="Reference Cards"></a>
 </p>
 
 <p align="center">
-  A structured, self-contained PyTorch course organized into <strong>50 curriculum modules</strong>,
+  A structured, self-contained PyTorch course organized into <strong>52 curriculum modules</strong>,
   <strong>50 interactive notebooks</strong>, and <strong>2 operational guides</strong>.<br>
   The curriculum modules pair explanations with runnable Python scripts and a Jupyter playbook.
 </p>
@@ -140,6 +140,8 @@ This repository takes someone with **basic Python knowledge** and makes them a *
 | 48 | [**Custom Autograd Functions**](48_custom_autograd/) | `torch.autograd.Function`, STE, gradcheck, double backward | 1 README + 2 scripts |
 | 49 | [**Advanced Gradient Checkpointing**](49_gradient_checkpointing_advanced/) | Selective checkpointing, reentrant vs non-reentrant, activation offload | 1 README + 1 script |
 | 50 | [**Sparse Tensors**](50_torch_sparse/) | COO/CSR layouts, coalesce, sparse matmul, sparsity heuristics | 1 README + 1 script |
+| 51 | [**Safe Model Serialization**](51_safe_serialization/) | State dictionaries, `weights_only`, checkpoint provenance, integrity checks, safe-global inspection | 1 README + 1 script |
+| 52 | [**Graph Neural Networks**](52_graph_neural_networks/) | Core-PyTorch graph representation, message passing, aggregation, graph convolution, node classification | 1 README + 1 script |
 
 ### Operational Guides
 
@@ -318,7 +320,7 @@ Tensors, Autograd, `nn.Module`, Optimizers, DataLoaders, Training Loops
 ## Repository Stats
 
 ```
-50 curriculum modules | 2 operational guides | 150 Python examples | 50 Jupyter notebooks | 28 reference cards
+52 curriculum modules | 2 operational guides | 152 Python examples | 50 Jupyter notebooks | 28 reference cards
 ```
 
 The checked inventory in [docs/content_inventory.md](docs/content_inventory.md) is the canonical source for these counts. It intentionally separates the numbered curriculum from operational guides, whose directory names overlap the curriculum numbering.
