@@ -71,7 +71,8 @@ Study when your work requires them — not all at once:
 |------|---------|
 | Custom gradients | [48 Custom Autograd](../48_custom_autograd/), [38 Compiled Autograd](../38_compiled_autograd/) |
 | Memory at LLM scale | [49 Advanced Checkpointing](../49_gradient_checkpointing_advanced/), [26 Memory](../26_memory_profiling/) |
-| Sparse data / graphs | [50 Sparse](../50_torch_sparse/) |
+| Sparse data / graphs | [50 Sparse](../50_torch_sparse/), [52 Graph Neural Networks](../52_graph_neural_networks/) |
+| Secure checkpoints | [51 Safe Serialization](../51_safe_serialization/) |
 | Profiling | [45 Profiler](../45_torch_profiler/) + `chrome_trace_guide.md` |
 | Quantization | [46 Quantization](../46_quantization_recipes/) + `qat_walkthrough.md` |
 | Kernels / internals | [25 Triton](../25_triton_kernels/), [35 Dispatcher](../35_dispatcher/), [36 C++ Extensions](../36_cpp_extensions/) |
