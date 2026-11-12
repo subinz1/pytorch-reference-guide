@@ -312,9 +312,10 @@ def train(
         betas=(0.9, 0.999),
     )
 
-    amp_dtype = torch.bfloat16 if torch.cuda.is_available() or hasattr(torch.cpu, "is_available") else torch.float32
-    if not use_amp:
-        amp_dtype = torch.float32
+    device_type = torch.device(device).type
+    if device_type not in {"cpu", "cuda"}:
+        raise ValueError(f"AMP example supports cpu or cuda, got {device!r}")
+    amp_dtype = torch.float16 if device_type == "cuda" else torch.bfloat16
 
     losses = []
     step = 0
@@ -342,7 +343,11 @@ def train(
             input_ids = batch["input_ids"].to(device)
             labels = batch["labels"].to(device)
 
-            with torch.autocast(device_type=device, dtype=amp_dtype, enabled=use_amp):
+            with torch.autocast(
+                device_type=device_type,
+                dtype=amp_dtype,
+                enabled=use_amp,
+            ):
                 _, loss = model(input_ids, labels=labels)
                 loss = loss / grad_accum_steps
 
