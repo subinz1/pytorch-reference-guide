@@ -85,6 +85,11 @@ CATEGORIES = {
         "42_rag_pipeline",
         "44_performance_case_studies",
     ],
+    "Applied ML Systems": [
+        "53_time_series_forecasting",
+        "54_recommendation_systems",
+        "55_multimodal_retrieval",
+    ],
     "Operational Guides": [
         "40_crcr_downstream_ci",
         "41_targeted_tests",

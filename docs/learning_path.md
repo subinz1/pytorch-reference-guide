@@ -60,6 +60,9 @@ README with its script(s) and notebook when available.
 | 39 | [Text Classifier](../39_text_classifier/) | End-to-end NLP project |
 | 40 | [Image Classifier](../40_image_classifier/) | End-to-end vision project |
 | 41 | [Diffusion](../41_diffusion_model/) | Generative project track |
+| 53 | [Time-Series Forecasting](../53_time_series_forecasting/) | Demand and capacity forecasting |
+| 54 | [Recommendation Systems](../54_recommendation_systems/) | Retrieval and ranking foundations |
+| 55 | [Multimodal Retrieval](../55_multimodal_retrieval/) | Image-text dual encoders |
 
 Pick **one** project module and finish it fully before starting another.
 

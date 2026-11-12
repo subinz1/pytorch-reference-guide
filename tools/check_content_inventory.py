@@ -12,9 +12,10 @@ OPERATIONAL_GUIDES = {
     "40_crcr_downstream_ci",
     "41_targeted_tests",
 }
-EXPECTED_MODULE_NUMBERS = list(range(1, 51))
+EXPECTED_MODULE_NUMBERS = list(range(1, 56))
+EXPECTED_NOTEBOOK_NUMBERS = list(range(1, 51))
 EXPECTED_REFERENCE_CARDS = 28
-EXPECTED_MODULE_SCRIPTS = 150
+EXPECTED_MODULE_SCRIPTS = 155
 
 
 def fail(message: str) -> None:
@@ -40,7 +41,7 @@ def main() -> None:
     expected_numbers = Counter(EXPECTED_MODULE_NUMBERS)
     if module_numbers != expected_numbers:
         fail(
-            "curriculum module numbers do not match 01 through 50: "
+            "curriculum module numbers do not match 01 through 55: "
             f"found {sorted(module_numbers.elements())}"
         )
 
@@ -52,7 +53,7 @@ def main() -> None:
 
     notebooks = sorted((REPO_ROOT / "notebooks").glob("*.ipynb"))
     notebook_numbers = [int(notebook.name[:2]) for notebook in notebooks]
-    if notebook_numbers != EXPECTED_MODULE_NUMBERS:
+    if notebook_numbers != EXPECTED_NOTEBOOK_NUMBERS:
         fail("notebook numbers do not match 01 through 50")
 
     cards = [
