@@ -52,6 +52,7 @@ CATEGORIES = {
         "37_export_deep_dive",
         "43_production_serving",
         "46_quantization_recipes",
+        "51_safe_serialization",
     ],
     "Architecture & Design": [
         "12_model_architectures",
@@ -64,6 +65,7 @@ CATEGORIES = {
         "36_cpp_extensions",
         "48_custom_autograd",
         "50_torch_sparse",
+        "52_graph_neural_networks",
     ],
     "Testing & Debugging": [
         "14_testing",
@@ -94,13 +96,6 @@ OPERATIONAL_GUIDES = {
     "41_targeted_tests": "targeted-test-selection",
 }
 
-CURRICULUM_MODULE_COUNT = 50
-OPERATIONAL_GUIDE_COUNT = 2
-EXAMPLE_COUNT = 150
-NOTEBOOK_COUNT = 50
-REFERENCE_CARD_COUNT = 28
-
-
 def discover_modules():
     """Find all module directories and return sorted list of (dir_name, path)."""
     modules = []
@@ -110,6 +105,29 @@ def discover_modules():
             if readme.exists():
                 modules.append((entry.name, entry))
     return modules
+
+
+def count_curriculum_modules(modules):
+    """Count modules that are not operational guides."""
+    return sum(dir_name not in OPERATIONAL_GUIDES for dir_name, _ in modules)
+
+
+def count_python_examples(modules):
+    """Count Python examples contained in documented modules."""
+    return sum(len(list(path.glob("*.py"))) for _, path in modules)
+
+
+def count_notebooks():
+    """Count committed Jupyter notebooks."""
+    return len(list((REPO_ROOT / "notebooks").glob("*.ipynb")))
+
+
+def count_reference_cards():
+    """Count reference cards while excluding their index."""
+    return sum(
+        path.name != "README.md"
+        for path in (REPO_ROOT / "docs" / "reference_cards").glob("*.md")
+    )
 
 
 def extract_title(content):
@@ -433,7 +451,7 @@ def build_sidebar(modules):
         categorized[cat].append((dir_name, short_title))
 
     parts = []
-    for cat_name in CATEGORIES:
+    for cat_name in [*CATEGORIES, "Other"]:
         if cat_name not in categorized:
             continue
         parts.append(f'<div class="nav-category">')
@@ -506,11 +524,15 @@ def build_html(modules):
 
     result = HTML_TEMPLATE.replace("{{sidebar}}", sidebar)
     result = result.replace("{{sections}}", "\n".join(sections))
-    result = result.replace("{{curriculum_module_count}}", str(CURRICULUM_MODULE_COUNT))
-    result = result.replace("{{operational_guide_count}}", str(OPERATIONAL_GUIDE_COUNT))
-    result = result.replace("{{example_count}}", str(EXAMPLE_COUNT))
-    result = result.replace("{{notebook_count}}", str(NOTEBOOK_COUNT))
-    result = result.replace("{{reference_card_count}}", str(REFERENCE_CARD_COUNT))
+    result = result.replace(
+        "{{curriculum_module_count}}", str(count_curriculum_modules(modules))
+    )
+    result = result.replace(
+        "{{operational_guide_count}}", str(len(OPERATIONAL_GUIDES))
+    )
+    result = result.replace("{{example_count}}", str(count_python_examples(modules)))
+    result = result.replace("{{notebook_count}}", str(count_notebooks()))
+    result = result.replace("{{reference_card_count}}", str(count_reference_cards()))
     return result
 
 
